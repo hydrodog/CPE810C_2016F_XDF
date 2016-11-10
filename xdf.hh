@@ -16,7 +16,7 @@ private:
     int p_pageNumber;//total page number
 
 public:
-    Print(int totalPage, int startPage, int endPage);//TODO: remind frame team to give us total page number
+    Print(int startPage, int endPage);//TODO: remind frame team to give us total page number
     void process();//process and distribute
 
 
