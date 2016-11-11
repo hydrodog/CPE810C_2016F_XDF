@@ -1,0 +1,3 @@
+This module implements the functionality of reading a pdf file into the memory.
+PoDoFo is library required for the compilation of this module.
+For dependencies and installation instructions of PoDoFo, please read "./podofo/README.html".
