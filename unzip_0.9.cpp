@@ -13,17 +13,17 @@ int UnCompress(char * DestName, char *SrcName)
     FILE* fp3;  //the pointer to open the compressed files which should be uncompressed
     FILE* fp4;  //the pointer to create the decompression of the file
     errno_t err; //The definition of error variable
-    //打开欲解压的文件
+    //open the file should be uncompressed
     fp3 = fopen(SrcName, "r");
    /*
     err = fopen_s(&fp3,SrcName,"r");
     if(err)
     {
-        qDebug() << "文件打开失败!";
+        qDebug() << "fail to opel the file!";
         return 1;
     }
     */
-     //获取欲解压文件的大小
+     //get the length of the file should be uncompressed
     long ucur = ftell(fp3);
     fseek(fp3,0L,SEEK_END);
     long ufileLength = ftell(fp3);
