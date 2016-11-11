@@ -6,6 +6,9 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QDebug>
+#include <QFontDialog>
+#include <QColorDialog>
+#include <QTableWidget>
 
 int MainWindow::fileState=0;
 
@@ -110,4 +113,81 @@ void MainWindow::on_actionNew_file_triggered(){
             }
         }
     }
+}
+
+void MainWindow::on_actionFont_triggered()
+{
+    bool ok;
+    QFont font=QFontDialog::getFont(&ok,this);
+    if(ok) ui->textEdit->setCurrentFont(font);
+}
+
+void MainWindow::on_actionColor_triggered()
+{
+    QColorDialog color(this);
+    color.setOption(QColorDialog::ShowAlphaChannel);
+    color.exec();
+    QColor color1=color.currentColor();
+    ui->textEdit->setTextColor(color1);
+}
+
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->textEdit->QTextEdit::copy();
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+    ui->textEdit->QTextEdit::paste();
+}
+
+void MainWindow::on_actionCut_triggered()
+{
+    ui->textEdit->QTextEdit::cut();
+}
+
+void MainWindow::on_actionImport_image_triggered()
+{
+    imageName = QFileDialog::getSaveFileName(this,tr("import image"),"",tr("Text files(*.png *.jpg)"));
+}
+
+void MainWindow::on_actionDigital_signature_triggered()
+{
+    QDialog a;
+    a.resize(400,300);
+    QTableWidget *table = new QTableWidget(&a);
+    table->resize(300,200);
+    table->setRowCount(2);
+    table->setColumnCount(2);
+    QStringList headerLabels;
+    headerLabels << "C1" << "C2";
+    table->setHorizontalHeaderLabels(headerLabels);
+    table->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
+
+    //设置行表
+    QStringList rowLabels;
+    rowLabels << "Line1" << "Line2" << "Line3" << "Line4";
+    table->setVerticalHeaderLabels(rowLabels);
+
+
+    //设置每一行的高度
+    for(int i = 0; i < 4; i++)
+        table->setRowHeight(i, 22);
+
+    //自动调整最后一列的宽度使它和表格的右边界对齐
+    table->horizontalHeader()->setStretchLastSection(true);
+
+    //设置表格的选择方式
+    table->setSelectionBehavior(QAbstractItemView::SelectItems);
+
+    //设置编辑方式
+    table->setEditTriggers(QAbstractItemView::DoubleClicked);
+    QTableWidgetItem b;
+    b.setText("hahaha");
+    table->setItem(1,1,&b);
+
+
+    table->show();
+    a.exec();
+
 }

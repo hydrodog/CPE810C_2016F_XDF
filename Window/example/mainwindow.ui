@@ -46,6 +46,7 @@
     <addaction name="actionImport_image"/>
     <addaction name="separator"/>
     <addaction name="actionPrint"/>
+    <addaction name="actionPrint_review"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
@@ -63,6 +64,11 @@
     </widget>
     <addaction name="actionFont"/>
     <addaction name="actionColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionCut"/>
+    <addaction name="separator"/>
     <addaction name="menuForm"/>
    </widget>
    <widget class="QMenu" name="menuTool">
@@ -94,6 +100,9 @@
    <addaction name="actionNew_file"/>
    <addaction name="actionOpen_file"/>
    <addaction name="actionSave_file"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionPaste"/>
    <addaction name="actionPrint_review"/>
    <addaction name="separator"/>
    <addaction name="actionLeft"/>
@@ -106,6 +115,10 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew_file">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/filenew.png</normaloff>:/myimage/image/filenew.png</iconset>
+   </property>
    <property name="text">
     <string>new file</string>
    </property>
@@ -117,6 +130,10 @@
    </property>
   </action>
   <action name="actionOpen_file">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/fileopen.png</normaloff>:/myimage/image/fileopen.png</iconset>
+   </property>
    <property name="text">
     <string>open file</string>
    </property>
@@ -128,6 +145,10 @@
    </property>
   </action>
   <action name="actionSave_file">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/filesave.png</normaloff>:/myimage/image/filesave.png</iconset>
+   </property>
    <property name="text">
     <string>save file</string>
    </property>
@@ -139,6 +160,10 @@
    </property>
   </action>
   <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/filesave.png</normaloff>:/myimage/image/filesave.png</iconset>
+   </property>
    <property name="text">
     <string>save as...</string>
    </property>
@@ -193,16 +218,28 @@
    </property>
   </action>
   <action name="actionLeft">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/textleft.png</normaloff>:/myimage/image/textleft.png</iconset>
+   </property>
    <property name="text">
     <string>left</string>
    </property>
   </action>
   <action name="actionCenter">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/textcenter.png</normaloff>:/myimage/image/textcenter.png</iconset>
+   </property>
    <property name="text">
     <string>center</string>
    </property>
   </action>
   <action name="actionRight">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/textright.png</normaloff>:/myimage/image/textright.png</iconset>
+   </property>
    <property name="text">
     <string>right</string>
    </property>
@@ -227,8 +264,40 @@
     <string>about</string>
    </property>
   </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/editcopy.png</normaloff>:/myimage/image/editcopy.png</iconset>
+   </property>
+   <property name="text">
+    <string>copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/editpaste.png</normaloff>:/myimage/image/editpaste.png</iconset>
+   </property>
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="myimage.qrc">
+     <normaloff>:/myimage/image/editcut.png</normaloff>:/myimage/image/editcut.png</iconset>
+   </property>
+   <property name="text">
+    <string>cut</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="myimage.qrc"/>
+ </resources>
  <connections/>
 </ui>

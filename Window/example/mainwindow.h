@@ -29,12 +29,26 @@ private slots:
 
     void on_actionNew_file_triggered();
 
+    void on_actionFont_triggered();
+
+    void on_actionColor_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionCut_triggered();
+
+    void on_actionImport_image_triggered();
+
     void on_actionDigital_signature_triggered();
 
 private:
 
     Ui::MainWindow *ui;
     QString fileName;
+    QString imageName;
+    QString copy;
     static int fileState;
 
 };
