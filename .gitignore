@@ -1,75 +1,47 @@
-# This file is used to ignore files which are generated
-# ----------------------------------------------------------------------------
-
-*~
-*.autosave
-*.a
-*.core
-*.moc
-*.o
-*.obj
-*.orig
-*.rej
-*.so
-*.so.*
-*_pch.h.cpp
-*_resource.rc
-*.qm
-*.stash
-*.pro
-.#*
-*.*#
-core
-!core/
-tags
-.DS_Store
-.directory
-*.debug
-Makefile*
-*.prl
-*.app
-moc_*.cpp
-ui_*.h
-qrc_*.cpp
+# Windows image file caches
 Thumbs.db
-*.res
-*.rc
-/.qmake.cache
-/.qmake.stash
+ehthumbs.db
 
-# qtcreator generated files
-*.pro.user*
+# Folder config file
+Desktop.ini
 
-# xemacs temporary files
-*.flc
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Vim temporary files
-.*.swp
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-# Visual Studio generated files
-*.ib_pdb_index
-*.idb
-*.ilk
-*.pdb
-*.sln
-*.suo
-*.vcproj
-*vcproj.*.*.user
-*.ncb
-*.sdf
-*.opensdf
-*.vcxproj
-*vcxproj.*
+# Windows shortcuts
+*.lnk
 
-# MinGW generated files
-*.Debug
-*.Release
+# =========================
+# Operating System Files
+# =========================
 
-# Python byte code
-*.pyc
+# OSX
+# =========================
 
-# Binaries
-# --------
-*.dll
-*.exe
+.DS_Store
+.AppleDouble
+.LSOverride
 
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

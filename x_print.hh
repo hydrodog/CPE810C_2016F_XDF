@@ -3,17 +3,20 @@
  * Author: Fan Yang, Zejian Zhou
  */
 
-#ifndef XDF_HH
-#define XDF_HH
+#ifndef X_PRINT_HH
+#define X_PRINT_HH
 
 #include <string>
 #include <iostream>
-#include <fstream>
+
 
 class Print
 {
 private:
-    int p_pageNumber;//total page number
+    int p_totalPageNumber;//total page number
+    int p_startPage;
+    int p_endPage;
+    int p_currentPageNumber;
 
 public:
     Print(int startPage, int endPage);//TODO: remind frame team to give us total page number
