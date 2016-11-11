@@ -164,23 +164,18 @@ void MainWindow::on_actionDigital_signature_triggered()
     table->setHorizontalHeaderLabels(headerLabels);
     table->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
 
-    //设置行表
     QStringList rowLabels;
     rowLabels << "Line1" << "Line2" << "Line3" << "Line4";
     table->setVerticalHeaderLabels(rowLabels);
 
 
-    //设置每一行的高度
     for(int i = 0; i < 4; i++)
         table->setRowHeight(i, 22);
 
-    //自动调整最后一列的宽度使它和表格的右边界对齐
     table->horizontalHeader()->setStretchLastSection(true);
 
-    //设置表格的选择方式
     table->setSelectionBehavior(QAbstractItemView::SelectItems);
 
-    //设置编辑方式
     table->setEditTriggers(QAbstractItemView::DoubleClicked);
     QTableWidgetItem b;
     b.setText("hahaha");
