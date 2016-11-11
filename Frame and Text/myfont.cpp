@@ -1,6 +1,6 @@
 #include "myfont.h"
 
-myFont::myFont():language("English"),color(255),font("times"),size(11.0),bold(1),italic(false),underline(false)
+myFont::myFont(string l,int c,string f,double s,int b,bool i,bool u):language(l),color(c),font(f),size(s),bold(b),italic(i),underline(u)
 {
 
 }
