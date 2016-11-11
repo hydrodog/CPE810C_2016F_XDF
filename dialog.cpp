@@ -19,8 +19,12 @@ Dialog::~Dialog()
 
 void Dialog::on_acceptButton_clicked()
 {
-    PPrint pt(6,1,3);
-    this->setWindowTitle(ui->BeginTextEdit->toPlainText());
+    PPrint pt;
+    //this->setWindowTitle(ui->BeginTextEdit->toPlainText());
+    pt.setStartPageNum(ui->BeginTextEdit->toPlainText().toInt());
+    pt.setEndPageNum(ui->EndTextEdit->toPlainText().toInt());
+
+
     pt.PProcess();
 }
 

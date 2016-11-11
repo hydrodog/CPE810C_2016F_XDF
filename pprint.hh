@@ -21,8 +21,11 @@ private:
     int endPageNum;
 
 public:
-    PPrint(int total,int start,int end);
+    PPrint();
     void PProcess();//process the print
+    void setTotalPageNum(int num);
+    void setStartPageNum(int num);
+    void setEndPageNum(int num);
 
 };
 
