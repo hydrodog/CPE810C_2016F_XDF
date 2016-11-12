@@ -18,3 +18,31 @@ communication between text team and image team to make sure what they need we to
 
 give them. 
 
+
+/**
+
+**/
+
+Member:
+
+Name: Zizhi Chen = zchen55 = tomato143
+
+E-mail: zchen55@stevens.edu   /   ipple89@gmail.com
+
+I made the " Initial Sign" with Han Xiao.
+
+I made the file "unzip_0.9.cpp", it can uncompresses simple files. However, it can't run correctly, 
+I tried to use some code to test this problems, and some of them were dealed with, but some are not,
+I will try in this weekend. Actually, I found some informations from the internet that the basic 
+library "zlib. h" can't works good enough when try to uncompress the complex files. It's better to 
+write own ".h" file, I am not sure about it, I will try again then if it also not work good I will 
+try to learn how to write ".h" file.
+
+This week, Han Xiao and I learnt what is epub and html files, and some simple codes of these two.
+Cause we should check these codes, then we can get the point how to translate them to the word the
+txt and picture teams could use. 
+
+And this week, we get together two times to discussed about out work, each time aoubt 5 hours. 
+Other time, we do our own job separately. We also met the members of picture teams, and members 
+of txt teams to talk about our projects.
+
