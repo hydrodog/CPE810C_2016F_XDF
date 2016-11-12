@@ -17,7 +17,7 @@ private:
     bool underline;
 public:
     myFont(string l="English",int c=255,string f="times",double s=11.0,int b=1,bool i=false,bool u=false);
-
+    void setfont(string l,int c,string f,double s,int b,bool i,bool u);
 };
 
 

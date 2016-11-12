@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     border.cpp \
     textline.cpp \
     text.cpp \
-    myfont.cpp
+    myfont.cpp \
+    importmessage.cpp
 
 HEADERS += \
     text.h \
@@ -24,4 +25,5 @@ HEADERS += \
     textline.h \
     border.h \
     page.h \
-    myfont.h
+    myfont.h \
+    importmessage.h
