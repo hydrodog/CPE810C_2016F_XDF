@@ -4,7 +4,7 @@ Name: Han Xiao = hxiao3 = henrybird
 
 E-mail: hxiao3@stevens.edu
 
-I made the Initial Sign with Zizhi Chen. 
+I made the "Initial Sign" with Zizhi Chen. 
 
 I made the file "getfiles.cpp". It can get all the files in the folder given. Actually, it can 
 
@@ -17,3 +17,4 @@ I and Zizhi Chen found and read some data about what epub and html file are. We 
 communication between text team and image team to make sure what they need we to do and we will 
 
 give them. 
+
