@@ -13,9 +13,21 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    frame.cpp \
+    page.cpp \
+    text.cpp \
+    border.cpp \
+    myfont.cpp \
+    textline.cpp
 
 HEADERS  += mainwindow.h \
-    ../build-810c-Desktop_Qt_5_7_0_clang_64bit-Debug/ui_mainwindow.h
+    ../build-810c-Desktop_Qt_5_7_0_clang_64bit-Debug/ui_mainwindow.h \
+    frame.h \
+    page.h \
+    text.h \
+    border.h \
+    myfont.h \
+    textline.h
 
 FORMS    += mainwindow.ui
