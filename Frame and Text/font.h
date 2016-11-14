@@ -1,5 +1,5 @@
-#ifndef MYFONT_H
-#define MYFONT_H
+#ifndef FONT_H
+#define FONT_H
 using namespace std;
 
 #include <string>
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif // MYFONT_H
+#endif // FONT_H

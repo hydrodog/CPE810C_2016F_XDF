@@ -1,6 +1,6 @@
 #include <iostream>
 #include <page.h>
-#include "myfont.h"
+#include "font.h"
 int main()
 {
 

@@ -1,25 +1,26 @@
-#include<importmessage.h>
-#include<stdlib.h>
-#include<fstream>
-#include<iostream>
+#include <content.h>
+#include <stdlib.h>
+#include <fstream>
+#include <iostream>
 using namespace std;
-void ImportMessage::getmessage(){
+
+void Content::getmessage() {
     ifstream in("filename");
     char a[256];
-    try{
+    try {
        in.is_open();
     }
-    catch(double){
+    catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()){
+    while(!in.eof()) {
         in.getline(a,256);
     }
-    for(int i=0;i<256;i++){
+    for(int i=0;i<256;i++) {
         m.insert(pair<char,int>(a[i],i));
     }
 }
-void ImportMessage::getfont(){
+void Content::getfont() {
     string language;
     int color;
     string font;
@@ -29,23 +30,23 @@ void ImportMessage::getfont(){
     bool underline;
     ifstream in("fontname");
     char a[256];
-    try{
+    try {
        in.is_open();
     }
-    catch(double){
+    catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()){
+    while(!in.eof()) {
         in.getline(a,256);
     }
     string b=a;
     int posA=1;
     int posB=1;
-    while(1){
+    while(1) {
         posA=b.find("language",posA+1);
         if(posA==-1)break;
     }
-    while(1){
+    while(1) {
         posB=b.find("color",posB+1);
         if(posB==-1)break;
     }
@@ -55,69 +56,77 @@ void ImportMessage::getfont(){
     }
     language=c;
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("font",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&color);
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("size",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     font=c;
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("bold",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     sscanf(c,"%lf",&size);
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("italic",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&bold);
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("underline",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     int x;
     sscanf(c,"%d",&x);
-    if(x==1){
+    if(x==1) {
        italic=true;
     }else{
         italic=false;
     }
     posA=posB;
-    while(1){
+    while(1) {
         posB=b.find("end",posB+1);
         if(posB==-1)break;
     }
-    for(int i=posA;i<posB;i++){
+    for(int i=posA;i<posB;i++) {
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&x);
-    if(x==1){
+    if(x==1) {
        underline=true;
-    }else{
+    }else {
         underline=false;
     }
     t.setfont(language,color,font,size,bold,italic,underline);
+}
+void Content::exportContent() {
+    for(It it = m.begin(); it != m.end(); it++) {
+        cout << it->first << " "<< it->second << endl; 
+    }
+}
+void Content::contentFont() {
+    
 }
