@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "frame.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,7 +17,7 @@ public:
     ~MainWindow();
 
 
-    void addFrame();
+    void addFrame(Frame f);
 private slots:
     void on_actionFont_triggered();
 

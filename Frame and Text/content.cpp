@@ -51,7 +51,7 @@ void Content::getfont() {
         if(posB==-1)break;
     }
     char c[20];
-    for(int i=posA;i<posB;i++){
+    for(int i=posA+8;i<posB;i++){
         c[i-posA]=a[i];
     }
     language=c;
@@ -60,7 +60,11 @@ void Content::getfont() {
         posB=b.find("font",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+5;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&color);
@@ -69,7 +73,11 @@ void Content::getfont() {
         posB=b.find("size",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+4;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     font=c;
@@ -78,7 +86,11 @@ void Content::getfont() {
         posB=b.find("bold",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+4;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     sscanf(c,"%lf",&size);
@@ -87,7 +99,11 @@ void Content::getfont() {
         posB=b.find("italic",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+4;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&bold);
@@ -96,7 +112,11 @@ void Content::getfont() {
         posB=b.find("underline",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+6;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     int x;
@@ -111,7 +131,11 @@ void Content::getfont() {
         posB=b.find("end",posB+1);
         if(posB==-1)break;
     }
+<<<<<<< HEAD:Frame and Text/content.cpp
     for(int i=posA;i<posB;i++) {
+=======
+    for(int i=posA+9;i<posB;i++){
+>>>>>>> f758dc704c60c6af914421aaf0e5bb1400146611:Frame and Text/importmessage.cpp
         c[i-posA]=a[i];
     }
     sscanf(c,"%d",&x);
