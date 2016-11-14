@@ -3,24 +3,7 @@ This is Print team's readme
 
 --------------------How to print?-------------------------------------------------------
 
-<<<<<<< HEAD
 Just call our dialog,that's all.
-=======
-3 steps to print out
-
-Step1: Include x_Print.hh
-
-Step2: Create a Print instance, the constructor of this calss needs 2 arguments.
-
-       Print(int startPage, int endPage);
-
-Step3: Call the method "process". This method requires no argument.
-
-Example:
-
-       Print docu(18,30);//I wanna print page 18~ page 30
-       docu.process();//Here we go!
->>>>>>> master
 
 ------------------Structure-----------------------------------------------------------
 //Main class, handle the whole document
