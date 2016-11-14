@@ -1,3 +1,9 @@
 This module implements the functionality of reading a pdf file into the memory.
 PoDoFo is library required for the compilation of this module.
-For dependencies and installation instructions of PoDoFo, please read "./podofo/README.html".
+For dependencies and installation instructions of PoDoFo, please read "./podofo/README.html"; 
+Alternatively, try using Qt Creator to open ./CMakeLists.txt as a project and compile by Ctrl+B.
+
+
+----- For test only ------
+After building, cd to ./build-podofo-Desktop-Default/tools/xdfimport and run:
+./xdfimport ./../../../samples/sample2.pdf
