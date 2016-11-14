@@ -1,3 +1,28 @@
 This module implements the functionality of reading a pdf file into the memory.
 PoDoFo is library required for the compilation of this module.
-For dependencies and installation instructions of PoDoFo, please read ./podofo/README.html
+For dependencies and installation instructions of PoDoFo, please read "./podofo/README.html"; 
+Alternatively, try using Qt Creator to open ./CMakeLists.txt as a project and compile by Ctrl+B.
+
+
+------- For test only ---------
+After building, cd to ./build-podofo-Desktop-Default/tools/xdfimport and run:
+./xdfimport ./../../../samples/sample2.pdf
+
+
+----- Notes for text importing ------
+
+BT				# Begin text
+11 0 0 11 315.0006 501.1094 Tm	# Set the transformation matrix
+0.13333 0.12157 0.12549 scn	# Set color
+0 -1.0909 TD			# Move to the start of the next line, offset the current line by (tx, ty).
+-0.0308 Tc			# Set character spacing
+0.0008 Tw			# Set character width
+[(n)10.2(o)12.2(i)23.2(s)4.2(e)12.2(,)-0.8( be)-7.8(t)-29.8(t)16.2(e)15.2(r)-0.8( pos)26.2(i)-1.8(t)15.2(i)11.2(o)8.2(n)24.2(i)22.2(n)20.2(g CM)12.2(O)6.2(S)-0.8( i)22.2(m)24.2(a)21.2(g)15.2(e se)15.2(n)24.2(s)3.2(o)9.2(r)1.2(s t)16.2(o)-0.8( r)14.2(e)15.2(p)9.2(l)22.2(a)11.2(c)9.2(e)-30.8( )]TJ			# Show text
+T*				# Move to the start of the next line
+ET				# End text
+
+----- Notes for PDF team ------
+Every content stream begins at the page description level, where changes can be made to the [graphics state]
+such as colors and text attributes.
+
+

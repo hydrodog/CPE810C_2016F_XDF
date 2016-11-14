@@ -1,0 +1,3066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PoDoFo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\src\;CMake Files\test\;CMake Files\test\ContentParser\;CMake Files\test\CreationTest\;CMake Files\test\FilterTest\;CMake Files\test\FormTest\;CMake Files\test\LargeTest\;CMake Files\test\ObjectParserTest\;CMake Files\test\ParserTest\;CMake Files\test\SignatureTest\;CMake Files\test\TokenizerTest\;CMake Files\test\VariantTest\;CMake Files\test\WatermarkTest\;CMake Files\test\unit\;CMake Files\tools\;CMake Files\tools\podofobox\;CMake Files\tools\podofocolor\;CMake Files\tools\podofocountpages\;CMake Files\tools\podofocrop\;CMake Files\tools\podofoencrypt\;CMake Files\tools\podofogc\;CMake Files\tools\podofoimgextract\;CMake Files\tools\podofoimg2pdf\;CMake Files\tools\podofomerge\;CMake Files\tools\podofopages\;CMake Files\tools\podofopdfinfo\;CMake Files\tools\podofotxt2pdf\;CMake Files\tools\podofotxtextract\;CMake Files\tools\podofouncompress\;CMake Files\tools\podofoimpose\;CMake Files\tools\podofoincrementalupdates\;CMake Files\tools\podofoxmp\;CMake Files\tools\xdfimport\;CMake Files\examples\;CMake Files\examples\helloworld\;CMake Files\examples\helloworld-base14\;CMake Files\debian\;CMake Files\debian\man\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofo_static">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/libpodofo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 podofo_static"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofo_static/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/libpodofo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 podofo_static/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ContentParser">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/ContentParser" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 ContentParser"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ContentParser/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/ContentParser" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 ContentParser/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ContentParser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CreationTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/CreationTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 CreationTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CreationTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/CreationTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 CreationTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/CreationTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FilterTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/FilterTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 FilterTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FilterTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/FilterTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 FilterTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FilterTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FormTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/FormTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 FormTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FormTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/FormTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 FormTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/FormTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LargeTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/LargeTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 LargeTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LargeTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/LargeTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 LargeTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/LargeTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ObjectParserTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/ObjectParserTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 ObjectParserTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ObjectParserTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/ObjectParserTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 ObjectParserTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ObjectParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParserTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/ParserTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 ParserTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParserTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/ParserTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 ParserTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/ParserTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SignatureTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/SignatureTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 SignatureTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SignatureTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/SignatureTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 SignatureTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/SignatureTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TokenizerTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/TokenizerTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 TokenizerTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TokenizerTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/TokenizerTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 TokenizerTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/TokenizerTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="VariantTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/VariantTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 VariantTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="VariantTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/VariantTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 VariantTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/VariantTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="WatermarkTest">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/WatermarkTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 WatermarkTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="WatermarkTest/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/WatermarkTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 WatermarkTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/WatermarkTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofo-test">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/podofo-test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/src"/>
+					<Add directory="/src/os"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 podofo-test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofo-test/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/podofo-test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/src"/>
+					<Add directory="/src/os"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 podofo-test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/test/unit/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofobox">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/podofobox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 podofobox"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofobox/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/podofobox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 podofobox/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofobox/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocolor">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/podofocolor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 podofocolor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocolor/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/podofocolor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 podofocolor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocolor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocountpages">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/podofocountpages" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 podofocountpages"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocountpages/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/podofocountpages" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 podofocountpages/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocountpages/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocrop">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/podofocrop" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 podofocrop"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofocrop/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/podofocrop" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 podofocrop/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofocrop/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoencrypt">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/podofoencrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 podofoencrypt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoencrypt/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/podofoencrypt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 podofoencrypt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoencrypt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofogc">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/podofogc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 podofogc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofogc/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/podofogc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 podofogc/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofogc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimgextract">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/podofoimgextract" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 podofoimgextract"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimgextract/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/podofoimgextract" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 podofoimgextract/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimgextract/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimg2pdf">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/podofoimg2pdf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 podofoimg2pdf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimg2pdf/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/podofoimg2pdf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 podofoimg2pdf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimg2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofomerge">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/podofomerge" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 podofomerge"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofomerge/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/podofomerge" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 podofomerge/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofomerge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofopages">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/podofopages" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 podofopages"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofopages/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/podofopages" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 podofopages/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopages/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofopdfinfo">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/podofopdfinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 podofopdfinfo"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofopdfinfo/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/podofopdfinfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 podofopdfinfo/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofopdfinfo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofotxt2pdf">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/podofotxt2pdf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 podofotxt2pdf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofotxt2pdf/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/podofotxt2pdf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 podofotxt2pdf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxt2pdf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofotxtextract">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/podofotxtextract" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 podofotxtextract"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofotxtextract/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/podofotxtextract" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 podofotxtextract/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofotxtextract/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofouncompress">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/podofouncompress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 podofouncompress"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofouncompress/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/podofouncompress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 podofouncompress/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofouncompress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimpose">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/podofoimpose" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 podofoimpose"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoimpose/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/podofoimpose" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 podofoimpose/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoimpose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoincrementalupdates">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/podofoincrementalupdates" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 podofoincrementalupdates"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoincrementalupdates/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/podofoincrementalupdates" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 podofoincrementalupdates/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoincrementalupdates/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoxmp">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/podofoxmp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 podofoxmp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="podofoxmp/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/podofoxmp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 podofoxmp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/podofoxmp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="xdfimport">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/xdfimport" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 xdfimport"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="xdfimport/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/xdfimport" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 xdfimport/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/tools/xdfimport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helloworld">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/helloworld" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 helloworld"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helloworld/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/helloworld" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 helloworld/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helloworld-base14">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/helloworld-base14" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 helloworld-base14"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helloworld-base14/fast">
+				<Option output="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/helloworld-base14" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/cppunit"/>
+					<Add directory="/usr/include/lua5.1"/>
+					<Add directory="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 helloworld-base14/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zchenpds/git/CPE810C_2016F_XDF/pdf/build-podofo-Desktop-Default/examples/helloworld-base14/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/examples/helloworld-base14/helloworld-base14.cpp">
+			<Option target="helloworld-base14"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/examples/helloworld/helloworld.cpp">
+			<Option target="helloworld"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfArray.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfArray.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfCanvas.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfCanvas.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfColor.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfColor.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfContentsTokenizer.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfContentsTokenizer.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfData.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfData.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDataType.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDataType.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDate.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDate.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDictionary.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfDictionary.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncoding.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncoding.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncodingFactory.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncodingFactory.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncrypt.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfEncrypt.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfError.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfError.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFileStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFileStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFilter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFilter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFiltersPrivate.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfFiltersPrivate.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfImmediateWriter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfImmediateWriter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfInputDevice.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfInputDevice.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfInputStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfInputStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfLocale.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfLocale.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfMemStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfMemStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfMemoryManagement.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfMemoryManagement.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfName.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfName.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfObjectStreamParserObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfObjectStreamParserObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfOutputDevice.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfOutputDevice.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfOutputStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfOutputStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfParser.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfParser.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfParserObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfParserObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRect.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRect.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRefCountedBuffer.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRefCountedBuffer.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRefCountedInputDevice.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfRefCountedInputDevice.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfReference.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfReference.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfSigIncWriter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfSigIncWriter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfString.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfString.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfTokenizer.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfTokenizer.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfVariant.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfVariant.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfVecObjects.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfVecObjects.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfWriter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfWriter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRef.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRef.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRefStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRefStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRefStreamParserObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/base/PdfXRefStreamParserObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAcroForm.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAcroForm.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAction.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAction.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAnnotation.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfAnnotation.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfCMapEncoding.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfCMapEncoding.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfContents.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfContents.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDestination.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDestination.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDifferenceEncoding.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDifferenceEncoding.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDocument.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfDocument.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfElement.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfElement.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfEncodingObjectFactory.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfEncodingObjectFactory.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfExtGState.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfExtGState.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfField.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfField.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFileSpec.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFileSpec.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFont.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFont.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontCID.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontCID.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontCache.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontCache.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontConfigWrapper.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontConfigWrapper.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontFactory.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontFactory.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetrics.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetrics.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsBase14.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsBase14.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsFreetype.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsFreetype.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontMetricsObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontSimple.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontSimple.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontTTFSubset.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontTTFSubset.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontTrueType.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontTrueType.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType1.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType1.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType1Base14.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType1Base14.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType3.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFontType3.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFunction.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfFunction.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfHintStream.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfHintStream.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfIdentityEncoding.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfIdentityEncoding.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfImage.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfImage.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfInfo.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfInfo.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfMemDocument.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfMemDocument.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfNamesTree.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfNamesTree.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfOutlines.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfOutlines.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPage.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPage.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPagesTree.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPagesTree.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPagesTreeCache.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPagesTreeCache.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPainter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPainter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPainterMM.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfPainterMM.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfShadingPattern.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfShadingPattern.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncMemDocument.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncMemDocument.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncPainter.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncPainter.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncSignatureField.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSigIncSignatureField.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSignOutputDevice.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSignOutputDevice.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSignatureField.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfSignatureField.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfStreamedDocument.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfStreamedDocument.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfTable.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfTable.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfTilingPattern.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfTilingPattern.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfXObject.cpp">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/doc/PdfXObject.h">
+			<Option target="podofo_static"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ContentParser/main.cpp">
+			<Option target="ContentParser"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/CreationTest/CreationTest.cpp">
+			<Option target="CreationTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/FilterTest/FilterTest.cpp">
+			<Option target="FilterTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/FormTest/FormTest.cpp">
+			<Option target="FormTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/LargeTest/LargeTest.cpp">
+			<Option target="LargeTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ObjectParserTest/ObjectParserTest.cpp">
+			<Option target="ObjectParserTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ParserTest/ParserTest.cpp">
+			<Option target="ParserTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/SignatureTest/SignTest.cpp">
+			<Option target="SignatureTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/TokenizerTest/TokenizerTest.cpp">
+			<Option target="TokenizerTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/VariantTest/VariantTest.cpp">
+			<Option target="VariantTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/WatermarkTest/WatermarkTest.cpp">
+			<Option target="WatermarkTest"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/BasicTypeTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/BasicTypeTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/ColorTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/ColorTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/DateTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/DateTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/DeviceTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/DeviceTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/ElementTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/ElementTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/EncodingTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/EncodingTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/EncryptTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/EncryptTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/FilterTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/FilterTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/FontTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/FontTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/NameTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/NameTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PageTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PageTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PagesTreeTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PagesTreeTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PainterTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/PainterTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/StringTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/StringTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/TestUtils.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/TestUtils.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/TokenizerTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/TokenizerTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/VariantTest.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/VariantTest.h">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/main.cpp">
+			<Option target="podofo-test"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofobox/boxsetter.cpp">
+			<Option target="podofobox"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofobox/boxsetter.h">
+			<Option target="podofobox"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofobox/podofobox.cpp">
+			<Option target="podofobox"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/colorchanger.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/colorchanger.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/colorspace.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/colorspace.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/dummyconverter.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/dummyconverter.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/graphicsstack.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/graphicsstack.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/grayscaleconverter.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/grayscaleconverter.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/iconverter.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/iconverter.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/luaconverter.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/luaconverter.h">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/podofocolor.cpp">
+			<Option target="podofocolor"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocountpages/countpages.cpp">
+			<Option target="podofocountpages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocrop/podofocrop.cpp">
+			<Option target="podofocrop"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoencrypt/podofoencrypt.cpp">
+			<Option target="podofoencrypt"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofogc/podofogc.cpp">
+			<Option target="podofogc"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimg2pdf/ImageConverter.cpp">
+			<Option target="podofoimg2pdf"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimg2pdf/ImageConverter.h">
+			<Option target="podofoimg2pdf"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimg2pdf/podofoimg2pdf.cpp">
+			<Option target="podofoimg2pdf"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimgextract/ImageExtractor.cpp">
+			<Option target="podofoimgextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimgextract/ImageExtractor.h">
+			<Option target="podofoimgextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimgextract/podofoimgextract.cpp">
+			<Option target="podofoimgextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/impositionplan.cpp">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/impositionplan.h">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/pdftranslator.cpp">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/pdftranslator.h">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/planreader_legacy.cpp">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/planreader_legacy.h">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/planreader_lua.cpp">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/planreader_lua.h">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/podofoimpose.cpp">
+			<Option target="podofoimpose"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoincrementalupdates/incrementalupdates.cpp">
+			<Option target="podofoincrementalupdates"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofomerge/podofomerge.cpp">
+			<Option target="podofomerge"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/DeleteOperation.cpp">
+			<Option target="podofopages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/DeleteOperation.h">
+			<Option target="podofopages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/MoveOperation.cpp">
+			<Option target="podofopages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/MoveOperation.h">
+			<Option target="podofopages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/podofopages.cpp">
+			<Option target="podofopages"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopdfinfo/pdfinfo.cpp">
+			<Option target="podofopdfinfo"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopdfinfo/pdfinfo.h">
+			<Option target="podofopdfinfo"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopdfinfo/podofopdfinfo.cpp">
+			<Option target="podofopdfinfo"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxt2pdf/podofotxt2pdf.cpp">
+			<Option target="podofotxt2pdf"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxtextract/TextExtractor.cpp">
+			<Option target="podofotxtextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxtextract/TextExtractor.h">
+			<Option target="podofotxtextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxtextract/podofotxtextract.cpp">
+			<Option target="podofotxtextract"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofouncompress/Uncompress.cpp">
+			<Option target="podofouncompress"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofouncompress/Uncompress.h">
+			<Option target="podofouncompress"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofouncompress/podofouncompress.cpp">
+			<Option target="podofouncompress"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoxmp/podofoxmp.cpp">
+			<Option target="podofoxmp"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/xdfimport/main.cpp">
+			<Option target="xdfimport"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/xdfimport/xdfimport.cpp">
+			<Option target="xdfimport"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/xdfimport/xdfimport.h">
+			<Option target="xdfimport"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/podofo_config.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindZLIB.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindLIBCRYPTO.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindLIBIDN.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindLIBJPEG.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindTIFF.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindCppUnit.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/MacroEnsureVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindOpenSSL.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindFREETYPE.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/LibraryDebugAndRelease.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindLIBSTLPORT.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindFONTCONFIG.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindPkgConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/cmake/modules/FindLUA.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ContentParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\ContentParser\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/CreationTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\CreationTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/FilterTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\FilterTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/FormTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\FormTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/LargeTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\LargeTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ObjectParserTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\ObjectParserTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/ParserTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\ParserTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/SignatureTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\SignatureTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/TokenizerTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\TokenizerTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/VariantTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\VariantTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/WatermarkTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\WatermarkTest\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/test/unit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\unit\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofobox/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofobox\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocolor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofocolor\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocountpages/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofocountpages\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofocrop/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofocrop\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoencrypt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoencrypt\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofogc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofogc\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimgextract/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoimgextract\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimg2pdf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoimg2pdf\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofomerge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofomerge\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopages/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofopages\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofopdfinfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofopdfinfo\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxt2pdf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofotxt2pdf\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofotxtextract/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofotxtextract\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofouncompress/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofouncompress\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoimpose/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoimpose\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoincrementalupdates/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoincrementalupdates\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/podofoxmp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\podofoxmp\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/tools/xdfimport/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\xdfimport\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/examples/helloworld/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\helloworld\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/examples/helloworld-base14/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\helloworld-base14\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/debian/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\debian\"/>
+		</Unit>
+		<Unit filename="/home/zchenpds/git/CPE810C_2016F_XDF/pdf/podofo/debian/man/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\debian\man\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
