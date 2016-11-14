@@ -1,4 +1,4 @@
-/*This is the main process class, It can procss and distribute different objects
+/*This is the main process class, It can procss print and distribute different objects
  * Author: @Zejian Zhou(Github:JayZejianZhou) @Fan Yang(Github:fyang14)
  * Edited at 13/10,2016
  */
@@ -20,7 +20,7 @@ private:
     int startPageNum;
     int endPageNum;
     bool isReverse;
-    int isOdd;
+    int isOdd;// 0 normal, 1 odd pages, 2 even pages @Zejian
     bool isPDF;//flag, if the user wanna print out as PDF
 
 

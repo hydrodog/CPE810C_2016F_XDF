@@ -41,7 +41,7 @@ void PPrint::print(){
     QPrintDialog dialog(&printer);
     dialog.setWindowTitle("Print Document");
 
-    if (isPDF){
+    if (isPDF){//if the user want PDF output directly
         printer.setOutputFormat(QPrinter::PdfFormat);
         printer.setOutputFileName("printXDF.pdf");
     }
@@ -50,28 +50,76 @@ void PPrint::print(){
         if(dialog.exec()==QDialog::Accepted){ //what printer do you wanna use
             }
     }
-    if(isReverse){
+    if(isReverse){//if the user wanna print from end to begin
         QPainter painter;
         painter.begin(&printer);
-        for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum--){
-            painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
-            if(PageNum!=startPageNum)
-                printer.newPage();
+        if(isOdd==0){//means normal print
+            for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum--){
+                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                if(PageNum!=startPageNum)
+                    printer.newPage();
+            }
+            painter.end();
         }
-        painter.end();
+        else if(isOdd==1){//means odd pages printed
+            if(endPageNum%2==0)//end page is even page
+                endPageNum--;//switch to odd page
+                for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
+                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                    if(PageNum!=startPageNum)
+                        printer.newPage();
+                }
+            painter.end();
+        }
+        else if(isOdd==2){//means even pages printed
+            if(endPageNum%2!=0)//end page is odd page
+                endPageNum--;//switch to odd page
+                for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
+                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                    if(PageNum!=startPageNum)
+                        printer.newPage();
+                }
+            painter.end();
+        }
+        else
+            throw ("/nPrivate member isOdd number is wrong, in pprint::print");
+
     }
+
     else {
         QPainter painter;
         painter.begin(&printer);
-        for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum++){
-            painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
-            if(PageNum!=endPageNum)
-                printer.newPage();
-          }
-        painter.end();
+        if(isOdd==0){
+            for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum++){
+                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                if(PageNum!=endPageNum)
+                    printer.newPage();
+              }
+            painter.end();
+        }
+        else if(isOdd==1){
+            if(endPageNum%2==0)//end page is even page
+                endPageNum++;//switch to odd page
+            for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
+                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                if(PageNum!=endPageNum)
+                    printer.newPage();
+              }
+            painter.end();
+        }
+        else if(isOdd==2){
+            if(endPageNum%2!=0)//end page is odd page
+                endPageNum++;//switch to even page
+            for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
+                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                if(PageNum!=endPageNum)
+                    printer.newPage();
+              }
+            painter.end();
+        }
     }
 
-#if 0
+#if 0//save the original print code just in case @Zejian
     if(isReverse){//if you wanna print from end to begin
         if(isPDF){}//TODO: is pdf? I need to deal with paint class now @Zejian
 
