@@ -1,0 +1,100 @@
+Page size:
+  Bottom: 0  Left: 0  Width: 612  Height: 792
+
+
+[Move Cursor to: (315,501.11)]
+alternatives by addressing several technical challenges 
+-- “ll factor/quantum ef“ciency (QE), global shutter 
+ef“ciency (GSE), and dark current. In overcoming these 
+challenges, CMOS image sensor vendors are delivering 
+global shutter pixel technology with smaller pixel size, 
+larger “ll factor, higher GSE, lower dark current ,and lower 
+noise, better positioning CMOS image sensors to replace 
+CCD at an accelerating rate. 
+Rolling Shutter Overview
+Also known as focal-plane shutter, a rolling shutter 
+utilizes two scans … reset and readout … to control the 
+exposure time. A shutter pulse that resets a row scans 
+the pixel array prior to readout scanning (Figure 1). The 
+interval between the shutter and the readout pulses 
+determines the exposure time. However, since exposure 
+times of different rows are shifted when a rolling shutter 
+sensor is used, still images of fast-moving objects become 
+distorted, rendering the rolling shutter unsuitable for 
+applications like barcode scanning, machine vision, or 
+automated inspection systems, which require the imaging 
+of rapidly moving objects. 
+[Move Cursor to: (315,73.109)]
+Figure 1. Typical Rolling Shutter Operation
+[Move Cursor to: (44,499.61)]
+To conform to early TV system architectures and other 
+mediums that transmitted data serially, the earliest 
+image sensing technology utilized an electronic shutter 
+mechanism known as a rolling shutter. With this long 
+history, the rolling shutter and its associated column-
+parallel readout architectures, in which pixels of the same 
+row are readout simultaneously, was also the natural 
+choice for performing shutter operations within CMOS 
+image sensors.
+The global shutter pixel technology typically found on 
+charge-coupled device (CCD) image sensors can offer 
+signi“cant bene“ts such as the elimination of rolling 
+shutter artifacts through simultaneous image capture of 
+the entire frame. However, the use of global shutter pixel 
+requires the addition of a pixel-level memory … one of the 
+barriers to widespread global shutter adoption.
+As CMOS image sensors have grown in popularity and as 
+machine vision, movie production, industrial, automotive, 
+and scanning applications increasingly place high priority 
+on the ability to capture fast-moving objects with high 
+image quality, image sensor vendors have worked to solve 
+the technical challenges involved with the utilization of 
+global shutter pixel technology on CMOS image sensors 
+-- sensors that were instrumental in making advanced 
+machine vision, scanning, and the “lming of movies like 
+Titanic
+, 
+The Matrix
+ and 
+Avatar
+[Move Cursor to: (172.2,183.27)]
+1 
+[Move Cursor to: (176.74,179.61)]
+possible. Further, with 
+signi“cant CMOS processing technology advancements, 
+transistors can be made much smaller;  this, together with 
+improved micro-lens technology, is better enabling image 
+sensor vendors to cost-effectively integrate the memory 
+required for a global shutter.
+Today, CMOS image sensor providers are closing the 
+performance gap between rolling and global shutter 
+[Move Cursor to: (47.141,570.6)]
+Global Shutter Pixel Technologies and CMOS Image 
+Sensors … A Powerful Combination
+[Move Cursor to: (46.356,525.6)]
+An Aptina
+[Move Cursor to: (92.761,529.59)]
+TM
+[Move Cursor to: (101.72,525.6)]
+ Technology White Paper
+[Move Cursor to: (45,59.379)]
+aptina.com
+[Move Cursor to: (45,46.379)]
+©2012  Aptina Imaging Corporation.  All rights reserved. 3/12 EN.L
+[Move Cursor to: (339.8,223.09)]
+Rolling
+Shutter
+Pixel
+Column 1
+Column 2
+Column N
+Readout
+Shutter
+[Move Cursor to: (345.42,138.98)]
+Scan direction
+[Move Cursor to: (514.26,156.65)]
+Exposure
+time
+for the
+Red
+ row
