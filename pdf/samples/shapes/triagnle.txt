@@ -1,0 +1,2 @@
+q Q q /Gs1 gs /Cs1 CS 0.5 0 0 SC /Gs2 gs 200 200 m 400 400 l 600 200 l h S
+Q
