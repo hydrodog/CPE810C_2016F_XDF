@@ -116,7 +116,7 @@ void PPrint::print(){
                     printer.newPage();
               }
             painter.end();
-        }//er
+        }//
     }
 
 #if 0//save the original print code just in case @Zejian
