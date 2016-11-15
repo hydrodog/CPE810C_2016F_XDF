@@ -12,7 +12,7 @@
 #include <QPainter>
 #include <QPrintDialog>
 #include <QPrinter>
-
+//test
 class PPrint
 {
 private:
