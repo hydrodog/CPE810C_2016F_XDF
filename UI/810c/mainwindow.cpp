@@ -23,17 +23,31 @@ void MainWindow::addFrame(Frame f){
     QFrame* frame_3 = new QFrame(ui->centralWidget);
     QString str=QString("frame").append(QChar(f.getframeNum()));
     frame_3->setObjectName(str);
-    frame_3->setGeometry(QRect(40, 660, 511, 291));
+    frame_3->setGeometry(QRect(40, 20, 600, 600));
     frame_3->setFrameShape(QFrame::StyledPanel);
     frame_3->setFrameShadow(QFrame::Raised);
     if(f.getText().getTextLineList().empty()){
         return;
     }else{
+
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
         textBrowser->setObjectName(QStringLiteral("frame_3_textBrowser"));
-        textBrowser->setGeometry(QRect(0, 0, 511, 291));
-        QString str="this is a text";
-        textBrowser->setText(str);
+        textBrowser->setGeometry(QRect(0, 0, 600, 600));
+        textBrowser->setStyleSheet("background-color:white;");
+        QFont serifFont("Times", 20, QFont::Bold);
+        serifFont.setStyle(QFont::StyleOblique);
+        textBrowser->setCurrentFont(serifFont);
+        textBrowser->setTextColor(QColor( "red" ));
+        QString str="this is a text,this is a text,this is a text,this is a text,this is a text,this is a text,this is a text";
+        textBrowser->append(str);
+        textBrowser->append(str);
+        QFont serifFont2("Times", 44, QFont::Bold);
+        serifFont2.setItalic(true);
+        textBrowser->setCurrentFont(serifFont2);
+        textBrowser->setTextColor(QColor( "blue" ));
+        textBrowser->insertPlainText("This is another string!");
+
+
     }
 
 }
