@@ -3,7 +3,7 @@
 #include <string>
 #include <list>
 #include <map>
-#include <myfont.h>
+#include <font.h>
 extern int PublicLinecode;
 class TextLine{
 /*A line should have a bunch of characters and length and height

@@ -12,7 +12,8 @@ using namespace std;
 class Content{
 private:
 	typedef map<string,int>::iterator It;
-    map<char,int> m;
+    map<int,char> m;
+    map<int,string> lc,pc;
     myFont t;
 public:
     Content();

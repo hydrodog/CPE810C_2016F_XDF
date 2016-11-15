@@ -2,7 +2,7 @@
 #define FRAME_H__
 #include "border.h"
 #include "text.h"
-#include "myfont.h"
+#include "font.h"
 #include <string>
 #include <list>
 

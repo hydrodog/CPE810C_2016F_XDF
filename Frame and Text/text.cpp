@@ -1,5 +1,5 @@
 #include "text.h"
-#include "myfont.h"
+#include "font.h"
 Text::Text():linespace(1.0)
 {}
 void Text::insert(char *s){
