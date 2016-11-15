@@ -23,7 +23,7 @@ int main( int argc, char* argv[] )
 {
   char*    pszInput;
 
-    TextExtractor extractor;
+    PdfImporter importer;
   
 
   if( argc != 2 )
@@ -35,7 +35,7 @@ int main( int argc, char* argv[] )
   pszInput  = argv[1];
     
   try {
-      extractor.Init( pszInput );
+      importer.Init( pszInput );
   } catch( PdfError & e ) {
       fprintf( stderr, "Error: An error %i ocurred during processing the pdf file.\n", e.GetError() );
       e.PrintErrorMsg();

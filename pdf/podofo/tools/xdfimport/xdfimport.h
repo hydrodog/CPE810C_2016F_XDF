@@ -18,15 +18,17 @@ using namespace PoDoFo;
 #endif // MAX_PATH
 
 /** This class uses the PoDoFo lib to parse 
- *  a PDF file and to write all text it finds
- *  in this PDF document to stdout.
+ *  a PDF file and to invoke the in XDF
+ *  functions for creating text, graphics and
+ *  image bjects
  */
-class TextExtractor {
+class PdfImporter {
 private:
+    // output in human language the parsed content to this file
     ofstream of;
 public:
-    TextExtractor();
-    virtual ~TextExtractor();
+    PdfImporter();
+    virtual ~PdfImporter();
 
     void Init( const char* pszInput );
 
@@ -36,7 +38,7 @@ private:
      *  \param pDocument the owning document
      *  \param pPage extract the text of this page.
      */
-    void ExtractText( PdfMemDocument* pDocument, PdfPage* pPage );
+    void ImportPage( PdfMemDocument* pDocument, PdfPage* pPage );
 
     /** Adds a text string to a list which can be sorted by 
      *  position on the page later, so that the whole structure 

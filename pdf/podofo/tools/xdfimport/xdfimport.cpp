@@ -6,16 +6,16 @@
 
 #include <stack>
 #include <iomanip>
-TextExtractor::TextExtractor():of("out.txt")
+PdfImporter::PdfImporter():of("out.txt")
 {
 
 }
 
-TextExtractor::~TextExtractor()
+PdfImporter::~PdfImporter()
 {
 }
 
-void TextExtractor::Init( const char* pszInput )
+void PdfImporter::Init( const char* pszInput )
 {
     if( !pszInput )
     {
@@ -37,12 +37,12 @@ void TextExtractor::Init( const char* pszInput )
                   "Width: " << rPageSize.GetWidth() << "  " <<
                   "Height: " << rPageSize.GetHeight() << "\n\n";
 
-            this->ExtractText( &document, pPage );
+            this->ImportPage( &document, pPage );
         }
     }
 }
 
-void TextExtractor::ExtractText( PdfMemDocument* pDocument, PdfPage* pPage ) 
+void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
 {
     const char*      pszToken = NULL;
     PdfVariant       var;
@@ -64,17 +64,7 @@ void TextExtractor::ExtractText( PdfMemDocument* pDocument, PdfPage* pPage )
         if( eType == ePdfContentsType_Keyword )
         {
             // of << pszToken << '\n';
-            // support 'l' and 'm' tokens
-            if( strcmp( pszToken, "l" ) == 0 || 
-                strcmp( pszToken, "m" ) == 0 )
-            {
-                // dCurPosX = stack.top().GetReal();
-                stack.pop();
-                // dCurPosY = stack.top().GetReal();
-                stack.pop();
-                //of << '(' << setprecision(3) << dCurPosX << ',' << dCurPosY << ") " << '\n';
-            }
-            else if( strcmp( pszToken, "BT" ) == 0 ) 
+            if( strcmp( pszToken, "BT" ) == 0 )
             {
                 bTextBlock   = true;     
                 // BT does not reset font
@@ -157,7 +147,7 @@ void TextExtractor::ExtractText( PdfMemDocument* pDocument, PdfPage* pPage )
     }
 }
 
-void TextExtractor::AddTextElement( double dCurPosX, double dCurPosY, 
+void PdfImporter::AddTextElement( double dCurPosX, double dCurPosY,
 		PdfFont* pCurFont, const PdfString & rString )
 {
     static double dCurPosX_old, dCurPosY_old;
