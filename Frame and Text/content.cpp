@@ -1,7 +1,10 @@
-#include <content.h>
+#include "content.h"
 #include <stdlib.h>
+#include <map>
+#include <list>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 void Content::getmessage() {
@@ -29,7 +32,7 @@ void Content::getmessage() {
         b.erase(pos,12);
     }
     for(int i=0;i<256;i++) {
-        if(b[i]==NULL)break;
+        if(b[i])break;
         m.insert(pair<int,char>(i,b[i]));
     }
 }
@@ -112,11 +115,26 @@ void Content::getfont() {
     t.setfont(language,color,font,size,bold,italic,underline);
 }
 
-/*void Content::exportContent() {
-    for(It it = m.begin(); it != m.end(); it++) {
-        cout << it->first << " "<< it->second << endl; 
+list<char> Content::exportContent() {
+    list<char> lstTemp;
+    map<int,char>:: iterator itTemp = m.begin();
+    for(;itTemp != m.end();itTemp++) {
+        lstTemp.push_back(itTemp->second);
     }
-}*/
+    return lstTemp;
+}
 void Content::contentFont() {
-    
+    contentFont[0] = language;
+    contentFont[1] = color;
+    contentFont[2] = font;
+    contentFont[3] = size;
+    contentFont[4] = bold;
+    ostringstream os1;  
+    os1 << italic; 
+    contentFont[5] = os1;
+    ostringstream os2;  
+    os2 << underline;
+    contentFont[6] = underline;
+
+    return contentFont;
 }

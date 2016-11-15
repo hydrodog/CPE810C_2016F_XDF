@@ -6,8 +6,10 @@
 #include <string>
 #include <iostream>
 #include <map>
+#include <list>
+#include <string>
 #include <fstream>
-#include <font.h>
+#include "font.h"
 using namespace std;
 class Content{
 private:
@@ -15,11 +17,12 @@ private:
     map<int,char> m;
     map<int,string> lc,pc;
     myFont t;
+    string* contentFont = new string[6];
 public:
-    Content();
+    Content(){};
     void getmessage();
     void getfont();
-    void exportContent();
+    list<char> exportContent();
     void contentFont();
 };
 
