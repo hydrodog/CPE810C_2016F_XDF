@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     textline.cpp \
     text.cpp \
     font.cpp \
-    content.cpp
+    content.cpp \
+    read.cpp
 
 HEADERS += \
     text.h \
@@ -26,4 +27,5 @@ HEADERS += \
     border.h \
     page.h \
     font.h \
-    content.h
+    content.h \
+    read.h

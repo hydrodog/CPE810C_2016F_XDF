@@ -10,6 +10,7 @@
 #include <string>
 #include <fstream>
 #include "font.h"
+#include "read.h"
 using namespace std;
 class Content{
 private:
@@ -17,13 +18,14 @@ private:
     map<int,char> m;
     map<int,string> lc,pc;
     myFont t;
+    Read r;
     string* contentFont = new string[6];
 public:
     Content(){};
     void getmessage();
     void getfont();
     list<char> exportContent();
-    void contentFont();
+    myFont contentFont();
 };
 
 #endif // CONTENT_H
