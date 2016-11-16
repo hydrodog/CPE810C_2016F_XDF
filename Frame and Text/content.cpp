@@ -1,15 +1,15 @@
 #include "content.h"
 #include <stdlib.h>
 #include <map>
-#include <list>
+#include <string>
 #include <fstream>
 #include <iostream>
-#include <sstream>
+
 using namespace std;
 
 void Content::getmessage() {
     ifstream in("filename");
-    char a[256];
+    string words;
     try {
        in.is_open();
     }
@@ -17,9 +17,9 @@ void Content::getmessage() {
         cout<<"Opening file error!"<<endl;
     }
     while(!in.eof()) {
-        in.getline(a,256);
+        in >> words;
     }
-    //r.readContent(a);
+    cout << words << endl;
 }
 void Content::getfont() {
     string language;
@@ -110,15 +110,6 @@ void Content::getfont() {
     }
     t.setfont(language,color,font,size,bold,italic,underline);
 }
-
-/*list<char> Content::exportContent() {
-    list<char> lstTemp;
-    //map<int,char>:: iterator itTemp = m.begin();
-    for(;itTemp != m.end();itTemp++) {
-        lstTemp.push_back(itTemp->second);
-    }
-    return lstTemp;
-}
 myFont Content::contentFont() {
     return t;
-} */
+}

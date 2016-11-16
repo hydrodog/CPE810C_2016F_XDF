@@ -18,7 +18,8 @@ SOURCES += main.cpp \
     text.cpp \
     font.cpp \
     content.cpp \
-    read.cpp
+    read.cpp \
+    sample.cpp
 
 HEADERS += \
     text.h \
