@@ -21,9 +21,9 @@ public:
     Text();
 
 
-    void insert(char *s);//insert a string
+    void insertString(const char *s);//insert a string
 
-    void insert(char c);//inset a character
+    void insertChar(const char c);//inset a character
 
     void insertReturn();//insert return
 

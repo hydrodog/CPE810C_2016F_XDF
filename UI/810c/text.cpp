@@ -3,24 +3,24 @@
 #include <iostream>
 Text::Text():linespace(1.0)
 {}
-void Text::insert(char *s){
+void Text::insertString(const char *s){
     if(textLineList.empty()){
         TextLine newline;
-        newline.insert(s);
+        newline.insertString(s);
         textLineList.push_back(newline);
     }
     else{//TODO: should consider the situation that line may full
-        textLineList.back().insert(s);
+        textLineList.back().insertString(s);
     }
 }//insert a string
-void Text::insert(char c){
+void Text::insertChar(char c){
     if(textLineList.empty()){
         TextLine newline;
-        newline.insert(c);
+        newline.insertChar(c);
         textLineList.push_back(newline);
     }
     else{
-        textLineList.back().insert(c);
+        textLineList.back().insertChar(c);
     }
 }//inset a character
 
@@ -52,12 +52,12 @@ void Text::setDefalutFont(myFont & myfont){
 
 void Text::addTextLine(TextLine& tl){
     this->textLineList.push_back(tl);
-    std::cout<<"TextLineList'length after set "<<textLineList.size()<<endl;
+    std::cout<<"TextLineList'length after set "<<textLineList.size()<<'\n';
     this->len++;
 }
 
 std::list<TextLine> Text::getTextLineList() const{
-    std::cout<<"TextLineList'length when get "<<textLineList.size()<<endl;
+    std::cout<<"TextLineList'length when get "<<textLineList.size()<<'\n';
     return textLineList;
 }
 

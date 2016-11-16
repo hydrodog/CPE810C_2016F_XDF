@@ -12,11 +12,12 @@ Frame::Frame(double startX, double startY, double height, double width, int Fram
 void Frame::clear(){
 
 }//Reset all information to defalut value
-void Frame::insert(char *s){
-    text.insert(s);
+void Frame::insertChar(char c){
+    text.insertChar(c);
 }
-void Frame::insert(char c){
-    text.insert(c);
+
+void Frame::insertString(const char *s){
+    text.insertString(s);
 }
 
 void Frame::insert(char *s, bool withLink){
@@ -40,7 +41,7 @@ void Frame::insert(char *s, bool withLink){
 }//insert a string with a link or not
 
 void Frame::insertSpace(){
-    text.insert(' ');
+    text.insertChar(' ');
 } // insert a space
 void Frame::insertReturn(){
     text.insertReturn();

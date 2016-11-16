@@ -21,11 +21,17 @@ class Frame{
     public:
         Frame(double startX,double startY,double height,double width,int FrameNum);
         void clear();//Reset all information to defalut value
+
         void insert(char *s,bool withLink);//insert a string with a link or not
-        void insert(char *s);//insert a string with a link or not
-        void insert(char  c);//insert a character with certain style
+
+        void insertString(const char *s);//insert a string with a link or not
+
+        void insertChar(char  c);//insert a character with certain style
+
         void insertSpace(); // insert a space
+
         void insertReturn();// insert return
+
         int  getframeNum(){return frameNum;}
 
         void addTextLine(TextLine& tl);
