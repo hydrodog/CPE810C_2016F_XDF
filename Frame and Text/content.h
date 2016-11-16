@@ -14,9 +14,6 @@
 using namespace std;
 class Content{
 private:
-	typedef map<string,int>::iterator It;
-    map<int,char> m;
-    map<int,string> lc,pc;
     myFont t;
     Read r;
     string* contentFont = new string[6];

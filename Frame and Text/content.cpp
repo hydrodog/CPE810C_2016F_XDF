@@ -8,7 +8,18 @@
 using namespace std;
 
 void Content::getmessage() {
-    r.readContent();
+    ifstream in("filename");
+    char a[256];
+    try {
+       in.is_open();
+    }
+    catch(double) {
+        cout<<"Opening file error!"<<endl;
+    }
+    while(!in.eof()) {
+        in.getline(a,256);
+    }
+    r.readContent(a);
 }
 void Content::getfont() {
     string language;

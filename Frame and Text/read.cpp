@@ -5,18 +5,7 @@
 #include <iostream>
 using namespace std;
 
-void Read::readContent() {
-    ifstream in("filename");
-    char a[256];
-    try {
-       in.is_open();
-    }
-    catch(double) {
-        cout<<"Opening file error!"<<endl;
-    }
-    while(!in.eof()) {
-        in.getline(a,256);
-    }
+void Read::readContent(char (&a)[256]) {
     string b=a;
     int pos;
     for(int i=0;i<256;i++) {
