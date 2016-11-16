@@ -10,11 +10,13 @@ void Read::readContent(char (&a)[256]) {
     int pos;
     for(int i=0;i<256;i++) {
         pos=b.find("<linechange>");
+        if(pos==-1){break;}
         lc.insert(pair<int,string>(pos-1,"linechange"));
         b.erase(pos,12);
     }
     for(int i=0;i<256;i++) {
         pos=b.find("<parachange>");
+        if(pos==-1){break;}
         pc.insert(pair<int,string>(pos-1,"parachange"));
         b.erase(pos,12);
     }
