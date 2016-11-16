@@ -12,7 +12,9 @@
 #include <QTableWidget>
 
 int MainWindow::fileState=0;
-
+/*
+ * Creates a window with a set size and name
+ */
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -21,12 +23,19 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowTitle("XDF project");
     this->resize(1300,800);
 }
-
+/*
+ * deconstructor deletes the UI that was created during construction
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+/*
+ * Creates a diolog box from which user is then able to open txt file or pdf file
+ * Displays the file where user can now vew and edit on window
+ * when closed the file restores to its previous condition unless it has been saved
+ */
 void MainWindow::on_actionOpen_file_triggered()
 {
     fileName = QFileDialog::getOpenFileName(this,"open file","D:","text(*.txt *.pdf)");
@@ -45,6 +54,9 @@ void MainWindow::on_actionOpen_file_triggered()
     return;
 }
 
+/*
+ * Writes over the old version of a file that has been changed in the editor window
+ */
 void MainWindow::on_actionSave_as_triggered()
 {
     QString filename = QFileDialog::getSaveFileName(this,tr("Save Text"),"",tr("Text files(*.txt)"));
@@ -63,7 +75,8 @@ void MainWindow::on_actionSave_as_triggered()
     }
 
 }
-
+/*
+ */
 void MainWindow::on_actionSave_file_triggered(){
     if(MainWindow::fileState==NoState && ui->textEdit->toPlainText()!=""){
         MainWindow::on_actionSave_as_triggered();
@@ -81,7 +94,10 @@ void MainWindow::on_actionSave_file_triggered(){
     }
 
 }
-
+/*
+ * allows user to create a new file
+ * the file will also open to be viewed by user
+ */
 void MainWindow::on_actionNew_file_triggered(){
     if(ui->textEdit->toPlainText()==""){
         return;
@@ -116,6 +132,9 @@ void MainWindow::on_actionNew_file_triggered(){
     }
 }
 
+/*
+ * Get the current font on the font box
+ */
 void MainWindow::on_actionFont_triggered()
 {
     bool ok;
@@ -123,6 +142,10 @@ void MainWindow::on_actionFont_triggered()
     if(ok) ui->textEdit->setCurrentFont(font);
 }
 
+/*
+ * get the current color in the color box while then setting the highlited
+ * or current text to ther color
+ */
 void MainWindow::on_actionColor_triggered()
 {
     QColorDialog color(this);
@@ -132,26 +155,43 @@ void MainWindow::on_actionColor_triggered()
     ui->textEdit->setTextColor(color1);
 }
 
+/*
+ * copy text/image that has been highlighted on the file
+ */
 void MainWindow::on_actionCopy_triggered()
 {
     ui->textEdit->QTextEdit::copy();
 }
 
+/*
+ * paste text/image that is currently on your clipboard
+ */
 void MainWindow::on_actionPaste_triggered()
 {
     ui->textEdit->QTextEdit::paste();
 }
 
+/*
+ * copy a piece of text/image on you your clipboard
+ * remove the text/image that was coppied from file
+ */
 void MainWindow::on_actionCut_triggered()
 {
     ui->textEdit->QTextEdit::cut();
 }
 
+/*
+ * show a dialog box where the user can choose an image to ad onto the 
+ * file that is currently oppend
+ */
 void MainWindow::on_actionImport_image_triggered()
 {
     imageName = QFileDialog::getSaveFileName(this,tr("import image"),"",tr("Text files(*.png *.jpg)"));
 }
 
+/*
+ * Allow user to set a signiture on the file
+ */
 void MainWindow::on_actionDigital_signature_triggered()
 {
     QDialog a;
@@ -165,23 +205,19 @@ void MainWindow::on_actionDigital_signature_triggered()
     table->setHorizontalHeaderLabels(headerLabels);
     table->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
 
-    //设置行表
+
     QStringList rowLabels;
     rowLabels << "Line1" << "Line2" << "Line3" << "Line4";
     table->setVerticalHeaderLabels(rowLabels);
 
-
-    //设置每一行的高度
+    
     for(int i = 0; i < 4; i++)
         table->setRowHeight(i, 22);
 
-    //自动调整最后一列的宽度使它和表格的右边界对齐
     table->horizontalHeader()->setStretchLastSection(true);
 
-    //设置表格的选择方式
     table->setSelectionBehavior(QAbstractItemView::SelectItems);
 
-    //设置编辑方式
     table->setEditTriggers(QAbstractItemView::DoubleClicked);
     QTableWidgetItem b;
     b.setText("hahaha");
