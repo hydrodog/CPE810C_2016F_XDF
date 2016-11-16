@@ -31,21 +31,34 @@ void MainWindow::addFrame(Frame f){
     }else{
 
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
-        textBrowser->setObjectName(QStringLiteral("frame_3_textBrowser"));
+        str.append("_textBrowser");
+        textBrowser->setObjectName(str);
         textBrowser->setGeometry(QRect(0, 0, 600, 600));
         textBrowser->setStyleSheet("background-color:white;");
         QFont serifFont("Times", 20, QFont::Bold);
         serifFont.setStyle(QFont::StyleOblique);
         textBrowser->setCurrentFont(serifFont);
         textBrowser->setTextColor(QColor( "red" ));
-        QString str="this is a text,this is a text,this is a text,this is a text,this is a text,this is a text,this is a text";
-        textBrowser->append(str);
-        textBrowser->append(str);
+
+        QString str;
+        int count=0;
+        std::list<TextLine> t=f.getText().getTextLineList();
+        for (std::list<TextLine>::iterator it =t.begin(); it != t.end(); ++it){
+            std::vector<char> temp= (*it).getLineContent();
+            for (std::vector<char>::iterator it2 = temp.begin() ; it2 != temp.end(); ++it2){
+                count++;
+                str.append(*it2);
+            }
+            textBrowser->append(str);
+            str.clear();
+        }
+
+
         QFont serifFont2("Times", 44, QFont::Bold);
         serifFont2.setItalic(true);
         textBrowser->setCurrentFont(serifFont2);
         textBrowser->setTextColor(QColor( "blue" ));
-        textBrowser->insertPlainText("This is another string!");
+        textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
 
 
     }
@@ -65,5 +78,5 @@ void MainWindow::on_actionColor_triggered()
     QColorDialog  color(this);
     color.setOption(QColorDialog::ShowAlphaChannel);
     color.exec();
-    QColor color1=color.currentColor();
+    //QColor color1=color.currentColor();
 }
