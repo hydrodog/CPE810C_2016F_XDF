@@ -19,7 +19,7 @@ void Content::getmessage() {
     while(!in.eof()) {
         in.getline(a,256);
     }
-    r.readContent(a);
+    //r.readContent(a);
 }
 void Content::getfont() {
     string language;
@@ -30,17 +30,28 @@ void Content::getfont() {
     bool italic;
     bool underline;
     ifstream in("fontname");
-    char a[256];
+    string a;
     try {
        in.is_open();
     }
     catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()) {
-        in.getline(a,256);
+    const int LINE_LENGTH = 10;  //fix in 11/16
+    char str[LINE_LENGTH];
+    string *k;
+    int i=0;
+    while( in.getline(str,LINE_LENGTH) )
+    {
+        k[i]=str;
+        i++;
+        if(i>=20)break;
+    }                //fix in 11/16
+    string b=k[0];
+    for(i=1;i<20;i++){
+        b=b+k[i];
     }
-    string b=a;
+    a=b;
     int posA=1;
     int posB=1;
     posA=b.find("language");
@@ -100,9 +111,9 @@ void Content::getfont() {
     t.setfont(language,color,font,size,bold,italic,underline);
 }
 
-list<char> Content::exportContent() {
+/*list<char> Content::exportContent() {
     list<char> lstTemp;
-    map<int,char>:: iterator itTemp = m.begin();
+    //map<int,char>:: iterator itTemp = m.begin();
     for(;itTemp != m.end();itTemp++) {
         lstTemp.push_back(itTemp->second);
     }
@@ -110,4 +121,4 @@ list<char> Content::exportContent() {
 }
 myFont Content::contentFont() {
     return t;
-}
+} */
