@@ -5,6 +5,8 @@ This is Print team's readme
 
 Just call our dialog,that's all.
 
+****Print team promise that every "print code" you pulled from master branch is fully runnable. 
+
 ------------------Structure-----------------------------------------------------------
 //Main class, handle the whole document
 Class: Print
