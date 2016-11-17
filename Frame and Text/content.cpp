@@ -37,21 +37,10 @@ void Content::getfont() {
     catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    const int LINE_LENGTH = 10;  //fix in 11/16
-    char str[LINE_LENGTH];
-    string *k;
-    int i=0;
-    while( in.getline(str,LINE_LENGTH) )
-    {
-        k[i]=str;
-        i++;
-        if(i>=20)break;
-    }                //fix in 11/16
-    string b=k[0];
-    for(i=1;i<20;i++){
-        b=b+k[i];
+    while(!in.eof()) {
+        in >> a;
     }
-    a=b;
+    string b=a;
     int posA=1;
     int posB=1;
     posA=b.find("language");

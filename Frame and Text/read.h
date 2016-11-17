@@ -14,6 +14,6 @@ private:
     map<int,string> lc,pc;
 public:
     Read(){};
-    void readContent();
+    void readContent(string a);
 };
 #endif // READ_H

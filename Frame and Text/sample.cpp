@@ -3,13 +3,13 @@
 
 using namespace std;
 
-int main() {
+//int main() {
   /* This is a sample code, it shows how to use our classes for other groups  */
-  Content sample;
+//  Content sample;
 
-  sample.getmessage();
+ // sample.getmessage();
 
-  cout << sample.contentFont()<< endl;
+ // cout << sample.contentFont()<< endl;
 
-  return 0;
-}
+ // return 0;
+//}
