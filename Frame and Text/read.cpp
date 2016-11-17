@@ -8,6 +8,6 @@ using namespace std;
 
 void Read::readContent(string a) {
     string b = a;
-    if(b)break;
-    m.insert(pair<int,char>(i,b));
+    //if(b)break;
+    //m.insert(pair<int,char>(i,b));
 }
