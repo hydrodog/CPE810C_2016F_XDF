@@ -1,12 +1,17 @@
 #include "myfont.h"
 
+myFont::myFont(){
+
+}
+
+
 QFont myFont::getFont(){
      return t;
 }
-QFont myFont::getColor(){
+QColor myFont::getColor(){
     return c;
 }
 
-myFont::setfont(){
+void myFont::setFont(){
 
 }

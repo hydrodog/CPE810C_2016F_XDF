@@ -10,10 +10,10 @@ private:
     QFont t;
     QColor c;
 public:
-    myFont(const QString & family, int pointSize = -1, int weight = -1, bool italic = false);
+    myFont();
     QFont getFont();
-    QFont getcolor();
-    void setfont();
+    QColor getColor();
+    void setFont();
 };
 
 

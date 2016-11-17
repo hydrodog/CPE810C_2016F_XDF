@@ -1,7 +1,7 @@
 #include "text.h"
 #include "myfont.h"
 #include <iostream>
-Text::Text():linespace(1.0)
+Text::Text():linespace(1.0),defalutFont()
 {}
 void Text::insertString(const char *s){
     if(textLineList.empty()){

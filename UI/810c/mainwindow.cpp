@@ -29,8 +29,8 @@ void MainWindow::addFrame(Frame f){
     if(f.getText().getTextLineList().empty()){
         return;
     }else{
-
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
+        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
         textBrowser->setGeometry(QRect(0, 0, 600, 600));
@@ -39,27 +39,37 @@ void MainWindow::addFrame(Frame f){
         serifFont.setStyle(QFont::StyleOblique);
         textBrowser->setCurrentFont(serifFont);
         textBrowser->setTextColor(QColor( "red" ));
-
+        //textBrowser->setAlignment(Qt::AlignRight);
         QString str;
         int count=0;
         std::list<TextLine> t=f.getText().getTextLineList();
         for (std::list<TextLine>::iterator it =t.begin(); it != t.end(); ++it){
             std::vector<char> temp= (*it).getLineContent();
+            count++;
             for (std::vector<char>::iterator it2 = temp.begin() ; it2 != temp.end(); ++it2){
-                count++;
+
                 str.append(*it2);
             }
             textBrowser->append(str);
+            if(count==1){
+                textBrowser->setAlignment(Qt::AlignRight);
+            }
+            else{
+                textBrowser->setAlignment(Qt::AlignCenter);
+            }
             str.clear();
         }
-
-
+        textBrowser->append("This is another test!!!!!\n");
+        textBrowser->setAlignment(Qt::AlignLeft);
         QFont serifFont2("Times", 44, QFont::Bold);
         serifFont2.setItalic(true);
         textBrowser->setCurrentFont(serifFont2);
         textBrowser->setTextColor(QColor( "blue" ));
-        textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
-
+        textBrowser->insertPlainText("This is another string!\nmm");
+        //textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
+        textBrowser->setAlignment(Qt::AlignRight);
+        textBrowser->append("This is another test!!");
+        textBrowser->setAlignment(Qt::AlignCenter);
 
     }
 
