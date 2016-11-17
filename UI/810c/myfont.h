@@ -10,10 +10,9 @@ private:
     QFont t;
     QColor c;
 public:
-    myFont::myFont(const QString & family, int pointSize = -1, int weight = -1, bool italic = false);
-    void getfont(myFont f){
-        cout<<"the attribute of the text is "<<f.t<<"  "<<"the color of the text is "<<f.c<<endl;
-    };
+    myFont(const QString & family, int pointSize = -1, int weight = -1, bool italic = false);
+    QFont getFont();
+    QFont getcolor();
     void setfont();
 };
 
