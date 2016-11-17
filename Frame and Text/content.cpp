@@ -102,3 +102,22 @@ void Content::getfont() {
 myFont Content::contentFont() {
     return t;
 }
+
+void Content::getalignment(int *n,int *m){
+    for(int i=0;i<256;i++){
+        if(n[i]==NULL||m[i]==NULL)break;
+        if(m[i]==0){
+            alignment.insert(pair<int,string>(n[i],"left"));
+        }
+        if(m[i]==1){
+            alignment.insert(pair<int,string>(n[i],"mid"));
+        }
+        if(m[i]==2){
+            alignment.insert(pair<int,string>(n[i],"right"));
+        }
+    }
+}
+
+map<int,string> Content::exportalignment(){
+    return alignment;
+}

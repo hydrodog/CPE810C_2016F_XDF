@@ -17,11 +17,14 @@ class Content{
 private:
     myFont t;
     string words;
+    map<int,string> alignment;
 public:
-    Content(){};
+    Content();
     void getmessage();
     void getfont();
     myFont contentFont();
+    void getalignment(int *n,int *m);
+    map<int,string> exportalignment();
 };
 
 #endif // CONTENT_H
