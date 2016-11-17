@@ -21,24 +21,7 @@ void Frame::insertString(const char *s){
 }
 
 void Frame::insert(char *s, bool withLink){
-    if(withLink==1){
-            cout<<"Please tell me the route of the file:"<<endl;
-            ifstream in;
-            string filename;
-            getline(cin,filename,'\n');
-            in.open(filename);
-            ostringstream ostr;
-            char c;
-            while(in.get(c)){
-            ostr.put(c);
-            }
-            string(s)=ostr.str();
-            in.close();
-        }else{
-            cout<<"Please type in the string:"<<endl;
-            cin>>s;
-        }
-}//insert a string with a link or not
+}
 
 void Frame::insertSpace(){
     text.insertChar(' ');

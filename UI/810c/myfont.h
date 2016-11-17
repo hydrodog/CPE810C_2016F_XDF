@@ -2,21 +2,19 @@
 #define MYFONT_H
 
 #include <string>
-
-
+#include <QFont>
+#include <QColor>
 class myFont{
 //This class represent a single character and it has its own different style
 private:
-    std::string language;
-    int color;
-    std::string font;
-    double  size;
-    int bold;
-    bool italic;
-    bool underline;
+    QFont t;
+    QColor c;
 public:
-    myFont(std::string l="English",int c=255,std::string f="times",double s=11.0,int b=1,bool i=false,bool u=false);
-
+    myFont::myFont(const QString & family, int pointSize = -1, int weight = -1, bool italic = false);
+    void getfont(myFont f){
+        cout<<"the attribute of the text is "<<f.t<<"  "<<"the color of the text is "<<f.c<<endl;
+    };
+    void setfont();
 };
 
 
