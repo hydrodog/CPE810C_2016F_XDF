@@ -7,7 +7,7 @@
 class myFont{
 //This class represent a single character and it has its own different style
 private:
-    QFont t;
+    QFont font;
     QColor c;
 public:
     myFont();
@@ -18,3 +18,5 @@ public:
 
 
 #endif // MYFONT_H
+
+
