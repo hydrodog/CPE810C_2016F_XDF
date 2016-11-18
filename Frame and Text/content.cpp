@@ -26,10 +26,8 @@ void Content::getmessage(string a) {
     if(i>=20)break;
     }                  //fix in 11/18
     cout << words << endl;          */
-	for(int i;i<=1024;i++){
-		if(word[i]==NULL)break;
-		words[i]=a[i];
-	}
+	int k=a.length();
+	words=a.c_str();
 }
 void Content::getfont(string a) {
     string language;
