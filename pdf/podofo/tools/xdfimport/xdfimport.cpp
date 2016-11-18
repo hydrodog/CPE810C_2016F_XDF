@@ -113,6 +113,46 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
                 <<dCurPosX2 << ',' << dCurPosY2 <<','
                 <<dCurPosX3 << ',' << dCurPosY3 <<',' << ")] " << '\n';
             }
+
+            else if( strcmp( pszToken, "q" ) == 0)
+            {
+                
+                of <<"["<<pszToken<< ']' <<" //Save graphics state \n";
+            }
+            else if( strcmp( pszToken, "Q" ) == 0)
+            {
+                
+                of <<"["<<pszToken<< ']' <<" //Restore graphics state \n";
+            }
+
+            else if( strcmp( pszToken, "Do" ) == 0)
+            {
+                cout<<"\nhere is a Do , let's see its variant 's type : "<<string(stack.top().GetDataTypeString())<<endl;
+                string token;
+                stack.top().ToString(token);
+                of <<"["<<pszToken<< "("<<token<<")] //name \n";
+                stack.pop();
+            }
+
+            else if( strcmp( pszToken, "cm" ) == 0)
+            {
+                
+                dCurPosY3 = stack.top().GetReal();
+                stack.pop();
+                dCurPosX3 = stack.top().GetReal();
+                stack.pop();
+                dCurPosY2 = stack.top().GetReal();
+                stack.pop();
+                dCurPosX2 = stack.top().GetReal();
+                stack.pop();
+                dCurPosY1 = stack.top().GetReal();
+                stack.pop();
+                dCurPosX1 = stack.top().GetReal();
+                stack.pop();
+                of <<"["<<pszToken<< '(' << setprecision(3) << dCurPosX1 << ',' << dCurPosY1 <<','
+                <<dCurPosX2 << ',' << dCurPosY2 <<','
+                <<dCurPosX3 << ',' << dCurPosY3 <<',' << ")] //Modify the current transformation matrix" << '\n';
+            }
             
             else if( strcmp( pszToken, "v" ) == 0)
             {

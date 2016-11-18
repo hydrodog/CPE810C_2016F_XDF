@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.6.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.6.3/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.6.2/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.6.3/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Leigh/Desktop/localpdf/pdf/podofo
+CMAKE_SOURCE_DIR = /Users/yingtinghuang/Downloads/localpdf/pdf/podofo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Leigh/Desktop/localpdf/pdf/podofo
+CMAKE_BINARY_DIR = /Users/yingtinghuang/Downloads/localpdf/pdf/podofo
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /Users/Leigh/Desktop/localpdf/pdf/podofo
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/local/Cellar/cmake/3.6.2/bin/cmake -P /Users/Leigh/Desktop/localpdf/pdf/podofo/cmake_uninstall.cmake
+	/usr/local/Cellar/cmake/3.6.3/bin/cmake -P /Users/yingtinghuang/Downloads/localpdf/pdf/podofo/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /Users/Leigh/Desktop/localpdf/pdf/podofo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Leigh/Desktop/localpdf/pdf/podofo /Users/Leigh/Desktop/localpdf/pdf/podofo /Users/Leigh/Desktop/localpdf/pdf/podofo /Users/Leigh/Desktop/localpdf/pdf/podofo /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/yingtinghuang/Downloads/localpdf/pdf/podofo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/yingtinghuang/Downloads/localpdf/pdf/podofo /Users/yingtinghuang/Downloads/localpdf/pdf/podofo /Users/yingtinghuang/Downloads/localpdf/pdf/podofo /Users/yingtinghuang/Downloads/localpdf/pdf/podofo /Users/yingtinghuang/Downloads/localpdf/pdf/podofo/CMakeFiles/uninstall.dir/DependInfo.cmake
 .PHONY : CMakeFiles/uninstall.dir/depend
 

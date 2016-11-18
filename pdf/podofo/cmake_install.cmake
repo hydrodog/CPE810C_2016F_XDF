@@ -1,8 +1,8 @@
-# Install script for directory: /Users/Leigh/Desktop/localpdf/pdf/podofo
+# Install script for directory: /Users/yingtinghuang/Downloads/localpdf/pdf/podofo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/opt/podofo")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,16 +27,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/Leigh/Desktop/localpdf/pdf/podofo/src/cmake_install.cmake")
-  include("/Users/Leigh/Desktop/localpdf/pdf/podofo/test/cmake_install.cmake")
-  include("/Users/Leigh/Desktop/localpdf/pdf/podofo/tools/cmake_install.cmake")
-  include("/Users/Leigh/Desktop/localpdf/pdf/podofo/examples/cmake_install.cmake")
-  include("/Users/Leigh/Desktop/localpdf/pdf/podofo/debian/cmake_install.cmake")
-
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -45,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Leigh/Desktop/localpdf/pdf/podofo/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/yingtinghuang/Downloads/localpdf/pdf/podofo/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

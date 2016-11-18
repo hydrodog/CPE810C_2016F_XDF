@@ -4,13 +4,12 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 # Look at http://www.vtk.org/Wiki/CMake_HowToDoPlatformChecks
 # and the other wiki entries before you add anything. You might not need to.
 #****************************************************************************
-
+#
 #
 # Project name and version
 #
 PROJECT(PoDoFo)
-set (CMAKE_CXX_STANDARD 11)
-
+SET(CMAKE_CXX_STANDARD 11)
 SET(PODOFO_VERSION_MAJOR "0" CACHE STRING "Major part of PoDoFo version number")
 SET(PODOFO_VERSION_MINOR "9" CACHE STRING "Minor part of PoDoFo version number")
 SET(PODOFO_VERSION_PATCH "4" CACHE STRING "Patchlevel part of PoDoFo version number")
