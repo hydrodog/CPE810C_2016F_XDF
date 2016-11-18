@@ -9,6 +9,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 # Project name and version
 #
 PROJECT(PoDoFo)
+set (CMAKE_CXX_STANDARD 11)
 
 SET(PODOFO_VERSION_MAJOR "0" CACHE STRING "Major part of PoDoFo version number")
 SET(PODOFO_VERSION_MINOR "9" CACHE STRING "Minor part of PoDoFo version number")

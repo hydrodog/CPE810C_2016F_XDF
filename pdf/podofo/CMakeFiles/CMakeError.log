@@ -1,0 +1,45 @@
+Determining if the include file winsock2.h exists failed with the following output:
+Change Dir: /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c60b/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5c60b.dir/build.make CMakeFiles/cmTC_5c60b.dir/build
+Building C object CMakeFiles/cmTC_5c60b.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -o CMakeFiles/cmTC_5c60b.dir/CheckIncludeFile.c.o   -c /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'winsock2.h' file not found
+#include <winsock2.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_5c60b.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_5c60b/fast] Error 2
+
+
+Determining if the include file mem.h exists failed with the following output:
+Change Dir: /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6db57/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_6db57.dir/build.make CMakeFiles/cmTC_6db57.dir/build
+Building C object CMakeFiles/cmTC_6db57.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -o CMakeFiles/cmTC_6db57.dir/CheckIncludeFile.c.o   -c /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'mem.h' file not found
+#include <mem.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_6db57.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_6db57/fast] Error 2
+
+
+Determining if the include file BaseTsd.h exists failed with the following output:
+Change Dir: /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ab3a/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1ab3a.dir/build.make CMakeFiles/cmTC_1ab3a.dir/build
+Building C object CMakeFiles/cmTC_1ab3a.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -o CMakeFiles/cmTC_1ab3a.dir/CheckIncludeFile.c.o   -c /Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/Leigh/Desktop/localpdf/pdf/podofo/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'BaseTsd.h' file not found
+#include <BaseTsd.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_1ab3a.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_1ab3a/fast] Error 2
+
+
