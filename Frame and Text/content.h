@@ -16,12 +16,12 @@ using namespace std;
 class Content{
 private:
     myFont t;
-    string words;
+    char *words;
     map<int,string> alignment;
 public:
     Content(){};
-    void getmessage();
-    void getfont();
+    void getmessage(string a);
+    void getfont(string a);
     myFont contentFont();
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
