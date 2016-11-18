@@ -11,9 +11,7 @@ static const int NoState = 0;
 namespace Ui {
 class MainWindow;
 }
-/*
- * Instatiates the mainwindow when called as Q_OBJECT
- */
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

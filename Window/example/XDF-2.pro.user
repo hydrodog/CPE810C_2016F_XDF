@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+#<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
 <!-- Written by QtCreator 4.1.0, 2016-11-10T21:52:49. -->
@@ -1612,4 +1612,4 @@
   <value type="int">18</value>
  </data>
 </qtcreator>
->>>>>>> refs/remotes/StevensECE/master
+#>>>>>>> refs/remotes/StevensECE/master
