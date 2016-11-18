@@ -30,3 +30,7 @@ HEADERS += \
     font.h \
     content.h \
     read.h
+
+DISTFILES += \
+    samplefont.txt \
+    sampletext.txt
