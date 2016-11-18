@@ -12,7 +12,8 @@ int main(){
 //    p.getFrame().insert(c);
 
     Content c;
-    c.getmessage();
+    string k="sdjfaghdsfkjaskjgasjhasgfasjkhgasjhgfdasjfhasdf";
+    c.getmessage(k);
 
     return 0;
 }
