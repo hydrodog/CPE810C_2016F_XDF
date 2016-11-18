@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     text.cpp \
     border.cpp \
     myfont.cpp \
-    textline.cpp
+    textline.cpp \
+    content.cpp
 
 HEADERS  += mainwindow.h \
     ../build-810c-Desktop_Qt_5_7_0_clang_64bit-Debug/ui_mainwindow.h \
@@ -28,6 +29,7 @@ HEADERS  += mainwindow.h \
     text.h \
     border.h \
     myfont.h \
-    textline.h
+    textline.h \
+    content.h
 
 FORMS    += mainwindow.ui

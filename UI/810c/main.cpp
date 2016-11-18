@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     Frame f(40,20,600,600,1);
    // f.setfont
     f.addTextLine(L);
-    f.addTextLine(L2);
+    f.addTextLine(L2);  
     cout<<f.getText().getLen()<<endl;
     cout<<f.getText().getTextLineList().size()<<endl;
     w.addFrame(f);
