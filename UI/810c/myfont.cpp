@@ -13,7 +13,7 @@ QColor myFont::getColor(){
 }
 
 void myFont::setFont(){
-font.setFamily("宋体");
+font.setFamily("Microsoft YaHei UI");
 
 font.setPixelSize(50);
 
