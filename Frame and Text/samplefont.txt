@@ -1,1 +1,1 @@
-LanguageEnglishcolor255fonttimes12.01falsetrue
+languageEnglishcolor255fonttimessize12.0bold1italic1underline0
