@@ -9,9 +9,11 @@ QFont myFont::getFont(){
      return font;
 }
 QColor myFont::getColor(){
-    return c;
+    return color;
 }
-
+void myFont::setFont(QFont f)  {
+    font=f;
+}
 void myFont::setFont(){
 font.setFamily("Microsoft YaHei UI");
 
@@ -40,3 +42,5 @@ font.setLetterSpacing(QFont::AbsoluteSpacing,20);
 
 font.setCapitalization(QFont::Capitalize);
 }
+
+
