@@ -8,7 +8,7 @@
 using namespace std;
 
 void Content::getmessage() {
-    ifstream in("filename");
+    ifstream in("sampletext.txt");
     string words;
     try {
        in.is_open();
@@ -29,7 +29,7 @@ void Content::getfont() {
     int bold;
     bool italic;
     bool underline;
-    ifstream in("fontname");
+    ifstream in("samplefont.txt");
     string a;
     try {
        in.is_open();
@@ -37,9 +37,15 @@ void Content::getfont() {
     catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()) {
-        in >> a;
-    }
+    const int LINE_LENGTH = 10;  //fix in 11/16
+    char str[LINE_LENGTH];
+    string *k;
+    int i=0;
+    while( in.getline(str,LINE_LENGTH) ){
+    k[i]=str;
+    i++;
+    if(i>=20)break;
+    }                //fix in 11/16
     string b=a;
     int posA=1;
     int posB=1;

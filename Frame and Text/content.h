@@ -19,7 +19,7 @@ private:
     string words;
     map<int,string> alignment;
 public:
-    Content();
+    Content(){};
     void getmessage();
     void getfont();
     myFont contentFont();
