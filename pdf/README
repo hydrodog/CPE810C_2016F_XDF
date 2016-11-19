@@ -4,6 +4,17 @@ For dependencies and installation instructions of PoDoFo, please read "./podofo/
 Alternatively, try using Qt Creator to open ./CMakeLists.txt as a project and compile by Ctrl+B.
 
 
+------ New features for graphics & img extraction ------ 
+Fetching 'q', 'Q', 'cm' and 'Do' operator for image.
+Fetching 'm', 'l', 'c', 'v', 'y', 'h' and 're' operator for graphics .
+
+in https://github.com/StevensECE/CPE810C_2016F_XDF/blob/pdf/pdf/podofo/tools/xdfimport/xdfimport.cpp
+
+Here(in this directory) are two samples of sourse pdf file and out put file for each.
+
+Further, all other operators and their operands coudle be fetched and orgenized well under the same cpp program architecture
+
+
 ------- For test only ---------
 After building, cd to ./build-podofo-Desktop-Default/tools/xdfimport and run:
 ./xdfimport ./../../../samples/sample1.pdf
@@ -24,5 +35,7 @@ ET				# End text
 ----- Notes for PDF team ------
 Every content stream begins at the page description level, where changes can be made to the [graphics state]
 such as colors and text attributes.
+
+
 
 
