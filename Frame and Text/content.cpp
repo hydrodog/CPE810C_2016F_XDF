@@ -27,6 +27,17 @@ void Content::getmessage(string a) {
     }                  //fix in 11/18
     cout << words << endl;          */
     string b=a;
+    int j=0;
+    int pos;
+    while(1){
+        pos=b.find("<n>");
+        if(pos==-1)break;
+        n++;
+        //cout<<pos<<endl;
+        changelinepos[j]=pos;
+        b.erase(pos,3);
+        j++;
+    }
     k=b.length();
     char c[k];
     for(int i=0;i<k;i++){
@@ -149,4 +160,12 @@ char* Content::getword(){
 }
 int Content::getlength(){
     return k;
+}
+int* Content::getlinechange(){
+    int *a=&changelinepos[0];
+    return a;
+}
+int Content::getlineamount(){
+    int m=n;
+    return m;
 }

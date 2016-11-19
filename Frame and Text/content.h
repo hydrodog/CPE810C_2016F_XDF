@@ -17,7 +17,9 @@ class Content{
 private:
     myFont t;
     int k;
+    int n=0;
     char *words=new char [k];
+    int *changelinepos=new int[n];
     map<int,string> alignment;
 public:
     Content(){};
@@ -28,6 +30,8 @@ public:
     map<int,string> exportalignment();
     char* getword();
     int getlength();
+    int* getlinechange();
+    int getlineamount();
 };
 
 #endif // CONTENT_H

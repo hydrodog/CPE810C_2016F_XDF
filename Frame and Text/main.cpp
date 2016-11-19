@@ -12,7 +12,7 @@ int main(){
 //    p.getFrame().insert(c);
 
     Content c;
-    string k="sdjfaghdsfkjaskjgasjhasgfasjkhgasjhgfdasjfhasdf";
+    string k="sdjfaghds<n>fkjaskjgasjha<n>sgfasjkhgasjhgfdasjfhasdf";
     c.getmessage(k);
     int n=c.getlength();
     char a[n];
@@ -22,6 +22,14 @@ int main(){
     }
     for(int i=0;i<n;i++){
         cout<<a[i];
+    }
+    cout<<endl;
+    int *d=c.getlinechange();
+    int j=c.getlineamount();
+    int e[j];
+    for(int i=0;i<j;i++){
+        e[i]=d[i];
+        cout<<e[i]<<endl;
     }
     return 0;
 }
