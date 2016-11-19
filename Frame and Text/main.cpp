@@ -2,7 +2,7 @@
 #include <page.h>
 #include "font.h"
 #include "content.h"
-
+#include<locale>
 using namespace std;
 
 int main(){
@@ -10,19 +10,18 @@ int main(){
 //    char c='a';
 //    Page p(29.7,20.99,1);
 //    p.getFrame().insert(c);
-
     Content c;
-    string k="sdjfaghds<n>fkjaskjgasjha<n>sgfasjkhgasjhgfdasjfhasdf";
+    wstring k=L"sdjfagh中文测试ds<n>fkjaskjgas测试中文jha<n>sgfasjkhgasjhgfdasjfhasdf";
     c.getmessage(k);
     int n=c.getlength();
-    char a[n];
-    char *b=c.getword();
+    wchar_t a[n];
+    wchar_t *b=c.getword();
     for(int i=0;i<n;i++){
         a[i]=b[i];
     }
-    for(int i=0;i<n;i++){
-        cout<<a[i];
-    }
+    string f;
+    Wchar_tToString(f,a);
+    cout<<f;
     cout<<endl;
     int *d=c.getlinechange();
     int j=c.getlineamount();

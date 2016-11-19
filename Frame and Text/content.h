@@ -10,25 +10,25 @@
 #include <string>
 #include <fstream>
 #include "font.h"
-
+#include <windows.h>
 using namespace std;
-
+void Wchar_tToString(std::string& szDst,const wchar_t *wchar); //This function is copied from the Internet.
 class Content{
 private:
     myFont t;
     int k;
     int n=0;
-    char *words=new char [k];
+    wchar_t *words=new wchar_t [k];
     int *changelinepos=new int[n];
     map<int,string> alignment;
 public:
     Content(){};
-    void getmessage(string a);
+    void getmessage(wstring a);
     void getfont(string a);
     myFont contentFont();
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
-    char* getword();
+    wchar_t* getword();
     int getlength();
     int* getlinechange();
     int getlineamount();
