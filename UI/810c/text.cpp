@@ -56,8 +56,17 @@ void Text::addTextLine(TextLine& tl){
     this->len++;
 }
 
+void Text::addContent(Content c){
+    contentList=c;
+}
+
+
 std::list<TextLine> Text::getTextLineList() const{
     std::cout<<"TextLineList'length when get "<<textLineList.size()<<'\n';
     return textLineList;
 }
 
+
+Content Text::getContentList() const{
+    return contentList;
+}

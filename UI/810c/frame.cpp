@@ -43,3 +43,7 @@ Text Frame::getText(){
 void Frame::addTextLine(TextLine& tl){
     text.addTextLine(tl);
 }
+
+void Frame::addContent(Content c){
+    text.addContent(c);
+}

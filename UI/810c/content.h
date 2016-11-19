@@ -16,15 +16,22 @@ using namespace std;
 class Content{
 private:
     myFont t;
-    string words;
+    int k;
+    int n=0;
+    char *words=new char [k];
+    int *changelinepos=new int[n];
     map<int,string> alignment;
 public:
     Content();
-    void getmessage();
-    void getfont();
+    void getmessage(string a);
+    void getfont(string a);
     myFont contentFont();
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
+    char* getword();
+    int getlength();
+    int* getlinechange();
+    int getlineamount();
 };
 
 #endif // CONTENT_H

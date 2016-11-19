@@ -33,7 +33,7 @@ class Frame{
         void insertReturn();// insert return
 
         int  getframeNum(){return frameNum;}
-
+        void addContent(Content c);
         void addTextLine(TextLine& tl);
         void setText(Text& t);
         Text getText();

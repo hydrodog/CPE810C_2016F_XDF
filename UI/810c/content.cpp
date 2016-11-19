@@ -7,11 +7,12 @@
 
 using namespace std;
 
+Content::Content(){
 
-Content::Content(){}
+}
 
-void Content::getmessage() {
-    ifstream in("filename");
+void Content::getmessage(string a) {
+    /*ifstream in("sampletext.txt");
     string words;
     try {
        in.is_open();
@@ -19,12 +20,38 @@ void Content::getmessage() {
     catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()) {
-        in >> words;
+    const int LINE_LENGTH = 10;  //fix in 11/18
+    char str[LINE_LENGTH];
+    string *k;
+    int i=0;
+    while( in.getline(str,LINE_LENGTH) ){
+    k[i]=str;
+    i++;
+    if(i>=20)break;
+    }                  //fix in 11/18
+    cout << words << endl;          */
+    string b=a;
+    int j=0;
+    int pos;
+    while(1){
+        pos=b.find("<n>");
+        if(pos==-1)break;
+        n++;
+        //cout<<pos<<endl;
+        changelinepos[j]=pos;
+        b.erase(pos,3);
+        j++;
     }
-    cout << words << endl;
+    k=b.length();
+    char c[k];
+    for(int i=0;i<k;i++){
+        c[i]=b.c_str()[i];
+    }
+    for(int i=0;i<k;i++){
+        words[i]=c[i];
+    }
 }
-void Content::getfont() {
+void Content::getfont(string a) {
     string language;
     int color;
     string font;
@@ -32,7 +59,7 @@ void Content::getfont() {
     int bold;
     bool italic;
     bool underline;
-    ifstream in("fontname");
+  /*  ifstream in("samplefont.txt");
     string a;
     try {
        in.is_open();
@@ -40,9 +67,15 @@ void Content::getfont() {
     catch(double) {
         cout<<"Opening file error!"<<endl;
     }
-    while(!in.eof()) {
-        in >> a;
-    }
+    const int LINE_LENGTH = 10;  //fix in 11/16
+    char str[LINE_LENGTH];
+    string *k;
+    int i=0;
+    while( in.getline(str,LINE_LENGTH) ){
+    k[i]=str;
+    i++;
+    if(i>=20)break;
+    }                //fix in 11/16 */
     string b=a;
     int posA=1;
     int posB=1;
@@ -123,4 +156,20 @@ void Content::getalignment(int *n,int *m){
 
 map<int,string> Content::exportalignment(){
     return alignment;
+}
+
+char* Content::getword(){
+    char *a=&words[0];
+    return a;
+}
+int Content::getlength(){
+    return k;
+}
+int* Content::getlinechange(){
+    int *a=&changelinepos[0];
+    return a;
+}
+int Content::getlineamount(){
+    int m=n;
+    return m;
 }

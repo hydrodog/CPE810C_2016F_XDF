@@ -35,13 +35,15 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setObjectName(str);
         textBrowser->setGeometry(QRect(0, 0, 600, 600));
         textBrowser->setStyleSheet("background-color:white;");
-        QFont serifFont("Times", 20, QFont::Bold);
+        QFont serifFont("Times", 50, QFont::Bold);
         serifFont.setStyle(QFont::StyleOblique);
         textBrowser->setCurrentFont(serifFont);
         textBrowser->setTextColor(QColor( "red" ));
         //textBrowser->setAlignment(Qt::AlignRight);
         QString str;
         int count=0;
+
+        //This loop is to find all characters of all lines in text and append them on screen
         std::list<TextLine> t=f.getText().getTextLineList();
         for (std::list<TextLine>::iterator it =t.begin(); it != t.end(); ++it){
             std::vector<char> temp= (*it).getLineContent();
@@ -59,18 +61,33 @@ void MainWindow::addFrame(Frame f){
             }
             str.clear();
         }
+
+        QFont serifFont2("Times", 28, QFont::Bold);
+        serifFont2.setItalic(true);
+        textBrowser->setCurrentFont(serifFont2);
+        textBrowser->setTextColor(QColor( "green" ));
+
+        Content c=f.getText().getContentList();
+        char *b=c.getword();
+        std::cout<<b<<endl;
+        textBrowser->append(b);
+
+
+
         textBrowser->append("This is another test!!!!!\n");
         textBrowser->setAlignment(Qt::AlignLeft);
-        QFont serifFont2("Times", 44, QFont::Bold);
+        QFont serifFont3("Times", 44, QFont::Bold);
         serifFont2.setItalic(true);
         textBrowser->setCurrentFont(serifFont2);
         textBrowser->setTextColor(QColor( "blue" ));
         textBrowser->insertPlainText("This is another string!\nmm");
         //textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
         textBrowser->setAlignment(Qt::AlignRight);
-        textBrowser->append("This is another test!!");
+        QString zw="这是中文测试!!";
+        textBrowser->append(zw.append("，另外的中文字"));
         textBrowser->setAlignment(Qt::AlignCenter);
-
+        //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
+        //textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
     }
 
 }

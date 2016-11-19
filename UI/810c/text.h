@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <list>
+#include "content.h"
 
 class Text{
 /*This class represents the words and text in the frame
@@ -15,6 +16,7 @@ class Text{
 private:
     myFont defalutFont;// A List of line in the text
     std::list<TextLine> textLineList;
+    Content contentList;
     int len;
     double linespace;
 public:
@@ -41,6 +43,10 @@ public:
 
     int getLen(){return len;}
     std::list<TextLine> getTextLineList() const;
+
+    Content getContentList() const;
+
+    void addContent(Content c);
 
 };
 
