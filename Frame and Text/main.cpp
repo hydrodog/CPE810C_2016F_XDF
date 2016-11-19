@@ -14,6 +14,14 @@ int main(){
     Content c;
     string k="sdjfaghdsfkjaskjgasjhasgfasjkhgasjhgfdasjfhasdf";
     c.getmessage(k);
-
+    int n=c.getlength();
+    char a[n];
+    char *b=c.getword();
+    for(int i=0;i<n;i++){
+        a[i]=b[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i];
+    }
     return 0;
 }

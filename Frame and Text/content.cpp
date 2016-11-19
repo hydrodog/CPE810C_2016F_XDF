@@ -27,12 +27,14 @@ void Content::getmessage(string a) {
     }                  //fix in 11/18
     cout << words << endl;          */
     string b=a;
-    int k=b.length();
+    k=b.length();
     char c[k];
     for(int i=0;i<k;i++){
         c[i]=b.c_str()[i];
     }
-    words=c;
+    for(int i=0;i<k;i++){
+        words[i]=c[i];
+    }
 }
 void Content::getfont(string a) {
     string language;
@@ -139,4 +141,12 @@ void Content::getalignment(int *n,int *m){
 
 map<int,string> Content::exportalignment(){
     return alignment;
+}
+
+char* Content::getword(){
+    char *a=&words[0];
+    return a;
+}
+int Content::getlength(){
+    return k;
 }

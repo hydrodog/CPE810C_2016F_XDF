@@ -16,7 +16,8 @@ using namespace std;
 class Content{
 private:
     myFont t;
-    char *words;
+    int k;
+    char *words=new char [k];
     map<int,string> alignment;
 public:
     Content(){};
@@ -25,6 +26,8 @@ public:
     myFont contentFont();
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
+    char* getword();
+    int getlength();
 };
 
 #endif // CONTENT_H
