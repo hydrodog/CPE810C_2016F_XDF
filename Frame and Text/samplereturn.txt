@@ -3,4 +3,4 @@
 
 sample introduction:
 
-<color*** font*** size** bold0 italic0 underline0 align0>text
+<colorblue font"宋体" size20 bold0 italic0 underline1 align0 urlhttp://download.qidian.com/apk/QDReader.apk?k=e>text

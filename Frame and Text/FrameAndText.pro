@@ -30,5 +30,5 @@ HEADERS += \
     content.h
 
 DISTFILES += \
-    samplefont.txt \
-    sampletext.txt
+    samplereturn.txt \
+    samplefile.html
