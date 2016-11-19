@@ -55,4 +55,4 @@ private:
                         PdfFont* pCurFont, const PdfString & rString );
 };
 
-#endif // _TEXT_EXTRACTOR_H_
+#endif // XDFIMPORT_H__
