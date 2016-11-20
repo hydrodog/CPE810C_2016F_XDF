@@ -1,0 +1,19 @@
+//This is a very important updata! And I find a bug reason! 
+
+from now on, my signature have its own UI and windows!! //Thx shitian`s Help!
+
+You can edit and signature the file in my Windows.
+
+
+//THE MOST IMPORTENT THING IS THAT WE FIND THE REASON OF A MOMORY LEAK!
+
+{"
+error: type 'QTableWidgetItem' does not provide a subscript operator wrong1.setText(s2q(Signature[i][1]));
+"}
+
+
+This warning only appear on my Mac but not on shitian`s Windows.
+
+on windows there is nothing warming. But it will break up when you run it.
+
+Next step is that we will fix it!
