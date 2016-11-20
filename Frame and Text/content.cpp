@@ -177,3 +177,7 @@ int Content::getlineamount(){
     int m=n;
     return m;
 }
+QString Content::getQString(){
+    QString str1= QString::fromWCharArray(words);
+    return str1;
+}

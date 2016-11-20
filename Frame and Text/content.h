@@ -11,8 +11,9 @@
 #include <fstream>
 #include "font.h"
 #include <windows.h>
+#include<QString>
 using namespace std;
-void Wchar_tToString(std::string& szDst,const wchar_t *wchar); //This function is copied from the Internet.
+void Wchar_tToString(std::string& szDst,const wchar_t *wchar); //This function is copied from the Internet,just for testing the wchar.
 class Content{
 private:
     myFont t;
@@ -32,6 +33,7 @@ public:
     int getlength();
     int* getlinechange();
     int getlineamount();
+    QString getQString();
 };
 
 #endif // CONTENT_H
