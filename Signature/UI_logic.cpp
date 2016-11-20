@@ -12,6 +12,11 @@ if (existSignature>=existRow){
 	//add one row
 }
 
+if(existSignature>10){
+	//erase the first signature
+	//put the 11th sign in the first row
+}
+	
 
 
 
