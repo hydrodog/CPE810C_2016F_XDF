@@ -9,14 +9,16 @@
 #include <list>
 #include <string>
 #include <fstream>
-#include "font.h"
 #include <windows.h>
 #include<QString>
+#include<QFont>
+#include<Qcolor>
 using namespace std;
 void Wchar_tToString(std::string& szDst,const wchar_t *wchar); //This function is copied from the Internet,just for testing the wchar.
 class Content{
 private:
-    myFont t;
+    QFont font;
+    QColor color;
     int k;
     int n=0;
     wchar_t *words=new wchar_t [k];
@@ -26,7 +28,7 @@ public:
     Content(){};
     void getmessage(wstring a);
     void getfont(string a);
-    myFont contentFont();
+    QFont contentFont();
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
     wchar_t* getword();

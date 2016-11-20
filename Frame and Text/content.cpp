@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include<QFont>
 
 using namespace std;
 void Wchar_tToString(std::string& szDst,const wchar_t *wchar){
@@ -57,8 +58,8 @@ void Content::getmessage(wstring a) {
 }
 void Content::getfont(string a) {
     string language;
-    int color;
-    string font;
+    string colortem;
+    string fonttem;
     double  size;
     int bold;
     bool italic;
@@ -95,13 +96,13 @@ void Content::getfont(string a) {
     for(int i=posA+5;i<posB;i++){
         c[i-posA]=a[i];
     }
-    sscanf(c,"%d",&color);
+    colortem=c;
     posA=posB;
     posB=b.find("size");
     for(int i=posA+4;i<posB;i++){
         c[i-posA]=a[i];
     }
-    font=c;
+    fonttem=c;
     posA=posB;
     posB=b.find("bold");
     for(int i=posA+4;i<posB;i++){
@@ -137,10 +138,17 @@ void Content::getfont(string a) {
     }else {
         underline=false;
     }
-    t.setfont(language,color,font,size,bold,italic,underline);
+    QString fonttem1= QString::fromStdString(fonttem);
+    QString colortem1= QString::fromStdString(colortem);
+    font.setFamily(fonttem1);
+    font.setPixelSize(size);
+    font.setBold(bold);
+    font.setItalic(italic);
+    font.setUnderline(underline);
+    color.setNamedColor(colortem1);
 }
-myFont Content::contentFont() {
-    return t;
+QFont Content::contentFont() {
+    return font;
 }
 
 void Content::getalignment(int *n,int *m){
