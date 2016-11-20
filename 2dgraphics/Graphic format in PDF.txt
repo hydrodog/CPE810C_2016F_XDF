@@ -1,0 +1,27 @@
+Note of how pdf draw a basic graphic
+
+Path Construction and Painting
+1. Paths defines shapes, trajectories, and regions of all sorts.
+2. Paths specify boundaries for clipping other graphics.
+
+Comment: Processes of how pdf draw graphics is similar with how people draw. That is, by using a pen to construct
+a continuous path. When ending a subpath, another subpath starts at the end of previous subpath. How to definite
+connection between paths?
+
+Connection
+1. A pair of segements are said to connect only if they are defined consecutively->end point of one seement is 
+anothe segement start point.(Nonconsecutive segements that meet or intersect ortuitously are not considered to 
+connect)
+2. A path is made up of one or more disconnected subpaths, each comprising a sequece of connected segements.
+
+Representing format
+1. A path object is defined by a sequence of operators to construct the patth, followed by one or more oprators
+to paint th path or use as a clipping boundary.
+
+PDF path operators fall into three categories:
+1.Path construction operators: deine th geometry of a path. A path is constructed by sequentially applying one 
+or more of these operators.
+2.Path-painting oprators end a path, object, usually causing the object to be painted on the current page in any 
+of a variety of ways.
+
+
