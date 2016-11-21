@@ -1,5 +1,5 @@
-#ifndef TEXTLINE_H__
-#define TEXTLINE_H__
+#ifndef TEXTLINE_HH__
+#define TEXTLINE_HH__
 #include <string>
 #include <list>
 #include <map>

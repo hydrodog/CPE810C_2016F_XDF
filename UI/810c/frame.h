@@ -1,8 +1,7 @@
-#ifndef FRAME_H__
-#define FRAME_H__
+#ifndef FRAME_HH__
+#define FRAME_HH__
 #include "border.h"
 #include "text.h"
-#include "myfont.h"
 #include <string>
 #include <list>
 

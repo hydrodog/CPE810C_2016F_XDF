@@ -1,5 +1,5 @@
-#ifndef PAGE_H__
-#define PAGE_H__
+#ifndef PAGE_HH__
+#define PAGE_HH__
 #include "frame.h"
 #include <list>
 

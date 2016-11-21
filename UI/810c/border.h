@@ -1,8 +1,8 @@
-#ifndef BORDER_H__
-#define BORDER_H__
+#ifndef BORDER_HH__
+#define BORDER_HH__
 
 class Border{
-//This class contains the different distance to four edges
+//Contains the different distance to four edges
 private:
     double leftEdge,rightEdge,topEdge,downEdge;
     int color;

@@ -1,6 +1,5 @@
-#ifndef TEXT_H__
-#define TEXT_H__
-#include "myfont.h"
+#ifndef TEXT_HH__
+#define TEXT_HH__
 #include "textline.h"
 #include <string>
 #include <map>

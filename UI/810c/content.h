@@ -1,5 +1,5 @@
-#ifndef CONTENT_H
-#define CONTENT_H
+#ifndef CONTENT_HH__
+#define CONTENT_HH__
 /*This head file "content" is written by the Frame and Text group,we share it with the
  * print group!
  */
@@ -9,15 +9,14 @@
 #include <list>
 #include <string>
 #include <fstream>
-#include "myfont.h"
-
+#include <QFont>
+#include <QColor>
 
 class Content{
 private:
     QFont font;
     QColor color;
     std::wstring content;
-
     int k;
     int n=0;
     char *words;
