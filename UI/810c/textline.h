@@ -3,7 +3,6 @@
 #include <string>
 #include <list>
 #include <map>
-#include <myfont.h>
 #include <vector>
 #include <string>
 

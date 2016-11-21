@@ -14,9 +14,8 @@ class Text{
 */
 
 private:
-    myFont defalutFont;// A List of line in the text
     std::list<TextLine> textLineList;
-    Content contentList;
+    std::list<Content> contentList;
     int len;
     double linespace;
 public:
@@ -29,22 +28,17 @@ public:
 
     void insertReturn();//insert return
 
-    void deleteLine(int i);//Delete line at index i
-
     void setLineSpace(double);
 
     double getLineSpace();
 
-    myFont getDefalutFont();
-
-    void setDefalutFont(myFont&);
-
     void addTextLine(TextLine &);
 
     int getLen(){return len;}
+
     std::list<TextLine> getTextLineList() const;
 
-    Content getContentList() const;
+    std::list<Content> getContentList() const;
 
     void addContent(Content c);
 

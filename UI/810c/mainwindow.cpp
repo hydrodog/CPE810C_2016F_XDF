@@ -7,6 +7,8 @@
 #include <QFrame>
 #include <QTextBrowser>
 #include "frame.h"
+
+using namespace  std;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -67,10 +69,13 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setCurrentFont(serifFont2);
         textBrowser->setTextColor(QColor( "green" ));
 
-        Content c=f.getText().getContentList();
-        char *b=c.getword();
-        std::cout<<b<<endl;
-        textBrowser->append(b);
+        //Content c=f.getText().getContentList();
+        string s="这是一段中文啊";
+        std::cout<<s.length()<<endl;
+        wstring b=L"这是我的一点心意";
+        std::cout<<b.length()<<endl;
+        QString mystr=QString::fromStdWString(b);
+        textBrowser->append(mystr);
 
 
 
@@ -78,7 +83,7 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setAlignment(Qt::AlignLeft);
         QFont serifFont3("Times", 44, QFont::Bold);
         serifFont2.setItalic(true);
-        textBrowser->setCurrentFont(serifFont2);
+        textBrowser->setCurrentFont(serifFont3);
         textBrowser->setTextColor(QColor( "blue" ));
         textBrowser->insertPlainText("This is another string!\nmm");
         //textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
@@ -86,8 +91,8 @@ void MainWindow::addFrame(Frame f){
         QString zw="这是中文测试!!";
         textBrowser->append(zw.append("，另外的中文字"));
         textBrowser->setAlignment(Qt::AlignCenter);
-        //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
-        //textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
+        textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
+        textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
     }
 
 }

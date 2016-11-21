@@ -1,7 +1,6 @@
 #include "text.h"
-#include "myfont.h"
 #include <iostream>
-Text::Text():linespace(1.0),defalutFont()
+Text::Text():linespace(1.0)
 {}
 void Text::insertString(const char *s){
     if(textLineList.empty()){
@@ -28,10 +27,6 @@ void Text::insertReturn(){
     TextLine newline;
     textLineList.push_back(newline);
 }//insert return
-void Text::deleteLine(int i){
-
-}//Delete line at index i
-
 
 
 void Text::setLineSpace(double ls){
@@ -42,14 +37,6 @@ double Text::getLineSpace(){
     return linespace;
 }
 
-myFont Text::getDefalutFont(){
-    return defalutFont;
-}
-
-void Text::setDefalutFont(myFont & myfont){
-    defalutFont=myfont;
-}
-
 void Text::addTextLine(TextLine& tl){
     this->textLineList.push_back(tl);
     std::cout<<"TextLineList'length after set "<<textLineList.size()<<'\n';
@@ -57,7 +44,7 @@ void Text::addTextLine(TextLine& tl){
 }
 
 void Text::addContent(Content c){
-    contentList=c;
+    contentList.push_back(c);
 }
 
 
@@ -67,6 +54,6 @@ std::list<TextLine> Text::getTextLineList() const{
 }
 
 
-Content Text::getContentList() const{
+std::list<Content> Text::getContentList() const{
     return contentList;
 }

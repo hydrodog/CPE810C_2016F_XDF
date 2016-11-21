@@ -133,11 +133,25 @@ void Content::getfont(string a) {
     }else {
         underline=false;
     }
-    //t.setfont(language,color,font,size,bold,italic,underline);
 }
-myFont Content::contentFont() {
-    return t;
+QFont Content::getContentFont() {
+    return font;
 }
+
+QColor Content::getContentColor(){
+    return color;
+}
+
+void Content::setFont(QFont f){
+    font=f;
+}
+
+void Content::setColor(QColor c){
+    color=c;
+}
+
+
+
 
 void Content::getalignment(int *n,int *m){
     for(int i=0;i<256;i++){

@@ -11,23 +11,28 @@
 #include <fstream>
 #include "myfont.h"
 
-using namespace std;
 
 class Content{
 private:
-    myFont t;
+    QFont font;
+    QColor color;
+    std::wstring content;
+
     int k;
     int n=0;
-    char *words=new char [k];
+    char *words;
     int *changelinepos=new int[n];
-    map<int,string> alignment;
+    std::map<int,std::string> alignment;
 public:
     Content();
-    void getmessage(string a);
-    void getfont(string a);
-    myFont contentFont();
+    void getmessage(std::string a);
+    void getfont(std::string a);
+    QFont getContentFont();
+    QColor getContentColor();
+    void setFont(QFont f);
+    void setColor(QColor c);
     void getalignment(int *n,int *m);
-    map<int,string> exportalignment();
+    std::map<int,std::string> exportalignment();
     char* getword();
     int getlength();
     int* getlinechange();

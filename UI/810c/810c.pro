@@ -18,7 +18,6 @@ SOURCES += main.cpp\
     page.cpp \
     text.cpp \
     border.cpp \
-    myfont.cpp \
     textline.cpp \
     content.cpp
 
@@ -28,7 +27,6 @@ HEADERS  += mainwindow.h \
     page.h \
     text.h \
     border.h \
-    myfont.h \
     textline.h \
     content.h
 
