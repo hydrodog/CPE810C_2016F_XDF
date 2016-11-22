@@ -1,14 +1,14 @@
-#include "OperatorDicTrie.hh"
+#include "3rdWeekOperatorDicTrie.hh"
 
 /*
  @author: Seito Ryu  18/11/16
 */
 //constructor of Node class
 OperatorDicTrie::Node::Node(){
-   for(int i = 0; i < 26; ++i){
-     next[i] = nullptr;
-     isOptor[i] = false;
-   }
+  for(int i = 0; i < 26; ++i){
+    next[i] = nullptr;
+    isOptor[i] = false;
+  }
 }
 //deconstructor of Node class
 OperatorDicTrie::Node::~Node(){
