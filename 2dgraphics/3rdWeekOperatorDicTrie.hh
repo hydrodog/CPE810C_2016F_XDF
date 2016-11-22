@@ -12,21 +12,21 @@
 */
 class OperatorDicTrie{
 private:
-    class Node{
-    public:
-        Node* next[26];
-        bool isOptor[26];
-        Node(){}
-        ~Node(){}
-    };
-    Node* root;
+  class Node{
+  public:
+    Node* next[26];
+    bool isOptor[26];
+    Node(){}
+    ~Node(){}
+  };
+  Node* root;
 public:
-    OperatorDicTrie():root(new Node) {}
-    ~OperatorDicTrie(){}
-    //add one operator into trie
-    void addOptor(const std::string& s){}
-    //check whether one string is an operator or not
-    bool isOptor(const std::string& s) const {}
+  OperatorDicTrie():root(new Node) {}
+  ~OperatorDicTrie(){}
+  //add one operator into trie
+  void addOptor(const std::string& s){}
+  //check whether one string is an operator or not
+  bool isOptor(const std::string& s) const {}
 };
 
 #endif
