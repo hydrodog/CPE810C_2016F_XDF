@@ -1,0 +1,4 @@
+2D GRAPHICS implements receiving 2d graphics raw data from pdf team.
+After receiving raw data, provide draw methods, in order to draw basic shaples on the main window.
+In 2D GRAPHICS, some advanced features are applied in the code like function pointer table, trie, hashmap, exception class.
+All draw methods are based on QT library. 
