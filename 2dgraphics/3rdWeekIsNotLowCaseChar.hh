@@ -8,9 +8,9 @@
 #include <iostream>
 class ExceptionOptDic{
 private:
-char valChr;
+  char valChr;
 public:
-    ExceptionOptDic(char val): valChr(val) {}
+  ExceptionOptDic(char val): valChr(val) {}
     friend std::ostream& operator << (std::ostream& s, const ExceptionOptDic& b) {}
-};
+  };
 #endif
