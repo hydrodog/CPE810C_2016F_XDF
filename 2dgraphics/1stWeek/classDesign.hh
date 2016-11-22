@@ -8,6 +8,12 @@
 #include <QPainter>
 #include <QtSvg/QSvgRenderer>
 
+
+/*
+ @author: Seito Ryu  4/11/16
+ @Purpose: Initial Design
+ */
+
 using namespace std;
 
 class Draw2DGraphics : public QWidget{
