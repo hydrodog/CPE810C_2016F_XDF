@@ -1,11 +1,12 @@
 #ifndef EXCEPTION_OPTDIC_HH__
 #define EXCEPTION_OPTDIC_HH__
-/**
- @purpose:
- Exception class when processing operator list
- @author: Seito Ryu  17/11/16
- */
+
 #include <iostream>
+
+/**
+ @author: Seito Ryu  17/11/16
+ @purpose: Exception class when processing operator list
+ */
 class ExceptionOptDic{
 private:
   char valChr;
