@@ -1,5 +1,24 @@
 #include "text.h"
 #include <iostream>
+using namespace std;
+void Text::getText(const wstring w){
+    wstring tem=w;
+    wstring lis=NULL;
+    int j=0;
+    int pos=0;
+    while(1){
+        if(pos==-1)break;
+        n++;
+        pos=tem.find(L"<stylechange>");
+        for(int i=0;i<pos;i++){
+            lis[i]=tem[i];
+        }
+        textcontent[j].getmessage(lis);
+        tem.erase(tem.begin(),tem.begin()+pos+13);
+        j++;
+    }
+}
+
 Text::Text():linespace(1.0)
 {}
 void Text::insertString(const char *s){

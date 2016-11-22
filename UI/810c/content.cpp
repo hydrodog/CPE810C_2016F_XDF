@@ -4,14 +4,19 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include<QFont>
 
 using namespace std;
-
-Content::Content(){
-
+void Wchar_tToString(std::string& szDst,const wchar_t *wchar){
+const wchar_t * wText = wchar;
+DWORD dwNum = WideCharToMultiByte(CP_OEMCP,NULL,wText,-1,NULL,0,NULL,FALSE);
+char *psText;
+psText = new char[dwNum];
+WideCharToMultiByte (CP_OEMCP,NULL,wText,-1,psText,dwNum,NULL,FALSE);
+szDst = psText;
+delete []psText;
 }
-
-void Content::getmessage(string a) {
+void Content::getmessage(wstring a) {
     /*ifstream in("sampletext.txt");
     string words;
     try {
@@ -30,11 +35,11 @@ void Content::getmessage(string a) {
     if(i>=20)break;
     }                  //fix in 11/18
     cout << words << endl;          */
-    string b=a;
+    wstring b=a;
     int j=0;
     int pos;
     while(1){
-        pos=b.find("<n>");
+        pos=b.find(L"<n>");
         if(pos==-1)break;
         n++;
         //cout<<pos<<endl;
@@ -43,7 +48,7 @@ void Content::getmessage(string a) {
         j++;
     }
     k=b.length();
-    char c[k];
+    wchar_t c[k];
     for(int i=0;i<k;i++){
         c[i]=b.c_str()[i];
     }
@@ -53,8 +58,8 @@ void Content::getmessage(string a) {
 }
 void Content::getfont(string a) {
     string language;
-    int color;
-    string font;
+    string colortem;
+    string fonttem;
     double  size;
     int bold;
     bool italic;
@@ -91,13 +96,13 @@ void Content::getfont(string a) {
     for(int i=posA+5;i<posB;i++){
         c[i-posA]=a[i];
     }
-    sscanf(c,"%d",&color);
+    colortem=c;
     posA=posB;
     posB=b.find("size");
     for(int i=posA+4;i<posB;i++){
         c[i-posA]=a[i];
     }
-    font=c;
+    fonttem=c;
     posA=posB;
     posB=b.find("bold");
     for(int i=posA+4;i<posB;i++){
@@ -133,25 +138,18 @@ void Content::getfont(string a) {
     }else {
         underline=false;
     }
+    QString fonttem1= QString::fromStdString(fonttem);
+    QString colortem1= QString::fromStdString(colortem);
+    font.setFamily(fonttem1);
+    font.setPixelSize(size);
+    font.setBold(bold);
+    font.setItalic(italic);
+    font.setUnderline(underline);
+    color.setNamedColor(colortem1);
 }
-QFont Content::getContentFont() {
+QFont Content::contentFont() {
     return font;
 }
-
-QColor Content::getContentColor(){
-    return color;
-}
-
-void Content::setFont(QFont f){
-    font=f;
-}
-
-void Content::setColor(QColor c){
-    color=c;
-}
-
-
-
 
 void Content::getalignment(int *n,int *m){
     for(int i=0;i<256;i++){
@@ -172,8 +170,8 @@ map<int,string> Content::exportalignment(){
     return alignment;
 }
 
-char* Content::getword(){
-    char *a=&words[0];
+wchar_t* Content::getword(){
+    wchar_t *a=&words[0];
     return a;
 }
 int Content::getlength(){
@@ -186,4 +184,8 @@ int* Content::getlinechange(){
 int Content::getlineamount(){
     int m=n;
     return m;
+}
+QString Content::getQString(){
+    QString str1= QString::fromWCharArray(words);
+    return str1;
 }

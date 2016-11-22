@@ -5,7 +5,7 @@
 #include <map>
 #include <list>
 #include "content.h"
-
+using namespace std;
 class Text{
 /*This class represents the words and text in the frame
 *Contains the width and height of this text
@@ -15,6 +15,8 @@ class Text{
 private:
     std::list<TextLine> textLineList;
     std::list<Content> contentList;
+    int n=1;
+    Content *textcontent=new Content[n];
     int len;
     double linespace;
 public:
@@ -22,7 +24,7 @@ public:
 
 
     void insertString(const char *s);//insert a string
-
+    void getText(const wstring w);
     void insertChar(const char c);//inset a character
 
     void insertReturn();//insert return

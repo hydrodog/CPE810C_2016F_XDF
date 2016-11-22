@@ -1,5 +1,5 @@
-#ifndef CONTENT_HH__
-#define CONTENT_HH__
+#ifndef CONTENT_H
+#define CONTENT_H
 /*This head file "content" is written by the Frame and Text group,we share it with the
  * print group!
  */
@@ -9,33 +9,32 @@
 #include <list>
 #include <string>
 #include <fstream>
-#include <QFont>
-#include <QColor>
-
+#include <windows.h>
+#include<QString>
+#include<QFont>
+#include<Qcolor>
+using namespace std;
+void Wchar_tToString(std::string& szDst,const wchar_t *wchar); //This function is copied from the Internet,just for testing the wchar.
 class Content{
 private:
     QFont font;
     QColor color;
-    std::wstring content;
     int k;
     int n=0;
-    char *words;
+    wchar_t *words=new wchar_t [k];
     int *changelinepos=new int[n];
-    std::map<int,std::string> alignment;
+    map<int,string> alignment;
 public:
-    Content();
-    void getmessage(std::string a);
-    void getfont(std::string a);
-    QFont getContentFont();
-    QColor getContentColor();
-    void setFont(QFont f);
-    void setColor(QColor c);
+    void getmessage(wstring a);
+    void getfont(string a);
+    QFont contentFont();
     void getalignment(int *n,int *m);
-    std::map<int,std::string> exportalignment();
-    char* getword();
+    map<int,string> exportalignment();
+    wchar_t* getword();
     int getlength();
     int* getlinechange();
     int getlineamount();
+    QString getQString();
 };
 
 #endif // CONTENT_H
