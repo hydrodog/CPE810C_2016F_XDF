@@ -1,4 +1,4 @@
-#include "3rdWeekOperatorDicTrie.hh"
+#include "OperatorDicTrie.hh"
 
 /*
  @author: Seito Ryu  18/11/16
