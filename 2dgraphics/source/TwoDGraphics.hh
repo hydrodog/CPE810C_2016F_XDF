@@ -1,20 +1,31 @@
 #ifndef TWO_DGRAPHICS_HH__
 #define TWO_DGRAPHICS_HH__
 
+#include "OperatorDicTrie.hh"
+#include "Shape.hh"
+#include "ExceptionTwoDG.hh"
 #include <string>
-#include <iostream>
+#include <vector>
+#include <fstream>
 
 /*
  @author: Seito Ryu  18/11/16
- @Purpose: Exception class for twoDGraphics
+ @Purpose: set raw data by pdf team
  */
-class TwoDGraphics{
+class twoDGraphics{
 private:
-  std::string errCnt;
+  std::string operFilPath;
+  std::string operFileName;
+  std::vector<Shape> shpLst;
+  OperatorDicTrie opterTrie;
 public:
-  TwoDGraphics(std::string val): errCnt(val) {}
-  friend std::ostream& operator << (std::ostream& s, const TwoDGraphics& e){}
-  std::string getCng() const{}
+  twoDGraphics(std::string operFilPath, std::string operFileName, std::vector<Shape> shpLst = {}): operFilPath(operFilPath), operFileName(operFileName), shpLst(shpLst){}
+  ~twoDGraphics(){}
+  //read all operators from given file, set into a trie
+  void setOpterDic(OperatorDicTrie& opterTrie){}
+  //get all shape objects, saved in vector
+  void setShape(std::string curOpter, std::vector<double> curOpnds){}
+  //get all shape objects, saved in vector
+  const std::vector<Shape>& getAllShape() const {}
 };
-
 #endif

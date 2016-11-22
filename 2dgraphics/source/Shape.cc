@@ -1,5 +1,8 @@
 #include "Shape.hh"
 
+/*
+ @author: Seito Ryu  17/11/16
+ */
 Shape::~Shape(){
   if(opter != nullptr){
     delete opter;

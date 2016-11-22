@@ -1,5 +1,9 @@
 #include "DrawFunList.hh"
 
+/*
+ @author: Seito Ryu  20/11/16
+ */
+
 //constructor
 DrawFunList::DrawFunList() {
   mapDrw = {

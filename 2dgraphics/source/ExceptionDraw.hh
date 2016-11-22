@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+
 /*
  @author: Seito Ryu  18/11/16
  @Purpose: Exception class for draw methods
