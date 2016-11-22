@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 Text::Text(){}
-#if 0
+
 void Text::getText(const wstring w){
     wstring tem=w;
     wstring lis=NULL;
@@ -15,12 +15,32 @@ void Text::getText(const wstring w){
         for(int i=0;i<pos;i++){
             lis[i]=tem[i];
         }
-        textcontent[j].getmessage(lis);
+        m_textcontent[j].getmessage(lis);
         tem.erase(tem.begin(),tem.begin()+pos+13);
         j++;
     }
 }
-#endif
+void Text::getallfont(const string v){
+    string tem=v;
+    string lis=NULL;
+    int j=0;
+    int pos=0;
+    while(1){
+        if(pos==-1)break;
+        pos=tem.find("<stylechange>");
+        for(int i=0;i<pos;i++){
+            lis[i]=tem[i];
+        }
+        m_textcontent[j].getfont(lis);
+        tem.erase(tem.begin(),tem.begin()+pos+13);
+        j++;
+    }
+}
+void Text::insertcontent(){
+    for(int i=0;i<n;i++){
+        m_contentList.push_front(m_textcontent[i]);
+    }
+}
 
 
 void Text::insertString(const char *s){

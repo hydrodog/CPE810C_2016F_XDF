@@ -16,12 +16,16 @@ private:
     std::list<TextLine> m_textLineList;
     std::list<Content> m_contentList;
     int m_len;
+    int n=1;
+    Content *m_textcontent=new Content[n];
 public:
     Text();
 
 
     void insertString(const char *s);//insert a string
     void getText(const wstring w);
+    void getallfont(const string v);
+    void insertcontent();
     void insertChar(const char c);//inset a character
 
     void insertReturn();//insert return
