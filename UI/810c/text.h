@@ -13,12 +13,9 @@ class Text{
 */
 
 private:
-    std::list<TextLine> textLineList;
-    std::list<Content> contentList;
-    int n=1;
-    Content *textcontent=new Content[n];
-    int len;
-    double linespace;
+    std::list<TextLine> m_textLineList;
+    std::list<Content> m_contentList;
+    int m_len;
 public:
     Text();
 
@@ -29,17 +26,13 @@ public:
 
     void insertReturn();//insert return
 
-    void setLineSpace(double);
-
-    double getLineSpace();
-
     void addTextLine(TextLine &);
 
-    int getLen(){return len;}
+    int len(){return m_len;}
 
-    std::list<TextLine> getTextLineList() const;
+    std::list<TextLine> textLineList() const{return m_textLineList;}
 
-    std::list<Content> getContentList() const;
+    std::list<Content> contentList() const{return m_contentList;}
 
     void addContent(Content c);
 

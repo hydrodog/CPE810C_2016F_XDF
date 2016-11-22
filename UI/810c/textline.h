@@ -13,17 +13,14 @@ class TextLine{
 */
 private:
     //Every index of char in string should have a characterStyle
-    int linecode;
-    std::string lineStyle;
-    std::vector<char> lineContent;//The list contains whole text content
+    int m_linecode;
+    std::vector<char> m_lineContent;//The list contains whole text content
     //std::map<int,myFont> specialFontList;
 public:
     TextLine();
     void insertString(const char *s);//insert a string with same style
     void insertChar(const char  c);//inset a character
-    void deleteCharacter(int i);//Delete Character at index i
-    void setlineStyle(char*);
-    std::vector<char> getLineContent(){return lineContent;}
+    std::vector<char> lineContent(){return m_lineContent;}
 
 };
 #endif // TEXTLINE_H

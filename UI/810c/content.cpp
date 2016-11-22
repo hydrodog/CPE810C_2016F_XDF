@@ -7,22 +7,16 @@
 #include<QFont>
 
 using namespace std;
-void Wchar_tToString(std::string& szDst,const wchar_t *wchar){
-const wchar_t * wText = wchar;
-DWORD dwNum = WideCharToMultiByte(CP_OEMCP,NULL,wText,-1,NULL,0,NULL,FALSE);
-char *psText;
-psText = new char[dwNum];
-WideCharToMultiByte (CP_OEMCP,NULL,wText,-1,psText,dwNum,NULL,FALSE);
-szDst = psText;
-delete []psText;
-}
+
+
+
 void Content::getmessage(wstring a) {
     /*ifstream in("sampletext.txt");
     string words;
     try {
        in.is_open();
     }
-    catch(double) {
+    catch(int) {
         cout<<"Opening file error!"<<endl;
     }
     const int LINE_LENGTH = 10;  //fix in 11/18
@@ -69,7 +63,7 @@ void Content::getfont(string a) {
     try {
        in.is_open();
     }
-    catch(double) {
+    catch(int) {
         cout<<"Opening file error!"<<endl;
     }
     const int LINE_LENGTH = 10;  //fix in 11/16
@@ -140,15 +134,12 @@ void Content::getfont(string a) {
     }
     QString fonttem1= QString::fromStdString(fonttem);
     QString colortem1= QString::fromStdString(colortem);
-    font.setFamily(fonttem1);
-    font.setPixelSize(size);
-    font.setBold(bold);
-    font.setItalic(italic);
-    font.setUnderline(underline);
-    color.setNamedColor(colortem1);
-}
-QFont Content::contentFont() {
-    return font;
+    m_font.setFamily(fonttem1);
+    m_font.setPixelSize(size);
+    m_font.setBold(bold);
+    m_font.setItalic(italic);
+    m_font.setUnderline(underline);
+    m_color.setNamedColor(colortem1);
 }
 
 void Content::getalignment(int *n,int *m){

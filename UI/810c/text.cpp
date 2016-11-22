@@ -1,6 +1,8 @@
 #include "text.h"
 #include <iostream>
 using namespace std;
+Text::Text(){}
+#if 0
 void Text::getText(const wstring w){
     wstring tem=w;
     wstring lis=NULL;
@@ -18,61 +20,43 @@ void Text::getText(const wstring w){
         j++;
     }
 }
+#endif
 
-Text::Text():linespace(1.0)
-{}
+
 void Text::insertString(const char *s){
-    if(textLineList.empty()){
+    if(m_textLineList.empty()){
         TextLine newline;
         newline.insertString(s);
-        textLineList.push_back(newline);
+        m_textLineList.push_back(newline);
     }
     else{//TODO: should consider the situation that line may full
-        textLineList.back().insertString(s);
+        m_textLineList.back().insertString(s);
     }
 }//insert a string
 void Text::insertChar(char c){
-    if(textLineList.empty()){
+    if(m_textLineList.empty()){
         TextLine newline;
         newline.insertChar(c);
-        textLineList.push_back(newline);
+        m_textLineList.push_back(newline);
     }
     else{
-        textLineList.back().insertChar(c);
+        m_textLineList.back().insertChar(c);
     }
 }//inset a character
 
 void Text::insertReturn(){
     TextLine newline;
-    textLineList.push_back(newline);
+    m_textLineList.push_back(newline);
 }//insert return
 
 
-void Text::setLineSpace(double ls){
-    linespace=ls;
-}
-
-double Text::getLineSpace(){
-    return linespace;
-}
-
 void Text::addTextLine(TextLine& tl){
-    this->textLineList.push_back(tl);
-    std::cout<<"TextLineList'length after set "<<textLineList.size()<<'\n';
-    this->len++;
+    this->m_textLineList.push_back(tl);
+    std::cout<<"TextLineList'length after set "<<m_textLineList.size()<<'\n';
+    this->m_len++;
 }
 
 void Text::addContent(Content c){
-    contentList.push_back(c);
+    m_contentList.push_back(c);
 }
 
-
-std::list<TextLine> Text::getTextLineList() const{
-    std::cout<<"TextLineList'length when get "<<textLineList.size()<<'\n';
-    return textLineList;
-}
-
-
-std::list<Content> Text::getContentList() const{
-    return contentList;
-}

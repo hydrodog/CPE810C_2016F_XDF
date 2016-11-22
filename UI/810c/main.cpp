@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
     //f.addContent(c);
     f.addTextLine(L);
     f.addTextLine(L2);  
-    cout<<f.getText().getLen()<<endl;
-    cout<<f.getText().getTextLineList().size()<<endl;
+    cout<<f.text().len()<<endl;
+    cout<<f.text().textLineList().size()<<endl;
     w.addFrame(f);
     w.show();
 

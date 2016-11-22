@@ -5,45 +5,36 @@
 #include <sstream>
 using namespace std;
 
-Frame::Frame(double startX, double startY, double height, double width, int FrameNum):border(height,width),height(height),width(width),
-    startX(startX),startY(startY),text(),frameNum(FrameNum)
+Frame::Frame(int startX, int startY, int height, int width, int FrameNum):m_frameNum(FrameNum),
+    m_height(height),m_width(width),m_startX(startX),m_startY(startY),m_border(height,width),m_text()
 {}
 
 void Frame::clear(){
 
 }//Reset all information to defalut value
 void Frame::insertChar(char c){
-    text.insertChar(c);
+    m_text.insertChar(c);
 }
 
 void Frame::insertString(const char *s){
-    text.insertString(s);
+    m_text.insertString(s);
 }
 
 void Frame::insert(char *s, bool withLink){
 }
 
 void Frame::insertSpace(){
-    text.insertChar(' ');
+    m_text.insertChar(' ');
 } // insert a space
 void Frame::insertReturn(){
-    text.insertReturn();
+    m_text.insertReturn();
 }// insert return
 
 
-void Frame::setText(Text& t){
-    text=t;
-}
-
-Text Frame::getText(){
-    return text;
-}
-
-
 void Frame::addTextLine(TextLine& tl){
-    text.addTextLine(tl);
+    m_text.addTextLine(tl);
 }
 
 void Frame::addContent(Content c){
-    text.addContent(c);
+    m_text.addContent(c);
 }

@@ -23,12 +23,12 @@ MainWindow::~MainWindow()
 }
 void MainWindow::addFrame(Frame f){
     QFrame* frame_3 = new QFrame(ui->centralWidget);
-    QString str=QString("frame").append(QChar(f.getframeNum()));
+    QString str=QString("frame").append(QChar(f.frameNum()));
     frame_3->setObjectName(str);
-    frame_3->setGeometry(QRect(40, 20, 600, 600));
+    frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
     frame_3->setFrameShape(QFrame::StyledPanel);
     frame_3->setFrameShadow(QFrame::Raised);
-    if(f.getText().getTextLineList().empty()){
+    if(f.text().textLineList().empty()){
         return;
     }else{
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
@@ -46,9 +46,9 @@ void MainWindow::addFrame(Frame f){
         int count=0;
 
         //This loop is to find all characters of all lines in text and append them on screen
-        std::list<TextLine> t=f.getText().getTextLineList();
+        std::list<TextLine> t=f.text().textLineList();
         for (std::list<TextLine>::iterator it =t.begin(); it != t.end(); ++it){
-            std::vector<char> temp= (*it).getLineContent();
+            std::vector<char> temp= (*it).lineContent();
             count++;
             for (std::vector<char>::iterator it2 = temp.begin() ; it2 != temp.end(); ++it2){
 
@@ -86,13 +86,12 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setCurrentFont(serifFont3);
         textBrowser->setTextColor(QColor( "blue" ));
         textBrowser->insertPlainText("This is another string!\nmm");
-        //textBrowser->insertPlainText("This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n,This is another string!\n");
         textBrowser->setAlignment(Qt::AlignRight);
         QString zw="这是中文测试!!";
         textBrowser->append(zw.append("，另外的中文字"));
         textBrowser->setAlignment(Qt::AlignCenter);
-        textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
-        textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
+        //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
+        //textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
     }
 
 }

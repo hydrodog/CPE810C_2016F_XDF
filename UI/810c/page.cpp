@@ -1,6 +1,6 @@
 #include "page.h"
 
-Page::Page(double height, double width, int pageNum):height(height),width(width),pageNumber(pageNum)
+Page::Page(int height, int width, int pageNum):m_pageNumber(pageNum),m_height(height),m_width(width)
 {
 }
 void Page::clear(){
@@ -16,32 +16,13 @@ void Page::import(){
 
 }//Way to import a file  NOT YOUR PROBLEM
 
-void Page::addNewFrame(double x,double y, double height,double width,int FrameNum){
-    Frame f(x,y,height,width,FrameNum);
-    frameList.push_back(f);
+void Page::addNewFrame(int startX, int startY, int height, int width, int FrameNum){
+    Frame f(startX,startY,height,width,FrameNum);
+    m_frameList.push_back(f);
 }
 
 void Page::addFrame(Frame& f){
-    frameList.push_back(f);
+    m_frameList.push_back(f);
 }
 
-std::list<Frame> Page::getFrameList(){
-    return frameList;
-}
-
-int Page::getPageNumber(){
-    return pageNumber;
-}
-
-void Page::setPageNumber(int i){
-    pageNumber=i;
-}
-
-double Page::getHeight(){
-    return height;
-}
-
-double Page::getWidth (){
-    return width;
-}
 
