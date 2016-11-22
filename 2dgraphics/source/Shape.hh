@@ -1,5 +1,5 @@
-#ifndef OPERATOR_DIC_TRIE_HH__
-#define OPERATOR_DIC_TRIE_HH__
+#ifndef SHAPE_HH__
+#define SHAPE_HH__
 
 #include <iostream>
 #include <vector>
