@@ -10,13 +10,15 @@
 #include <iostream>
 #include <fstream>
 #include <unordered_set>
-
+#include <map>
 using namespace std;
 using namespace PoDoFo;
 
 #ifndef MAX_PATH
 #define MAX_PATH 512
 #endif // MAX_PATH
+
+#define PDF_IMPORT_TEST_MODE
 
 /** This class uses the PoDoFo lib to parse
  *  a PDF file and to write all text it finds
@@ -25,9 +27,19 @@ using namespace PoDoFo;
 class PdfImporter {
 private:
     ofstream of;
+    ifstream fileConfig;
+
+    class PdfObj {
+    public:
+        int numOperands;
+    };
+    typedef std::map<std::string, PdfObj> t_mapPdfObj;
+    t_mapPdfObj mapPdfGraphicsObj;
+
+#ifdef PDF_IMPORT_TEST_MODE
     unordered_set<string> Operator_set; // for coding testing only
     unordered_set<string> Operator_set_not_handled; // for coding testing only
-    
+#endif
 public:
     PdfImporter();
     virtual ~PdfImporter();
@@ -35,6 +47,8 @@ public:
     void Init( const char* pszInput );
     
 private:
+    void loadFileConfig();
+
     /** Extract all text from the given page
      *
      *  \param pDocument the owning document

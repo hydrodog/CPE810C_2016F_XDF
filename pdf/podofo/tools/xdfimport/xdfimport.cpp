@@ -7,13 +7,61 @@
 #include <stack>
 #include <iomanip>
 #include <unordered_set>
+#include <sstream>
 PdfImporter::PdfImporter():of("out.txt")
 {
-    
+    loadFileConfig();
 }
 
 PdfImporter::~PdfImporter()
 {
+    fileConfig.close();
+}
+
+void PdfImporter::loadFileConfig()
+{
+    std::string sFileName("./../../../config/graphics_operator_list.conf");
+    fileConfig.open(sFileName);
+    if(!fileConfig.good())
+    {
+        std::string sErrorMessage;
+        sErrorMessage += "\n  Cannot open the config file:";
+        sErrorMessage += sFileName;
+        sErrorMessage += "\n";
+        throw sErrorMessage;
+    }
+    const int MAX_CHARS_PER_LINE = 256;
+    int lineCount = 0;
+    while(!fileConfig.eof())
+    {
+        char pszLine[MAX_CHARS_PER_LINE];
+        fileConfig.getline(pszLine, MAX_CHARS_PER_LINE);
+        lineCount++;
+        if (pszLine[0] == '#' || pszLine[0] == 0)
+            continue; //Lines starting with a # are comments
+        std::string sLine(pszLine);
+        std::istringstream ssLine(sLine);
+        std::string sNameOperator;
+        int numOperands;
+        std::getline(ssLine, sNameOperator, ',');
+        ssLine >> numOperands;
+        if (numOperands>10 || numOperands<0)
+        {
+            std::string sErrorMessage;
+            sErrorMessage += "\n  Error occurred while parsing line #";
+            sErrorMessage += std::to_string(lineCount);
+            sErrorMessage += " of file ";
+            sErrorMessage += sFileName;
+            sErrorMessage += "\n  Number of operands is out of range " ;
+            throw sErrorMessage;
+        }
+#ifdef PDF_IMPORT_TEST_MODE
+        std::cout << "Found graphics operator in the config file: " \
+                  << sNameOperator << ", " \
+                  << numOperands << '\n';
+#endif
+        mapPdfGraphicsObj[sNameOperator].numOperands = numOperands;
+    }
 }
 
 void PdfImporter::Init( const char* pszInput )
@@ -40,6 +88,8 @@ void PdfImporter::Init( const char* pszInput )
             this->ImportPage( &document, pPage );
         }
     }
+#ifdef PDF_IMPORT_TEST_MODE
+
     cout<<"operator found:\n";
     for(auto it = this->Operator_set.begin();it!=this->Operator_set.end();it++)
         cout<<(*it)<<" ";
@@ -49,6 +99,8 @@ void PdfImporter::Init( const char* pszInput )
     for(auto it = this->Operator_set_not_handled.begin();it!=this->Operator_set_not_handled.end();it++)
         cout<<(*it)<<" ";
     cout<<endl;
+#endif
+
 }
 
 void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
@@ -61,14 +113,6 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
     
     double dCurPosX     = 0.0;
     double dCurPosY     = 0.0;
-    double dCurPosX1     = 0.0;
-    double dCurPosY1     = 0.0;
-    double dCurPosX2     = 0.0;
-    double dCurPosY2     = 0.0;
-    double dCurPosX3     = 0.0;
-    double dCurPosY3     = 0.0;
-    double width     = 0.0;
-    double height     = 0.0;
     //double dX, dY;
     bool   bTextBlock   = false;
     PdfFont* pCurFont   = NULL;
@@ -80,132 +124,14 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
         
         if( eType == ePdfContentsType_Keyword )
         {
+#ifdef PDF_IMPORT_TEST_MODE
             this->Operator_set.emplace(string(pszToken));
-            // of << pszToken << '\n';
-            // support 'l' and 'm' tokens
-            
-            //m = Begin a new subpath by moving the current point to x y  page226
-            //l = Append a straight line segment from the current point to xy page226
-            if( strcmp( pszToken, "l" ) == 0 ||
-               strcmp( pszToken, "m" ) == 0 )
+#endif
+            t_mapPdfObj::iterator it = mapPdfGraphicsObj.find(pszToken);
+            if (it != mapPdfGraphicsObj.end())
             {
-                dCurPosX = stack.top().GetReal();
-                stack.pop();
-                dCurPosY = stack.top().GetReal();
-                stack.pop();
-                of <<"["<<pszToken<< '(' << setprecision(3) << dCurPosY << ',' << dCurPosX << ")] " << '\n';
-            }
-            else if( strcmp( pszToken, "c" ) == 0)
-            {
-                dCurPosY3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY2 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX2 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY1 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX1 = stack.top().GetReal();
-                stack.pop();
-                of <<"["<<pszToken<< '(' << setprecision(3) << dCurPosX1 << ',' << dCurPosY1 <<','
-                <<dCurPosX2 << ',' << dCurPosY2 <<','
-                <<dCurPosX3 << ',' << dCurPosY3 <<',' << ")] " << '\n';
-            }
 
-            else if( strcmp( pszToken, "q" ) == 0)
-            {
-                
-                of <<"["<<pszToken<< ']' <<" //Save graphics state \n";
             }
-            else if( strcmp( pszToken, "Q" ) == 0)
-            {
-                
-                of <<"["<<pszToken<< ']' <<" //Restore graphics state \n";
-            }
-
-            else if( strcmp( pszToken, "Do" ) == 0)
-            {
-                cout<<"\nhere is a Do , let's see its variant 's type : "<<string(stack.top().GetDataTypeString())<<endl;
-                string token;
-                stack.top().ToString(token);
-                of <<"["<<pszToken<< "("<<token<<")] //name \n";
-                stack.pop();
-            }
-
-            else if( strcmp( pszToken, "cm" ) == 0)
-            {
-                
-                dCurPosY3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY2 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX2 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY1 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX1 = stack.top().GetReal();
-                stack.pop();
-                of <<"["<<pszToken<< '(' << setprecision(3) << dCurPosX1 << ',' << dCurPosY1 <<','
-                <<dCurPosX2 << ',' << dCurPosY2 <<','
-                <<dCurPosX3 << ',' << dCurPosY3 <<',' << ")] //Modify the current transformation matrix" << '\n';
-            }
-            
-            else if( strcmp( pszToken, "v" ) == 0)
-            {
-                dCurPosY3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY2 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX2 = stack.top().GetReal();
-                stack.pop();
-                
-                of <<"["<<pszToken<< '(' << setprecision(3)
-                <<dCurPosX2 << ',' << dCurPosY2 <<','
-                <<dCurPosX3 << ',' << dCurPosY3 << ")] " << '\n';
-            }
-            else if( strcmp( pszToken, "y" ) == 0)
-            {
-                dCurPosY3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX3 = stack.top().GetReal();
-                stack.pop();
-                dCurPosY1 = stack.top().GetReal();
-                stack.pop();
-                dCurPosX1 = stack.top().GetReal();
-                stack.pop();
-                
-                of <<"["<<pszToken<< '(' << setprecision(3)
-                <<dCurPosX1 << ',' << dCurPosY1 <<','
-                <<dCurPosX3 << ',' << dCurPosY3 << ")] " << '\n';
-            }
-            else if( strcmp( pszToken, "h" ) == 0)
-            {
-                
-                of <<"["<<pszToken<<"]\n";
-            }
-            
-            else if( strcmp( pszToken, "re" ) == 0)
-            {
-                height = stack.top().GetReal();
-                stack.pop();
-                width = stack.top().GetReal();
-                stack.pop();
-                dCurPosY = stack.top().GetReal();
-                stack.pop();
-                dCurPosX = stack.top().GetReal();
-                stack.pop();
-                
-                of <<"["<<pszToken<< '(' << setprecision(3)
-                <<dCurPosX << ',' << dCurPosY <<','
-                <<width << ',' << height << ")] " << '\n';
-            }
-            
             else if( strcmp( pszToken, "BT" ) == 0 )
             {
                 // BT = begin a new txt obj
@@ -231,11 +157,9 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
                 of << "\n";
             else if( strcmp( pszToken, "T*" ) == 0 )
                 of << "\n";
-            
-            // {
-            //     Operator_set_not_handled.emplace(string(pszToken));
-            
-            // }
+            else {
+                Operator_set_not_handled.emplace(string(pszToken));
+            }
             
             if( bTextBlock )
             {

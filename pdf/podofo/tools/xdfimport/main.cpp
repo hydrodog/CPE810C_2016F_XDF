@@ -21,26 +21,34 @@ void print_help()
 
 int main( int argc, char* argv[] )
 {
-  char*    pszInput;
+    char*    pszInput;
 
-    PdfImporter importer;
+
   
 
-  if( argc != 2 )
-  {
-    print_help();
-    exit( -1 );
-  }
+    if( argc != 2 )
+    {
+        print_help();
+        exit( -1 );
+    }
 
-  pszInput  = argv[1];
+    pszInput  = argv[1];
     
-  try {
-      importer.Init( pszInput );
-  } catch( PdfError & e ) {
-      fprintf( stderr, "Error: An error %i ocurred during processing the pdf file.\n", e.GetError() );
-      e.PrintErrorMsg();
-      return e.GetError();
-  }
+    try {
+        PdfImporter importer;
+        importer.Init( pszInput );
+    } catch( PdfError & e ) {
+        fprintf( stderr, "Error: An error %i ocurred during processing the pdf file.\n", e.GetError() );
+        e.PrintErrorMsg();
+        return e.GetError();
+    } catch(char const * pszErrorMessage) {
+        std::cout << "Error occurred while importing a pdf file:" << pszErrorMessage << endl;
+        return 1;
+    } catch(string & sErrorMessage) {
+        std::cout << "Error occurred while importing a pdf file:" << sErrorMessage << endl;
+        return 1;
+    }
 
-  return 0;
+
+    return 0;
 }
