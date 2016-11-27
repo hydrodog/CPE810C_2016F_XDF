@@ -80,3 +80,6 @@ void Text::addContent(Content c){
     m_contentList.push_back(c);
 }
 
+Content Text::getContent(){
+    return *m_textcontent;
+}

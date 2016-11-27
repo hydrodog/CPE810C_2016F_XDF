@@ -21,7 +21,7 @@ private:
 public:
     Text();
 
-
+    Content getContent();
     void insertString(const char *s);//insert a string
     void getText(const wstring w);
     void getallfont(const string v);
