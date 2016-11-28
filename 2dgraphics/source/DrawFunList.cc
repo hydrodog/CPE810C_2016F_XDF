@@ -21,21 +21,31 @@ DrawFunList::~DrawFunList() {}
 void DrawFunList::draw1(const std::vector<Shape>& shape, const int& currentIndex){
   std::cout << "\t\t" << "This is draw1!" << "\t";
 #if 0
-  std::string currentOperator = shape[currentIndex].getOpter();
-  std::vector<double> currentOperands = shape[currentIndex].getOpnds();
-  
-  //using QT Painter method to draw certain shapes on the main window and fulfill color if necessary
-  
-  //if current information is not enough to make a draw, using shape object can reference all other operators and operands
-  for(int i = 0; i < shape[currentIndex].getOpnds().size(); ++i){
-    if(shape[i].getOpter() == "c"){
-      for(auto ite = shape[i].getOpnds().end(); ite != shape[i].getOpnds().begin(); --ite){
-        if(*ite == "red"){
-          //draw shape and fulfill color
+        //sample code version 1(get current operator's data):
+        std::cout << "\n" << "===============" << "\n" <<"this is sample code of getting current operands for current operator!" << "\n";
+        
+        std::cout << "Current operator is " << shape[currentIndex].getOpter() << "\n";
+        
+        for(auto ite = shape[currentIndex].getOpnds().begin(); ite != shape[currentIndex].getOpnds().end(); ++ite){
+            std::cout << *ite << "\t\t";
         }
-      }
-    }
-  }
+        std::cout << "\n" << "===============" << "\n";
+
+        //sample code version 2(get other operators' data):
+        std::string currentOperator = shape[currentIndex].getOpter();
+        std::vector<double> currentOperands = shape[currentIndex].getOpnds();
+        //Draw a circle on the main window and fulfill color
+        
+        //reference prevois operators and operands
+        for(int i = currentIndex - 1; i >= 0; i--){
+            if(shape[i].getOpter() == "c"){
+                for(auto ite = shape[i].getOpnds().end(); ite != shape[i].getOpnds().begin(); --ite){
+                    if(*ite == "red"){
+                        //fulfill color
+                    }
+                }
+            }
+        }
 #endif
 }
 void DrawFunList::draw2(const std::vector<Shape>& shape, const int& currentIndex){
