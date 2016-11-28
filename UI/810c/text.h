@@ -20,8 +20,8 @@ private:
     Content *m_textcontent=new Content[n];
 public:
     Text();
-
-    Content getContent();
+    int getnumber();
+    Content getContent(int i);
     void insertString(const char *s);//insert a string
     void getText(const wstring w);
     void getallfont(const string v);
