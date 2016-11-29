@@ -5,24 +5,22 @@ Text::Text(){}
 
 void Text::getText(const wstring w){
     wstring tem=w;
-    wstring lis=NULL;
-    int j=0;
     int pos=0;
+    wstring lis;
+    int j=0;
     while(1){
+        pos=tem.find(L"<stylechange>");
         if(pos==-1)break;
         n++;
-        pos=tem.find(L"<stylechange>");
-        for(int i=0;i<pos;i++){
-            lis[i]=tem[i];
-        }
+        lis=tem.substr(0,pos);
         m_textcontent[j].getmessage(lis);
         tem.erase(tem.begin(),tem.begin()+pos+13);
-        j++;
+        j++;       
     }
 }
 void Text::getallfont(const string v){
     string tem=v;
-    string lis=NULL;
+    string lis;
     int j=0;
     int pos=0;
     while(1){
@@ -85,4 +83,9 @@ Content Text::getContent(int i){
 }
 int Text::getnumber(){
     return n;
+}
+void Text::dealContentmessage(){
+    for(int i=0;i<n;i++){
+        m_textcontent[i].dealmessage();
+    }
 }

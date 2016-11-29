@@ -7,22 +7,16 @@
 #include<QFont>
 
 using namespace std;
-void Wchar_tToString(std::string& szDst,const wchar_t *wchar){
-const wchar_t * wText = wchar;
-DWORD dwNum = WideCharToMultiByte(CP_OEMCP,NULL,wText,-1,NULL,0,NULL,FALSE);
-char *psText;
-psText = new char[dwNum];
-WideCharToMultiByte (CP_OEMCP,NULL,wText,-1,psText,dwNum,NULL,FALSE);
-szDst = psText;
-delete []psText;
-}
+
+
+
 void Content::getmessage(wstring a) {
     /*ifstream in("sampletext.txt");
     string words;
     try {
        in.is_open();
     }
-    catch(double) {
+    catch(int) {
         cout<<"Opening file error!"<<endl;
     }
     const int LINE_LENGTH = 10;  //fix in 11/18
@@ -38,7 +32,7 @@ void Content::getmessage(wstring a) {
     wstring b=a;
     int j=0;
     int pos;
-    while(1){
+    /*while(1){
         pos=b.find(L"<n>");
         if(pos==-1)break;
         n++;
@@ -46,22 +40,23 @@ void Content::getmessage(wstring a) {
         changelinepos[j]=pos;
         b.erase(pos,3);
         j++;
-    }
+    }*/
     k=b.length();
     wchar_t c[k];
     for(int i=0;i<k;i++){
         c[i]=b.c_str()[i];
     }
-    for(int i=0;i<k;i++){
-        words[i]=c[i];
-    }
+    //for(int i=0;i<k;i++){
+    //    words[i]=c[i];
+    //}
+    words=c;
 }
 void Content::getfont(string a) {
     string language;
     string colortem;
     string fonttem;
     double  size;
-    int bold;
+    bool bold;
     bool italic;
     bool underline;
   /*  ifstream in("samplefont.txt");
@@ -69,7 +64,7 @@ void Content::getfont(string a) {
     try {
        in.is_open();
     }
-    catch(double) {
+    catch(int) {
         cout<<"Opening file error!"<<endl;
     }
     const int LINE_LENGTH = 10;  //fix in 11/16
@@ -114,13 +109,19 @@ void Content::getfont(string a) {
     for(int i=posA+4;i<posB;i++){
         c[i-posA]=a[i];
     }
-    sscanf(c,"%d",&bold);
+    int x;
+    sscanf(c,"%d",&x);
+    if(x==1) {
+        bold=true;
+    }else{
+        bold=false;
+    }
     posA=posB;
     posB=b.find("underline");
     for(int i=posA+6;i<posB;i++){
         c[i-posA]=a[i];
     }
-    int x;
+
     sscanf(c,"%d",&x);
     if(x==1) {
         italic=true;
@@ -140,15 +141,12 @@ void Content::getfont(string a) {
     }
     QString fonttem1= QString::fromStdString(fonttem);
     QString colortem1= QString::fromStdString(colortem);
-    font.setFamily(fonttem1);
-    font.setPixelSize(size);
-    font.setBold(bold);
-    font.setItalic(italic);
-    font.setUnderline(underline);
-    color.setNamedColor(colortem1);
-}
-QFont Content::contentFont() {
-    return font;
+    m_font.setFamily(fonttem1);
+    m_font.setPixelSize(size);
+    m_font.setBold(bold);
+    m_font.setItalic(italic);
+    m_font.setUnderline(underline);
+    m_color.setNamedColor(colortem1);
 }
 
 void Content::getalignment(int *n,int *m){
@@ -188,4 +186,21 @@ int Content::getlineamount(){
 QString Content::getQString(){
     QString str1= QString::fromWCharArray(words);
     return str1;
+}
+void Content::dealmessage(){
+    int pos;
+    int j=0;
+    wstring temp=words;
+    while(1){
+            pos=temp.find(L"<n>");
+            if(pos==-1)break;
+            n++;
+            changelinepos[j]=pos;
+            temp.erase(pos,3);
+            k=k-3;
+            j++;
+        }
+    for(int i=0;i<k;i++){
+        words[i]=temp.c_str()[i];
+    }
 }

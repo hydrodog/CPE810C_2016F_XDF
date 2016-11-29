@@ -16,12 +16,13 @@ private:
     std::list<TextLine> m_textLineList;
     std::list<Content> m_contentList;
     int m_len;
-    int n=1;
+    int n=0;
     Content *m_textcontent=new Content[n];
 public:
     Text();
     int getnumber();
     Content getContent(int i);
+    void dealContentmessage();
     void insertString(const char *s);//insert a string
     void getText(const wstring w);
     void getallfont(const string v);

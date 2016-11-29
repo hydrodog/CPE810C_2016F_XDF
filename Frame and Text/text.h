@@ -1,11 +1,11 @@
-#ifndef TEXT_H__
-#define TEXT_H__
-#include "font.h"
+#ifndef TEXT_HH__
+#define TEXT_HH__
 #include "textline.h"
 #include <string>
 #include <map>
 #include <list>
-
+#include "content.h"
+using namespace std;
 class Text{
 /*This class represents the words and text in the frame
 *Contains the width and height of this text
@@ -13,30 +13,33 @@ class Text{
 */
 
 private:
-    myFont defalutFont;// A List of line in the text
-    std::list<TextLine> textLineList;
-    double linespace;
+    std::list<TextLine> m_textLineList;
+    std::list<Content> m_contentList;
+    int m_len;
+    int n=0;
+    Content *m_textcontent=new Content[n];
 public:
     Text();
-
-
-    void insert(char *s);//insert a string
-
-    void insert(char c);//inset a character
+    int getnumber();
+    Content getContent(int i);
+    void dealContentmessage();
+    void insertString(const char *s);//insert a string
+    void getText(const wstring w);
+    void getallfont(const string v);
+    void insertcontent();
+    void insertChar(const char c);//inset a character
 
     void insertReturn();//insert return
 
-    void deleteLine(int i);//Delete line at index i
+    void addTextLine(TextLine &);
 
-    void setLineSpace(double);
+    int len(){return m_len;}
 
-    double getLineSpace();
+    std::list<TextLine> textLineList() const{return m_textLineList;}
 
-    myFont getDefalutFont();
+    std::list<Content> contentList() const{return m_contentList;}
 
-    void setDefalutFont(myFont&);
-
-    void addTextLine(TextLine &tl);
+    void addContent(Content c);
 
 };
 

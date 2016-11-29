@@ -27,7 +27,7 @@ private:
 public:
     void getmessage(std::wstring a);
     void getfont(std::string a);
-
+    void dealmessage();
     QFont font(){return m_font;}
     QColor color(){return m_color;}
     std::wstring str(){return m_str;}

@@ -32,7 +32,7 @@ void Content::getmessage(wstring a) {
     wstring b=a;
     int j=0;
     int pos;
-    while(1){
+    /*while(1){
         pos=b.find(L"<n>");
         if(pos==-1)break;
         n++;
@@ -40,22 +40,23 @@ void Content::getmessage(wstring a) {
         changelinepos[j]=pos;
         b.erase(pos,3);
         j++;
-    }
+    }*/
     k=b.length();
     wchar_t c[k];
     for(int i=0;i<k;i++){
         c[i]=b.c_str()[i];
     }
-    for(int i=0;i<k;i++){
-        words[i]=c[i];
-    }
+    //for(int i=0;i<k;i++){
+    //    words[i]=c[i];
+    //}
+    words=c;
 }
 void Content::getfont(string a) {
     string language;
     string colortem;
     string fonttem;
     double  size;
-    int bold;
+    bool bold;
     bool italic;
     bool underline;
   /*  ifstream in("samplefont.txt");
@@ -108,13 +109,19 @@ void Content::getfont(string a) {
     for(int i=posA+4;i<posB;i++){
         c[i-posA]=a[i];
     }
-    sscanf(c,"%d",&bold);
+    int x;
+    sscanf(c,"%d",&x);
+    if(x==1) {
+        bold=true;
+    }else{
+        bold=false;
+    }
     posA=posB;
     posB=b.find("underline");
     for(int i=posA+6;i<posB;i++){
         c[i-posA]=a[i];
     }
-    int x;
+
     sscanf(c,"%d",&x);
     if(x==1) {
         italic=true;
@@ -179,4 +186,21 @@ int Content::getlineamount(){
 QString Content::getQString(){
     QString str1= QString::fromWCharArray(words);
     return str1;
+}
+void Content::dealmessage(){
+    int pos;
+    int j=0;
+    wstring temp=words;
+    while(1){
+            pos=temp.find(L"<n>");
+            if(pos==-1)break;
+            n++;
+            changelinepos[j]=pos;
+            temp.erase(pos,3);
+            k=k-3;
+            j++;
+        }
+    for(int i=0;i<k;i++){
+        words[i]=temp.c_str()[i];
+    }
 }

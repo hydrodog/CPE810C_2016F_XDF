@@ -31,4 +31,4 @@ HEADERS += \
 
 DISTFILES += \
     samplereturn.txt \
-    samplefile.html
+    samplefile.html \

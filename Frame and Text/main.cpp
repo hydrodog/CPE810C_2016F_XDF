@@ -1,34 +1,23 @@
+#include "mainwindow.h"
+#include <QApplication>
 #include <iostream>
-#include <page.h>
-#include "font.h"
-#include "content.h"
-#include<locale>
+#include<fstream>
 using namespace std;
-
-int main(){
-
-//    char c='a';
-//    Page p(29.7,20.99,1);
-//    p.getFrame().insert(c);
-    Content c;
-    wstring k=L"sdjfagh中文测试ds<n>fkjaskjgas测试中文jha<n>sgfasjkhgasjhgfdasjfhasdf";
-    c.getmessage(k);
-    int n=c.getlength();
-    wchar_t a[n];
-    wchar_t *b=c.getword();
-    for(int i=0;i<n;i++){
-        a[i]=b[i];
+int main()
+{
+    //zqx's test are as follow
+    wifstream in;
+    in.open(("testfile1.txt"));
+    wstring testwords;
+    wstring allwords;
+    while(getline(in,testwords)){
+        allwords=allwords+testwords;
     }
-    string f;
-    Wchar_tToString(f,a);
-    cout<<f;
-    cout<<endl;
-    int *d=c.getlinechange();
-    int j=c.getlineamount();
-    int e[j];
-    for(int i=0;i<j;i++){
-        e[i]=d[i];
-        cout<<e[i]<<endl;
-    }
+    //wcout<<allwords;
+    const wstring allwords1=allwords;
+    in.close();
+    Text test1;
+    test1.getText(allwords1);
+    test1.dealContentmessage();
     return 0;
 }

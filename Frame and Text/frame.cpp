@@ -5,52 +5,36 @@
 #include <sstream>
 using namespace std;
 
-Frame::Frame(double startX, double startY, double height, double width):border(height,width),height(height),width(width),
-    startX(startX),startY(startY)
+Frame::Frame(int startX, int startY, int height, int width, int FrameNum):m_frameNum(FrameNum),
+    m_height(height),m_width(width),m_startX(startX),m_startY(startY),m_border(height,width),m_text()
 {}
 
 void Frame::clear(){
 
 }//Reset all information to defalut value
-void Frame::insert(char *s){
-    text.insert(s);
+void Frame::insertChar(char c){
+    m_text.insertChar(c);
 }
-void Frame::insert(char c){
-    text.insert(c);
+
+void Frame::insertString(const char *s){
+    m_text.insertString(s);
 }
 
 void Frame::insert(char *s, bool withLink){
-    if(withLink==1){
-            cout<<"Please tell me the route of the file:"<<endl;
-            ifstream in;
-            string filename;
-            getline(cin,filename,'\n');
-            in.open(filename);
-            ostringstream ostr;
-            char c;
-            while(in.get(c)){
-            ostr.put(c);
-            }
-            string(s)=ostr.str();
-            in.close();
-        }else{
-            cout<<"Please type in the string:"<<endl;
-            cin>>s;
-        }
-}//insert a string with a link or not
+}
 
 void Frame::insertSpace(){
-    text.insert(' ');
+    m_text.insertChar(' ');
 } // insert a space
 void Frame::insertReturn(){
-    text.insertReturn();
+    m_text.insertReturn();
 }// insert return
 
 
-void Frame::setText(Text& t){
-    text=t;
+void Frame::addTextLine(TextLine& tl){
+    m_text.addTextLine(tl);
 }
 
-Text Frame::getText(){
-    return text;
+void Frame::addContent(Content c){
+    m_text.addContent(c);
 }

@@ -1,5 +1,5 @@
-#ifndef PAGE_H__
-#define PAGE_H__
+#ifndef PAGE_HH__
+#define PAGE_HH__
 #include "frame.h"
 #include <list>
 
@@ -9,25 +9,27 @@ class Page{//Maybe a class should be written by other team
 *Function like import,export.
 */
 private:
-    int pageNumber;
-    std::list<Frame> frameList;
-    double height,width;
-    bool LtoR;//Left to right or right to left
-    bool horizontal;// horizontal or vertical
+    int m_pageNumber;
+    std::list<Frame> m_frameList;
+    int m_height,m_width;
+    bool m_LtoR;//Left to right or right to left
+    bool m_horizontal;// horizontal or vertical
 public:
-    Page(double height, double width, int pageNum);
+    Page(int height, int width, int pageNum);
 
     void clear();//Reset all information to defalut value
     void print();
     void save();
     void import();//Way to import a file  NOT YOUR PROBLEM
-    void addNewFrame(double x,double y, double height,double width);
+    void addNewFrame(int startX, int startY, int height, int width, int FrameNum);
     void addFrame(Frame& f);
-    std::list<Frame> getFrameList();
-    int getPageNumber();
-    double getHeight();
-    double getWidth ();
-    void setPageNumber(int i);
+
+    std::list<Frame> frameList(){ return m_frameList;}
+    int pageNumber(){ return m_pageNumber;}
+    int height(){return m_height;}
+    int width (){return m_width;}
+
+
 
 };
 
