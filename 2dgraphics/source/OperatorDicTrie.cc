@@ -33,7 +33,7 @@ void OperatorDicTrie::addOptor(const std::string& s){
   for(int i = 0; i < length; ++i){
     curChar = s[i];
     if(curChar < 'a' || curChar > 'z'){
-      throw IsNotLowCaseChar(curChar);
+      throw ExceptionDraw(curChar);
     }
     offset = curChar - 'a';
     if(i == (length - 1)){
