@@ -1,8 +1,12 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <iostream>
+//<<<<<<< HEAD
 #include<fstream>
 //#include<windows.h>
+//=======
+#include <fstream>
+//>>>>>>> 971ee87a64f753c2ca0a4fc849bf88251eac35ca
 using namespace std;
 /*void Wchar_tToString(std::string& szDst,const wchar_t *wchar){
 const wchar_t * wText = wchar;

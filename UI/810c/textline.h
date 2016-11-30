@@ -4,7 +4,7 @@
 #include <list>
 #include <map>
 #include <vector>
-#include <string>
+
 
 extern int PublicLinecode;
 class TextLine{

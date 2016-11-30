@@ -7,6 +7,7 @@
 #include <QFrame>
 #include <QTextBrowser>
 #include "frame.h"
+#include "border.h"
 
 using namespace  std;
 MainWindow::MainWindow(QWidget *parent) :
@@ -22,12 +23,16 @@ MainWindow::~MainWindow()
     //ui->textEdit->
 }
 void MainWindow::addFrame(Frame f){
+
+
+
     QFrame* frame_3 = new QFrame(ui->centralWidget);
     QString str=QString("frame").append(QChar(f.frameNum()));
     frame_3->setObjectName(str);
     frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
     frame_3->setFrameShape(QFrame::StyledPanel);
     frame_3->setFrameShadow(QFrame::Raised);
+    frame_3->setStyleSheet("background-color:yellow;");
     if(f.text().textLineList().empty()){
         return;
     }else{
@@ -35,7 +40,7 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
-        textBrowser->setGeometry(QRect(0, 0, 600, 600));
+        textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()+f.border().downEdge()+f.border().topEdge(), f.width()+f.border().leftEdge()+f.border().rightEdge()));
         textBrowser->setStyleSheet("background-color:white;");
         QFont serifFont("Times", 50, QFont::Bold);
         serifFont.setStyle(QFont::StyleOblique);
