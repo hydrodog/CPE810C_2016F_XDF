@@ -2,6 +2,7 @@
 
 /*
  @author: Seito Ryu  20/11/16
+ @modifer: Seito Ryu 30/11/16 "add some sample code"
  */
 
 //constructor
@@ -30,6 +31,13 @@ void DrawFunList::draw1(const std::vector<Shape>& shape, const int& currentIndex
             std::cout << *ite << "\t\t";
         }
         std::cout << "\n" << "===============" << "\n";
+
+        try{
+          // draw 2d graphic here!
+        }catch(std::exception &e){
+          throw ExceptionDraw(shape[currentIndex].getOpter());
+          return;
+        }
 
         //sample code version 2(get other operators' data):
         std::string currentOperator = shape[currentIndex].getOpter();

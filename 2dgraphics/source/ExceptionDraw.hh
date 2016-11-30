@@ -7,6 +7,7 @@
 /*
  @author: Seito Ryu  18/11/16
  @Purpose: Exception class for draw methods
+ @modifer: Seito Ryu 30/11/16 "delete the function: getCng"
  */
 class ExceptionDraw{
 private:
@@ -14,7 +15,6 @@ private:
 public:
   ExceptionDraw(std::string val): errCnt(val) {}
   friend std::ostream& operator << (std::ostream& s, const ExceptionDraw& e){}
-  std::string getCng() const{}
 };
 
 #endif

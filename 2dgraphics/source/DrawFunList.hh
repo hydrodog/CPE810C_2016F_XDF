@@ -2,6 +2,7 @@
 #define DRAW_FUNLIST_HH__
 
 #include "Shape.hh"
+#include "ExceptionDraw.hh"
 #include <iostream>
 #include <vector>
 #include <string>
