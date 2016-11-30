@@ -7,6 +7,7 @@
 #include <QFrame>
 #include <QTextBrowser>
 #include "frame.h"
+#include "border.h"
 
 using namespace  std;
 MainWindow::MainWindow(QWidget *parent) :
@@ -39,7 +40,7 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
-        textBrowser->setGeometry(QRect(f.startX(), 40, 520, 520));
+        textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()+f.border().downEdge()+f.border().topEdge(), f.width()+f.border().leftEdge()+f.border().rightEdge()));
         textBrowser->setStyleSheet("background-color:white;");
         QFont serifFont("Times", 50, QFont::Bold);
         serifFont.setStyle(QFont::StyleOblique);

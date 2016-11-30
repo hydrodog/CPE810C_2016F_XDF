@@ -43,6 +43,9 @@ class Frame{
 
         void text(Text& t){m_text=t;}
         Text text(){return m_text;}
+        Border border(){return m_border;}
+
+
 
 };
 
