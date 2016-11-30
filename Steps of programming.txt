@@ -1,0 +1,8 @@
+Steps of discussion and programming:
+1.create a header and source  file named "border" to constrain the size of the paper(contain the four edges);
+2.create the header and source file named "text" to discribe the text; in order to get the words, we have to 
+create a new header and source file named "textline" to get the words;
+3.create a header and source file named "frame" which includes "border" and "text" to represent a rectangle
+area to fill in texts and images;
+4.create a header and source file named "mainwindow" to test the other codes whether they can used successfully;
+5.we also create a header and source file named "page" to represent the single page of XDF;
