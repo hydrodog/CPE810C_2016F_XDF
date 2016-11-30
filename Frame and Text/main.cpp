@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <iostream>
-#include<fstream>
+#include <fstream>
 using namespace std;
 int main()
 {
