@@ -21,13 +21,12 @@ private:
     std::wstring m_str;
     int k;
     int n=0;
-    wchar_t *words=new wchar_t [k];
-    int *changelinepos=new int[n];
+    wstring words;
+    int changelinepos[20];
     map<int,string> alignment;
 public:
     void getmessage(std::wstring a);
     void getfont(std::string a);
-    void dealmessage();
     QFont font(){return m_font;}
     QColor color(){return m_color;}
     std::wstring str(){return m_str;}
@@ -37,7 +36,7 @@ public:
 
     void getalignment(int *n,int *m);
     map<int,string> exportalignment();
-    wchar_t* getword();
+    wstring getword();
     int getlength();
     int* getlinechange();
     int getlineamount();

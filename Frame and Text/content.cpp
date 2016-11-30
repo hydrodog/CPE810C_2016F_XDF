@@ -32,7 +32,7 @@ void Content::getmessage(wstring a) {
     wstring b=a;
     int j=0;
     int pos;
-    /*while(1){
+    while(1){
         pos=b.find(L"<n>");
         if(pos==-1)break;
         n++;
@@ -40,16 +40,9 @@ void Content::getmessage(wstring a) {
         changelinepos[j]=pos;
         b.erase(pos,3);
         j++;
-    }*/
-    k=b.length();
-    wchar_t c[k];
-    for(int i=0;i<k;i++){
-        c[i]=b.c_str()[i];
     }
-    //for(int i=0;i<k;i++){
-    //    words[i]=c[i];
-    //}
-    words=c;
+    k=b.length();
+    words=b;
 }
 void Content::getfont(string a) {
     string language;
@@ -168,9 +161,8 @@ map<int,string> Content::exportalignment(){
     return alignment;
 }
 
-wchar_t* Content::getword(){
-    wchar_t *a=&words[0];
-    return a;
+wstring Content::getword(){
+    return words;
 }
 int Content::getlength(){
     return k;
@@ -184,23 +176,6 @@ int Content::getlineamount(){
     return m;
 }
 QString Content::getQString(){
-    QString str1= QString::fromWCharArray(words);
+    QString str1= QString::fromStdWString(words);
     return str1;
-}
-void Content::dealmessage(){
-    int pos;
-    int j=0;
-    wstring temp=words;
-    while(1){
-            pos=temp.find(L"<n>");
-            if(pos==-1)break;
-            n++;
-            changelinepos[j]=pos;
-            temp.erase(pos,3);
-            k=k-3;
-            j++;
-        }
-    for(int i=0;i<k;i++){
-        words[i]=temp.c_str()[i];
-    }
 }

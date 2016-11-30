@@ -17,16 +17,16 @@ private:
     std::list<Content> m_contentList;
     int m_len;
     int n=0;
-    Content *m_textcontent=new Content[n];
+    //Content *m_textcontent=new Content[n];
 public:
     Text();
     int getnumber();
-    Content getContent(int i);
-    void dealContentmessage();
+    //Content getContent(int i);
+    //void dealContentmessage();
     void insertString(const char *s);//insert a string
-    void getText(const wstring w);
-    void getallfont(const string v);
-    void insertcontent();
+    void getText(const wstring w,const string v);
+    //void getallfont(const string v);
+    //void insertcontent();
     void insertChar(const char c);//inset a character
 
     void insertReturn();//insert return
