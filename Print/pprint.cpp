@@ -55,7 +55,8 @@ void PPrint::print(){
         painter.begin(&printer);
         if(isOdd==0){//means normal print
             for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum--){
-                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+               // painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                ppage page(&page_in);
                 if(PageNum!=startPageNum)
                     printer.newPage();
             }
@@ -65,7 +66,8 @@ void PPrint::print(){
             if(endPageNum%2==0)//end page is even page
                 endPageNum--;//switch to odd page
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
-                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                    ppage page(&page_in);
+//                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
                     if(PageNum!=startPageNum)
                         printer.newPage();
                 }
@@ -75,7 +77,8 @@ void PPrint::print(){
             if(endPageNum%2!=0)//end page is odd page
                 endPageNum--;//switch to odd page
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
-                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
+                    ppage page(&page_in);
+//                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
                     if(PageNum!=startPageNum)
                         printer.newPage();
                 }
@@ -91,7 +94,8 @@ void PPrint::print(){
         painter.begin(&printer);
         if(isOdd==0){
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum++){
-                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                ppage page(&page_in);
+//                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }
@@ -101,7 +105,8 @@ void PPrint::print(){
             if(endPageNum%2==0)//end page is even page
                 endPageNum++;//switch to odd page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
-                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                ppage page(&page_in);
+//                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }
@@ -111,7 +116,8 @@ void PPrint::print(){
             if(endPageNum%2!=0)//end page is odd page
                 endPageNum++;//switch to even page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
-                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
+                ppage page(&page_in);
+//                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }

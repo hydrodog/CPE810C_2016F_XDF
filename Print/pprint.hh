@@ -12,6 +12,7 @@
 #include <QPainter>
 #include <QPrintDialog>
 #include <QPrinter>
+#include <includes.hh>
 //test
 class PPrint
 {

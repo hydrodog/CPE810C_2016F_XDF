@@ -15,5 +15,10 @@
 
 
 #include "pprint.hh"
+#include "pframe.h"
+#include "ppage.h"
 
+#include <list>
+#include <QRectF>
+#include <QPainter>
 #endif // INCLUDES_HH
