@@ -16,13 +16,17 @@ SOURCES += main.cpp\
         dialog.cpp \
     pprint.cpp \
     pframe.cpp \
-    ppage.cpp
+    ppage.cpp \
+    frame.cpp \
+    page.cpp
 
 HEADERS  += dialog.h \
     pprint.hh \
     includes.hh \
     pframe.h \
-    ppage.h
+    ppage.h \
+    frame.h \
+    page.h
 
 FORMS    += dialog.ui
 

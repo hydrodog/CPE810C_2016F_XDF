@@ -7,7 +7,7 @@
 #define PFRAME_H
 
 #include <includes.hh>
-
+//#include <frame.h>
 
 class pframe
 {
@@ -23,7 +23,7 @@ public:
 
 
 //divided draw method
-    void draw_image(QImage * image);
+    void draw_image(QImage image);
     void draw_text();
     void draw_2dGraph();
 };

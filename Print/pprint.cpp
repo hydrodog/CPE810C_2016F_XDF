@@ -1,4 +1,5 @@
 #include <pprint.hh>
+#include <ppage.h>
 
 PPrint::PPrint() {
     startPageNum=0;
@@ -41,6 +42,10 @@ void PPrint::print(){
     QPrintDialog dialog(&printer);
     dialog.setWindowTitle("Print Document");
 
+
+
+    Page page_in;
+
     if (isPDF){//if the user want PDF output directly
         printer.setOutputFormat(QPrinter::PdfFormat);
         printer.setOutputFileName("printXDF.pdf");
@@ -56,7 +61,8 @@ void PPrint::print(){
         if(isOdd==0){//means normal print
             for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum--){
                // painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
-                ppage page(&page_in);
+                ppage page(& page_in);
+                page.print();
                 if(PageNum!=startPageNum)
                     printer.newPage();
             }
@@ -67,6 +73,7 @@ void PPrint::print(){
                 endPageNum--;//switch to odd page
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
                     ppage page(&page_in);
+                    page.print();
 //                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
                     if(PageNum!=startPageNum)
                         printer.newPage();
@@ -78,6 +85,7 @@ void PPrint::print(){
                 endPageNum--;//switch to odd page
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
                     ppage page(&page_in);
+                    page.print();
 //                    painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 哈哈哈哈");//Just test code in case other team fuck up
                     if(PageNum!=startPageNum)
                         printer.newPage();
@@ -95,6 +103,7 @@ void PPrint::print(){
         if(isOdd==0){
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum++){
                 ppage page(&page_in);
+                page.print();
 //                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();
@@ -106,6 +115,7 @@ void PPrint::print(){
                 endPageNum++;//switch to odd page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
                 ppage page(&page_in);
+                page.print();
 //                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();
@@ -117,6 +127,7 @@ void PPrint::print(){
                 endPageNum++;//switch to even page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
                 ppage page(&page_in);
+                page.print();
 //                painter.drawText(1000, 1000, "LET's FUJI CO.LTD 6666 55哈哈哈");//Just test code in case other teams fuck up
                 if(PageNum!=endPageNum)
                     printer.newPage();

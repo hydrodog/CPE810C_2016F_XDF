@@ -1,6 +1,6 @@
 #ifndef PPAGE_H
 #define PPAGE_H
-
+#include "includes.hh"
 
 class ppage
 {
