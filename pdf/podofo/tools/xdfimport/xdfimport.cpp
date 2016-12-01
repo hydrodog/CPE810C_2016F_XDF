@@ -127,7 +127,7 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
 #ifdef PDF_IMPORT_TEST_MODE
             this->Operator_set.emplace(string(pszToken));
 #endif
-            t_mapPdfObj::iterator it = mapPdfGraphicsObj.find(pszToken);
+            mapPdfObj_t::iterator it = mapPdfGraphicsObj.find(pszToken);
             if (it != mapPdfGraphicsObj.end())
             {
 

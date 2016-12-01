@@ -1,4 +1,4 @@
-ADD_EXECUTABLE(xdfimport main.cpp xdfimport.cpp)
+ADD_EXECUTABLE(xdfimport main.cpp xdfimport.cpp pdfgstate.cpp)
 
 TARGET_LINK_LIBRARIES(xdfimport ${PODOFO_LIB})
 SET_TARGET_PROPERTIES(xdfimport PROPERTIES COMPILE_FLAGS "${PODOFO_CFLAGS}")
