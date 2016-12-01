@@ -75,36 +75,29 @@ void Content::getfont(string a) {
     int posB=1;
     posA=b.find("language");
     posB=b.find("color");
-    char c[20];
-    for(int i=posA+8;i<posB;i++){
-        c[i-posA]=a[i];
-    }
-    language=c;
+    string c;
+
+    language=b.substr(posA+8,posB-posA-8);
     posA=posB;
     posB=b.find("font");
-    for(int i=posA+5;i<posB;i++){
-        c[i-posA]=a[i];
-    }
-    colortem=c;
+
+    colortem=b.substr(posA+5,posB-posA-5);
     posA=posB;
     posB=b.find("size");
-    for(int i=posA+4;i<posB;i++){
-        c[i-posA]=a[i];
-    }
-    fonttem=c;
+
+    fonttem=b.substr(posA+4,posB-posA-4);
     posA=posB;
     posB=b.find("bold");
-    for(int i=posA+4;i<posB;i++){
-        c[i-posA]=a[i];
-    }
-    sscanf(c,"%lf",&size);
+    c=b.substr(posA+4,posB-posA-4);
+    const char *temc=c.c_str();
+    sscanf(temc,"%lf",&size);
     posA=posB;
     posB=b.find("italic");
-    for(int i=posA+4;i<posB;i++){
-        c[i-posA]=a[i];
-    }
+
+    c=b.substr(posA+4,posB-posA-4);
+    const char *temc1=c.c_str();
     int x;
-    sscanf(c,"%d",&x);
+    sscanf(temc1,"%d",&x);
     if(x==1) {
         bold=true;
     }else{
@@ -112,11 +105,10 @@ void Content::getfont(string a) {
     }
     posA=posB;
     posB=b.find("underline");
-    for(int i=posA+6;i<posB;i++){
-        c[i-posA]=a[i];
-    }
 
-    sscanf(c,"%d",&x);
+    c=b.substr(posA+6,posB-posA-6);
+    const char *temc2=c.c_str();
+    sscanf(temc2,"%d",&x);
     if(x==1) {
         italic=true;
     }else{
@@ -124,10 +116,10 @@ void Content::getfont(string a) {
     }
     posA=posB;
     posB=b.find("end");
-    for(int i=posA+9;i<posB;i++){
-        c[i-posA]=a[i];
-    }
-    sscanf(c,"%d",&x);
+
+    c=b.substr(posA+9,posB-posA-9);
+    const char *temc3=c.c_str();
+    sscanf(temc3,"%d",&x);
     if(x==1) {
         underline=true;
     }else {
