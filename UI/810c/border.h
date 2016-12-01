@@ -7,7 +7,7 @@ private:
     int m_leftEdge,m_rightEdge,m_topEdge,m_downEdge;
     QColor m_color;
 public:
-    Border(int height, int width);
+    Border(int height=800, int width=600);
 
     void clear();//Reset all value to defalut one
 
