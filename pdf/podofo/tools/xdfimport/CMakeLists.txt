@@ -1,6 +1,6 @@
 ADD_EXECUTABLE(xdfimport main.cpp xdfimport.cpp pdfgstate.cpp)
 
-TARGET_LINK_LIBRARIES(xdfimport ${PODOFO_LIB})
+TARGET_LINK_LIBRARIES(xdfimport ${PODOFO_LIB}   Qt5::Core  Qt5::Gui)
 SET_TARGET_PROPERTIES(xdfimport PROPERTIES COMPILE_FLAGS "${PODOFO_CFLAGS}")
 ADD_DEPENDENCIES(xdfimport ${PODOFO_DEPEND_TARGET})
 INSTALL(TARGETS xdfimport

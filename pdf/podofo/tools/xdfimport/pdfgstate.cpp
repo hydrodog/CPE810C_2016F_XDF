@@ -4,3 +4,7 @@
 
 #include "pdfgstate.h"
 
+PdfGState::PdfGState()//: m_CTM()
+{
+
+}
