@@ -53,23 +53,7 @@ void Content::getfont(string a) {
     bool bold;
     bool italic;
     bool underline;
-  /*  ifstream in("samplefont.txt");
-    string a;
-    try {
-       in.is_open();
-    }
-    catch(int) {
-        cout<<"Opening file error!"<<endl;
-    }
-    const int LINE_LENGTH = 10;  //fix in 11/16
-    char str[LINE_LENGTH];
-    string *k;
-    int i=0;
-    while( in.getline(str,LINE_LENGTH) ){
-    k[i]=str;
-    i++;
-    if(i>=20)break;
-    }                //fix in 11/16 */
+
     string b=a;
     int posA=1;
     int posB=1;

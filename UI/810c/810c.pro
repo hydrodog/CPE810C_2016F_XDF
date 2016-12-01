@@ -18,7 +18,6 @@ SOURCES += main.cpp\
     page.cpp \
     text.cpp \
     border.cpp \
-    textline.cpp \
     content.cpp
 
 HEADERS  += mainwindow.h \
@@ -27,7 +26,6 @@ HEADERS  += mainwindow.h \
     page.h \
     text.h \
     border.h \
-    textline.h \
     content.h
 
 FORMS    += mainwindow.ui
