@@ -67,6 +67,7 @@ void DrawFunList::draw4(const std::vector<Shape>& shape, const int& currentIndex
 }
 void DrawFunList::draw5(const std::vector<Shape>& shape, const int& currentIndex){
   std::cout << "\t\t" << "This is draw5!" << "\t";
+}
 //draw function table
 DrawFunList::draw(const std::string& currentOperator, const std::vector<Shape>& shapeList, const int& currentIndex){
   if(mapDrw[currentOperator]){
