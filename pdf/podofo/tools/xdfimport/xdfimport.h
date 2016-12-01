@@ -6,6 +6,7 @@
 #define XDFIMPORT_H__
 
 #include <podofo.h>
+#include "pdfgstate.h"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
@@ -33,8 +34,8 @@ private:
     public:
         int numOperands;
     };
-    typedef std::map<std::string, PdfObj> t_mapPdfObj;
-    t_mapPdfObj mapPdfGraphicsObj;
+    typedef std::map<std::string, PdfObj> mapPdfObj_t;
+    mapPdfObj_t mapPdfGraphicsObj;
 
 #ifdef PDF_IMPORT_TEST_MODE
     unordered_set<string> Operator_set; // for coding testing only
