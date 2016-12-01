@@ -3,7 +3,25 @@
 #include <iostream>
 
 int main(){
+#if 0
   twoDGraphics* twoDGph;
+#endif
+  //read operator.dat file from config folder in the current directory, 
+  twoDGraphics* twoDGph = new twoDGraphics("config\\", "operator.dat");
+  //set test data: set each shape info seperately
+  //1st shape:
+  std::string opter1 = "m";
+  std::vector<double> opnds1;
+  opnds1.push_back(12.21);
+  opnds1.push_back(34.43);
+  twoDGph->setShape(opter1, opnds1)
+  //2nd shape:
+  std::string opter2 = "l";
+  std::vector<double> opnds2;
+  opnds1.push_back(12.21);
+  opnds1.push_back(34.43);
+  twoDGph->setShape(opter2, opnds2);
+
   DrawFunList drawFunList;
   int i = 0;
   
