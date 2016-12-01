@@ -36,11 +36,15 @@ void MainWindow::addFrame(Frame f){
     if(f.text().contentList().empty()){
         return;
     }else{
+
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
         textBrowser->setFrameStyle(QFrame::NoFrame);
+        QFrame* frame_4 = new QFrame(ui->centralWidget);
+        frame_4->setGeometry(QRect(0,0,100,100));
+        frame_4->setStyleSheet("background-color:green;");
         int a;
         a=f.startX();
 

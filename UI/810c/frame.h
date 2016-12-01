@@ -11,6 +11,8 @@ class Frame{
         int m_frameNum;
         int m_height,m_width;
         int m_startX,m_startY;
+        int m_type;//0 is pure text, 1 is image, 2 is 2d graphic
+
         Border m_border;
         std::list<Frame> m_insideFrame;//If necessary  //TODO: choose better name:
         //list<Image> imageList;
@@ -25,7 +27,7 @@ class Frame{
         int startY(){return m_startY;}
         int height(){return m_height;}
         int width(){return m_width;}
-
+        int type(){return m_type;}
         void addContent(Content c);
 
         void text(Text& t){m_text=t;}

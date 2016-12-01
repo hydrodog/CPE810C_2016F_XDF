@@ -1,7 +1,7 @@
 #include "border.h"
 #include<iostream>
 using namespace std;
-Border::Border(int height, int width):m_leftEdge(width/10),m_rightEdge(width/10),m_topEdge(height/10),m_downEdge(height/10)
+Border::Border(int height, int width):m_leftEdge(width/20),m_rightEdge(width/20),m_topEdge(height/20),m_downEdge(height/20)
 {}
 
 void Border::clear(){
