@@ -33,6 +33,8 @@ void MainWindow::addFrame(Frame f){
     frame_3->setFrameShape(QFrame::StyledPanel);
     frame_3->setFrameShadow(QFrame::Raised);
     frame_3->setStyleSheet("background-color:yellow;");
+    frame_3->setMidLineWidth(1);
+    frame_3->setLineWidth(2);
     if(f.text().textLineList().empty()){
         return;
     }else{
@@ -40,7 +42,7 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
-        textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()+f.border().downEdge()+f.border().topEdge(), f.width()+f.border().leftEdge()+f.border().rightEdge()));
+        textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
         textBrowser->setStyleSheet("background-color:white;");
         QFont serifFont("Times", 50, QFont::Bold);
         serifFont.setStyle(QFont::StyleOblique);
