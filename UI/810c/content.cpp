@@ -43,6 +43,7 @@ void Content::getmessage(wstring a) {
     }
     k=b.length();
     words=b;
+    m_str=b;
 }
 void Content::getfont(string a) {
     string language;

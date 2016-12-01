@@ -69,7 +69,8 @@ void Text::getText(const wstring w,const string v){
         j++;
     }
 }
-/*void Text::getallfont(const string v){
+#if 0
+void Text::getallfont(const string v){
     string temp=v;
     string lisf;
     int j=0;
@@ -84,13 +85,14 @@ void Text::getText(const wstring w,const string v){
         temp.erase(temp.begin(),temp.begin()+posf+13);
         j++;
     }
-}*/
-/*void Text::insertcontent(){
+}
+
+void Text::insertcontent(){
     for(int i=0;i<n;i++){
         m_contentList.push_front(m_textcontent[i]);
     }
-}*/
-
+}
+#endif
 
 void Text::insertString(const char *s){
     if(m_textLineList.empty()){

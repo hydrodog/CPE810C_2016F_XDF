@@ -46,7 +46,6 @@ class Frame{
         Border border(){return m_border;}
 
 
-
 };
 
 

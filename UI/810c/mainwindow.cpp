@@ -24,8 +24,6 @@ MainWindow::~MainWindow()
 }
 void MainWindow::addFrame(Frame f){
 
-
-
     QFrame* frame_3 = new QFrame(ui->centralWidget);
     QString str=QString("frame").append(QChar(f.frameNum()));
     frame_3->setObjectName(str);
@@ -35,7 +33,7 @@ void MainWindow::addFrame(Frame f){
     frame_3->setStyleSheet("background-color:yellow;");
     frame_3->setMidLineWidth(1);
     frame_3->setLineWidth(2);
-    if(f.text().textLineList().empty()){
+    if(!f.text().textLineList().empty()){
         return;
     }else{
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
@@ -44,14 +42,26 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setObjectName(str);
         textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
         textBrowser->setStyleSheet("background-color:white;");
-        QFont serifFont("Times", 50, QFont::Bold);
-        serifFont.setStyle(QFont::StyleOblique);
-        textBrowser->setCurrentFont(serifFont);
-        textBrowser->setTextColor(QColor( "red" ));
+        //QFont serifFont("Times", 50, QFont::Bold);
+        //serifFont.setStyle(QFont::StyleOblique);
+        //textBrowser->setCurrentFont(serifFont);
+        //textBrowser->setTextColor(QColor( "red" ));
         //textBrowser->setAlignment(Qt::AlignRight);
         QString str;
-        int count=0;
+       // int count=0;
 
+        std::list<Content> mycontent=f.text().contentList();
+        for (std::list<Content>::iterator it =mycontent.begin(); it != mycontent.end(); ++it){
+            wstring temp=(*it).str();
+            str=QString::fromStdWString(temp);
+            QFont t=(*it).font();
+            QColor c=(*it).color();
+            textBrowser->setCurrentFont(t);
+            textBrowser->setTextColor(c);
+            textBrowser->append(str);
+        }
+
+#if 0
         //This loop is to find all characters of all lines in text and append them on screen
         std::list<TextLine> t=f.text().textLineList();
         for (std::list<TextLine>::iterator it =t.begin(); it != t.end(); ++it){
@@ -70,22 +80,11 @@ void MainWindow::addFrame(Frame f){
             }
             str.clear();
         }
-
+#endif
         QFont serifFont2("Times", 28, QFont::Bold);
         serifFont2.setItalic(true);
         textBrowser->setCurrentFont(serifFont2);
         textBrowser->setTextColor(QColor( "green" ));
-
-        //Content c=f.getText().getContentList();
-        string s="这是一段中文啊";
-        std::cout<<s.length()<<endl;
-        wstring b=L"这是我的一点心意";
-        std::cout<<b.length()<<endl;
-        QString mystr=QString::fromStdWString(b);
-        textBrowser->append(mystr);
-
-
-
         textBrowser->append("This is another test!!!!!\n");
         textBrowser->setAlignment(Qt::AlignLeft);
         QFont serifFont3("Times", 44, QFont::Bold);

@@ -5,7 +5,7 @@
 #include <sstream>
 using namespace std;
 
-Frame::Frame(int startX=60, int startY=30, int height=800, int width=800, int FrameNum=2):m_frameNum(FrameNum),
+Frame::Frame(int startX, int startY, int height, int width, int FrameNum):m_frameNum(FrameNum),
     m_height(height),m_width(width),m_startX(startX),m_startY(startY),m_border(height,width),m_text()
 {}
 
@@ -17,6 +17,8 @@ void Frame::clear(){
     m_frameNum=2;
 
 }//Reset all information to defalut value
+
+
 void Frame::insertChar(char c){
     m_text.insertChar(c);
 }
