@@ -33,23 +33,23 @@ void MainWindow::addFrame(Frame f){
     frame_3->setStyleSheet("background-color:yellow;");
     frame_3->setMidLineWidth(1);
     frame_3->setLineWidth(2);
-    if(!f.text().textLineList().empty()){
+    if(f.text().contentList().empty()){
         return;
     }else{
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
-        textBrowser->setGeometry(QRect(f.startX()+f.border().leftEdge(), f.startY()+f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
-        textBrowser->setStyleSheet("background-color:white;");
-        //QFont serifFont("Times", 50, QFont::Bold);
-        //serifFont.setStyle(QFont::StyleOblique);
-        //textBrowser->setCurrentFont(serifFont);
-        //textBrowser->setTextColor(QColor( "red" ));
-        //textBrowser->setAlignment(Qt::AlignRight);
-        QString str;
-       // int count=0;
+        textBrowser->setFrameStyle(QFrame::NoFrame);
+        int a;
+        a=f.startX();
 
+        textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
+        textBrowser->setStyleSheet("background-color:white;");
+
+        QString str;
+
+        //Get the content list from text and append string to textbrowser
         std::list<Content> mycontent=f.text().contentList();
         for (std::list<Content>::iterator it =mycontent.begin(); it != mycontent.end(); ++it){
             wstring temp=(*it).str();
@@ -93,9 +93,6 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setTextColor(QColor( "blue" ));
         textBrowser->insertPlainText("This is another string!\nmm");
         textBrowser->setAlignment(Qt::AlignRight);
-        QString zw="这是中文测试!!";
-        textBrowser->append(zw.append("，另外的中文字"));
-        textBrowser->setAlignment(Qt::AlignCenter);
         //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
         //textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
     }

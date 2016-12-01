@@ -1,8 +1,8 @@
 #ifndef BORDER_HH__
 #define BORDER_HH__
 #include <QColor>
-class Border{
 //Contains the different distance to four edges
+class Border{
 private:
     int m_leftEdge,m_rightEdge,m_topEdge,m_downEdge;
     QColor m_color;
@@ -11,6 +11,7 @@ public:
 
     void clear();//Reset all value to defalut one
 
+    //Get and set function for private data member
     int leftEdge(){return m_leftEdge;}
     int rightEdge(){return m_rightEdge;}
     int topEdge(){return m_topEdge;}

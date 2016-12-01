@@ -3,11 +3,12 @@
 #include "frame.h"
 #include <list>
 
-class Page{//Maybe a class should be written by other team
+
 /*This class represents a single page of XDF
 *Information such as the text is left to right or right to left, horizontal or vertical, the heights and width of the page and a rectangle frame in the page.
 *Function like import,export.
 */
+class Page{
 private:
     int m_pageNumber;
     std::list<Frame> m_frameList;

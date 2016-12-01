@@ -6,9 +6,10 @@
 #include "content.h"
 using namespace std;
 class Text{
-/*This class represents the words and text in the frame
-*Contains the width and height of this text
-*If the height of all lines is over than the height of frame, create a new frame or page
+/*
+ * Represents the words and text in the frame
+ * Contains a list of Content instance
+ *
 */
 
 private:
@@ -19,7 +20,7 @@ public:
     Text();
     int getnumber();
     //void dealContentmessage();
-    void insertString(const char *s);//insert a string
+
     void getText(const wstring w,const string v);
     //void getallfont(const string v);
 
