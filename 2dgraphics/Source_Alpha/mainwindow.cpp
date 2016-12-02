@@ -2,9 +2,6 @@
 #include "ui_mainwindow.h"
 #include "drawfunlist.h"
 
-/*
-  @author: Bingyang WEN, Bo FAN   12/2/2016
-*/
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -30,19 +27,23 @@ void MainWindow::paintEvent(QPaintEvent *e)
 
         std::string curOpt = ite->getOpter();
 
+        std::cout << "Operator is " << curOpt << "\t";
+
         std::vector<double> allOpnds = ite->getOpnds();
 
         drawFunList.draw(curOpt, allOpnds,1);
 
         for(auto iteOpnds = allOpnds.begin(); iteOpnds != allOpnds.end(); ++iteOpnds){
+          std::cout << "\t\t" << *iteOpnds;
         }
+        std::cout << "\n";
     }
+
+
     QPainter painter(this);
-
     painter.setPen(drawFunList.getPen());
-
     painter.setBrush(drawFunList.getBrush());
-
     painter.drawPath(drawFunList.getPath());
 
 }
+
