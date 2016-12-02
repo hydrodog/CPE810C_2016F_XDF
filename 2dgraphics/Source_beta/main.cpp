@@ -10,6 +10,9 @@
 #include "operatordictrie.h"
 #include "twodgraphics.h"
 
+// Prototype of Project offered by @Seito Ryu   "Reading data and store data"
+// Modified by @Bingyang Wen @ Bo Fan           "Enable drawing function with given data"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
