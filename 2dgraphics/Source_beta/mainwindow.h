@@ -6,6 +6,11 @@
 #include <QtGui>
 #include <QtCore>
 
+/*
+ @author: Bingyang Wen  12/2/16 "Bulid a drawing envrionment"
+ 
+ */
+
 namespace Ui {
 class MainWindow;
 }
