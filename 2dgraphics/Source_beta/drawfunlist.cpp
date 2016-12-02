@@ -1,8 +1,8 @@
 #include "DrawFunList.h"
 
 /*
- @author: Seito Ryu  20/11/16
- @modifer: Seito Ryu 30/11/16 "add some sample code"
+ @author: Seito Ryu  11/20/16
+ @modifer: Bingyang Wen 12/2/16 "Set specific draw functions & optimization with pointers"
  */
 
 //constructor
