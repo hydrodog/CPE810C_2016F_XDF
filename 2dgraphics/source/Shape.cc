@@ -1,7 +1,8 @@
-#include "Shape.hh"
+#include "Shape.h"
 
 /*
  @author: Seito Ryu  17/11/16
+ @modifer: Seito Ryu 1/12/16  "fix some bugs"
  */
 Shape::~Shape(){
   if(opter != nullptr){
@@ -37,10 +38,12 @@ void Shape::setOpnds(const std::vector<double>& val){
   }
 }
 //return shape object's operator
-inline const char*  Shape::getOpter() const{
+//inline const char*  Shape::getOpter() const{
+std::string Shape::getOpter() const{
   return opter;
 }
 //return all numbers of the shape object
-inline const std::vector<double>& Shape::getOpnds() const{
+//inline const std::vector<double>& Shape::getOpnds() const{
+const std::vector<double>& Shape::getOpnds() const{
   return opnds;
 }

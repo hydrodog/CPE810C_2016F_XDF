@@ -7,14 +7,17 @@
 /*
  @author: Seito Ryu  18/11/16
  @Purpose: Exception class for twoDGraphics class
+ @modifer: Seito Ryu 1/12/16  "fix some bugs"
  */
 class ExceptionTwoDG{
 private:
   std::string errCnt;
 public:
   ExceptionTwoDG(std::string val): errCnt(val) {}
-  friend std::ostream& operator << (std::ostream& s, const ExceptionTwoDG& e){}
-  std::string getCng() const{}
+#if 0
+  friend std::ostream& operator << (std::ostream& s, const ExceptionTwoDG& e);
+#endif
+  std::string getCng() const;
 };
 
 #endif

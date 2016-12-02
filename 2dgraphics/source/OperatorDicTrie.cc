@@ -1,7 +1,8 @@
-#include "OperatorDicTrie.hh"
+#include "OperatorDicTrie.h"
 
 /*
  @author: Seito Ryu  18/11/16
+ @modifer: Seito Ryu 1/12/16  "fix some bugs"
 */
 //constructor of Node class
 OperatorDicTrie::Node::Node(){
@@ -17,12 +18,12 @@ OperatorDicTrie::Node::~Node(){
     if(next[i] != nullptr){
       delete next[i];
     }
-  }    
+  }
 }
 //constructor of OperatorDicTrie class
 OperatorDicTrie::~OperatorDicTrie(){
   if(root != nullptr)
-    delete root;  
+    delete root;
 }
 //add one operator into trie
 void OperatorDicTrie::addOptor(const std::string& s){
@@ -69,5 +70,3 @@ bool OperatorDicTrie::isOptor(const std::string& s) const {
   }
   return resultBl;
 }
-
-#endif

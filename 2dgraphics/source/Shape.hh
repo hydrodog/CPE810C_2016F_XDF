@@ -4,9 +4,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstring>
 /*
  @author: Seito Ryu  17/11/16
  @purpose: store data of each 2dgraphics, each shape object is one unit for draw method
+ @modifer: Seito Ryu 1/12/16  "fix some bugs"
  */
  //TODO: Confirm: how many variables necessary and whether there are others
 class Shape{
@@ -23,17 +25,19 @@ private:
   std::vector<double> opnds;
 public:
   Shape(double curX = 0, double curY = 0, int pageNo = 0, double pageBot = 0, double pageLef = 0, double pageWid = 0, double pageHei = 0, char* opter = nullptr, std::vector<double> opnds = {}): curX(curX), curY(curY), pageNo(pageNo), pageBot(pageBot), pageLef(pageLef), pageWid(pageWid), pageHei(pageHei), opter(opter), opnds(opnds) {}
-  ~Shape(){}
+  ~Shape();
   //copy constructor
-  Shape(const Shape& curShp){}
+  Shape(const Shape& curShp);
   //add current operator into shape object
-  void setOpter(const std::string& val){}
+  void setOpter(const std::string& val);
   //add all numbers for drawing into shape object
-  void setOpnds(const std::vector<double>& val){}
+  void setOpnds(const std::vector<double>& val);
   //return shape object's operator
   //inline std::string getOpter() const{
-  inline const char*  getOpter() const{}
+  //inline const char*  getOpter() const;
+  std::string  getOpter() const;
   //return all numbers of the shape object
-  inline const std::vector<double>& getOpnds() const{}
+  //inline const std::vector<double>& getOpnds() const;
+  const std::vector<double>& getOpnds() const;
 };
 #endif
