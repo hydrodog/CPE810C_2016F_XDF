@@ -1,0 +1,36 @@
+operands          operators       functions of QPainter(Path)                Description
+
+###path construction
+
+x y                  m            void moveTo(qreal x, qreal y)            Begin a new subpath by moving current point to (x,y)
+x y                  l            void lineTo(qreal x, qreal y)            Append a straight line from current point to (x,y)
+x1,y1,x2,y2,x3,y3    c            void cubicTo(qreal x1,qreal y1,qreal x2, Append a cubic Bezier curve to current path.
+                                  qreal y2,qreal x3, qreal y3)     
+
+x y width height     re           void addRect(qreal x, qreal y,           Draw a rectangle
+                                   qreal width, qreal height)
+
+----                 h            void closeSubpath()                      Close current path
+----                 S            void setPen()                            stroke the path
+----                 s            h+S
+----                 f            void setBrush()                          Fill the path(Non-zero)
+----                 f*           void setBrush()                          Fill the path(Even-odd)                         
+###color
+3 operands       sc scn SC SCN
+1                    G                                                     Change stroke color space to/DeviceGray and set color
+1                    g                                                     Change fill color space to/DeviceGray and set color
+3                    RG                                                    Change stroke color space to/DeviceRGB and set color
+3                    rg                                                    Change fill color space to/DeviceRGB and set color
+4                    K                                                     Change stroke color space to/DeviceCMRK and set color                                       
+4                    k                                                     Change fill color space to/DeviceCMRK and set color
+
+###Graphic state
+----                 q
+----                 Q
+a b c d e f          cm
+lineWidth            w    set the lie width
+lineCap              J                                                     0->butt caps. 1->round caps. 2->projecting square caps
+lineJoin             j                                                     0->Mitered join 1->rounded join 2->beveled join          
+miterLimit           M            
+dashArray            d                                                     intial solid line. []0->solid line;[2]0->2 on,2 off;[2]1 1 on,2 off;[2 3]0->2 on 
+flatness             i                                                     Set the flatness tolerance.0 to 100, initial 0
