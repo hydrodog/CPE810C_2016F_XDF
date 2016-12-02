@@ -10,3 +10,4 @@ void Border::clear(){
     m_topEdge=80;
     m_downEdge=80;
 }
+
