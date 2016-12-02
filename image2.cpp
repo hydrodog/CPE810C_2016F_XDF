@@ -106,3 +106,16 @@ void image::on_spinBox_scale_editingFinished()
     update();
     return;
 }
+
+int image::getWidth(){
+    return width;
+}
+
+int image::getHeight(){
+    return height;
+}
+
+QImage image::getImage(){
+    return QImage(imagename);
+}
+
