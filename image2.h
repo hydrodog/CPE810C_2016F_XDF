@@ -18,6 +18,9 @@ class image : public QDialog
 public:
     explicit image(QWidget *parent = 0);
     ~image();
+    int getWidth();
+    int getHeight();
+    QImage getImage();
 
 private slots:
     void on_pushButton_open_clicked();
