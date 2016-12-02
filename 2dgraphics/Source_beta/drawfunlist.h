@@ -10,9 +10,11 @@
 #include <QtGui>
 #include <QtCore>
 
+
 /*
- @author: Seito Ryu  20/11/16
- @Purpose: Set all QT draw methods and initialize operator:method set
+ @author: Seito Ryu  11/20/16
+ @modifer: Bingyang Wen 12/2/16 "Build the connection between DrawFunList and Window, which shows graphs"
+ @modifer: Bo fan       12/2/16 "Set specific draw functions"
  */
 /**
  TODO: implement basic and complicated QT methods
