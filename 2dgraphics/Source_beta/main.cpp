@@ -10,8 +10,15 @@
 #include "operatordictrie.h"
 #include "twodgraphics.h"
 
-// Prototype of Project offered by @Seito Ryu   "Reading data and store data"
-// Modified by @Bingyang Wen @ Bo Fan           "Enable drawing function with given data"
+/*
+ @author: Seito Ryu  11/20/16    "Reading data and store data"
+ @modifer: Bingyang Wen 12/2/16 
+ @modifer: Bo fan       12/2/16
+                                  "Enable drawing function with given data"
+
+ */
+
+
 
 int main(int argc, char *argv[])
 {
