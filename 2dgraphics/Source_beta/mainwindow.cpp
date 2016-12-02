@@ -3,7 +3,7 @@
 #include "drawfunlist.h"
 /*
  @author: Bingyang Wen  12/2/16 "Bulid a drawing envrionment"
- 
+
  */
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -47,6 +47,17 @@ void MainWindow::paintEvent(QPaintEvent *e)
     QPainter painter(this);
     painter.setPen(drawFunList.getPen());
     painter.setBrush(drawFunList.getBrush());
+
     painter.drawPath(drawFunList.getPath());
+
+
+
+
+    painter.translate(this->rect().bottomLeft());
+    painter.scale(1.0, -1.0);
+
+
+    painter.drawPath(drawFunList.getPath());
+
 
 }

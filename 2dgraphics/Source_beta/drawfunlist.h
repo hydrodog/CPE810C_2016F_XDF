@@ -16,6 +16,7 @@
  @modifer: Bingyang Wen 12/2/16 "Build the connection between DrawFunList and Window, which shows graphs"
  @modifer: Bo fan       12/2/16 "Set specific draw functions"
  */
+
 /**
  TODO: implement basic and complicated QT methods
 */
@@ -30,10 +31,12 @@ private:
   void setColor(const std::vector<double>& operands, const int& currentIndex);
   void setPen(const std::vector<double>& operands, const int& currentIndex);
   void setBrush(const std::vector<double>& operands, const int& currentIndex);
+  void setCTM(const std::vector<double>& operands, const int& currentIndex);
   QPainterPath *path=new QPainterPath;
   QColor *color=new QColor;
   QPen *pen=new QPen;
   QBrush *brush=new QBrush;
+  QTransform *transformer=new QTransform;
 
 public:
     DrawFunList();
@@ -43,6 +46,7 @@ public:
     QColor getColor();
     QPen getPen();
     QBrush getBrush();
+    QTransform getCTM();
 };
 
 #endif

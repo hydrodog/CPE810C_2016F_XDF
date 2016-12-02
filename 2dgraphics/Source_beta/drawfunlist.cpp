@@ -1,12 +1,8 @@
 #include "DrawFunList.h"
-
-/*
- @author: Seito Ryu  11/20/16
- @modifer: Bingyang Wen 12/2/16 "Build the connection between DrawFunList and Window, which shows graphs"
- @modifer: Bo fan       12/2/16 "Set specific draw functions"
- */
-
 //constructor
+
+
+
 DrawFunList::DrawFunList() {
   mapDrw = {
     {"m",  &DrawFunList::setPoint},
@@ -16,7 +12,8 @@ DrawFunList::DrawFunList() {
     {"h",  &DrawFunList::closePath},
     {"sc",&DrawFunList::setColor},
     {"s",&DrawFunList::setPen},
-    {"f",&DrawFunList::setBrush}
+    {"f",&DrawFunList::setBrush},
+    {"cm",&DrawFunList::setCTM}
 
   };
 }
@@ -55,6 +52,10 @@ void DrawFunList::setBrush(const std::vector<double>& operands, const int& curre
 
     *brush=QBrush(*color);
 }
+void DrawFunList::setCTM(const std::vector<double>& operands, const int& currentIndex){
+
+    *transformer=QTransform(operands[0],operands[1],0,operands[2],operands[3],0,operands[4],operands[5],1);
+}
 //draw function table
 void DrawFunList::draw(const std::string& currentOperator, const std::vector<double>& operands, const int& currentIndex){
   if(mapDrw[currentOperator]){
@@ -78,4 +79,9 @@ QPen DrawFunList::getPen()
 QBrush DrawFunList::getBrush()
 {
     return *brush;
+}
+
+QTransform DrawFunList::getCTM()
+{
+    return *transformer;
 }
