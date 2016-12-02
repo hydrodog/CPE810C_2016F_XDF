@@ -2,7 +2,8 @@
 
 /*
  @author: Seito Ryu  11/20/16
- @modifer: Bingyang Wen 12/2/16 "Set specific draw functions & optimization with pointers"
+ @modifer: Bingyang Wen 11/2/16 "Build the connection between DrawFunList and Window, which shows graphs"
+ @modifer: Bo fan       11/2/16 "Set specific draw functions"
  */
 
 //constructor
