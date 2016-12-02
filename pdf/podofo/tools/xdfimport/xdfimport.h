@@ -1,6 +1,6 @@
 /*
  * Author: Dominik Seichter
- * Edited by: Zhuo Chen, Yingting Chen
+ * Edited by: Zhuo Chen, Yingting Huang
  */
 #ifndef XDFIMPORT_H__
 #define XDFIMPORT_H__

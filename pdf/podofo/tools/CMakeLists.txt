@@ -1,20 +1,8 @@
 SUBDIRS(
-	podofobox
 	podofocolor
-        podofocountpages
-        podofocrop
-	podofoencrypt
-	podofogc
-	podofoimgextract
 	podofoimg2pdf
-	podofomerge
-	podofopages
-	podofopdfinfo
-	podofotxt2pdf
+	podofoimgextract
 	podofotxtextract
-	podofouncompress
-	podofoimpose
-	podofoincrementalupdates
 	podofoxmp
         xdfimport
 	)
