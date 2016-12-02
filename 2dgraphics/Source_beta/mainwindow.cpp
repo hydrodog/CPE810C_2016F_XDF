@@ -1,6 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "drawfunlist.h"
+/*
+ @author: Bingyang Wen  12/2/16 "Bulid a drawing envrionment"
+ 
+ */
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
