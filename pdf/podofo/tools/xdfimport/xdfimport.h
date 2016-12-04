@@ -6,7 +6,7 @@
 #define XDFIMPORT_H__
 
 #include <podofo.h>
-#include "pdfgstate.h"
+#include "pdfgraphics.h"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
@@ -26,21 +26,7 @@ using namespace PoDoFo;
  *  in this PDF document to stdout.
  */
 class PdfImporter {
-private:
-    ofstream of;
-    ifstream fileConfig;
 
-    class PdfObj {
-    public:
-        int numOperands;
-    };
-    typedef std::map<std::string, PdfObj> mapPdfObj_t;
-    mapPdfObj_t mapPdfGraphicsObj;
-
-#ifdef PDF_IMPORT_TEST_MODE
-    unordered_set<string> Operator_set; // for coding testing only
-    unordered_set<string> Operator_set_not_handled; // for coding testing only
-#endif
 public:
     PdfImporter();
     virtual ~PdfImporter();
@@ -68,6 +54,22 @@ private:
      */
     void AddTextElement( double dCurPosX, double dCurPosY,
                         PdfFont* pCurFont, const PdfString & rString );
+private:
+    //xDocument* xdoc;
+    ofstream of;
+    ifstream fileConfig;
+
+    class PdfObj {
+    public:
+        int numOperands;
+    };
+    typedef std::map<std::string, PdfObj> mapPdfObj_t;
+    mapPdfObj_t mapPdfGraphicsObj;
+
+#ifdef PDF_IMPORT_TEST_MODE
+    unordered_set<string> Operator_set; // for coding testing only
+    unordered_set<string> Operator_set_not_handled; // for coding testing only
+#endif
 };
 
 #endif // XDFIMPORT_H__

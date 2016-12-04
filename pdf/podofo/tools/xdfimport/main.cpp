@@ -37,6 +37,7 @@ int main( int argc, char* argv[] )
     try {
         PdfImporter importer;
         importer.Init( pszInput );
+        //importer.getXDoc();
     } catch( PdfError & e ) {
         fprintf( stderr, "Error: An error %i ocurred during processing the pdf file.\n", e.GetError() );
         e.PrintErrorMsg();
