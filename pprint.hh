@@ -13,6 +13,7 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include <list>
+#include "text.h"
 using namespace std;
 //test
 class PPrint
@@ -35,8 +36,8 @@ public:
     void setIsReverse(bool num);
     void setIsOdd(int num);
     void setIsPDF(bool is);
-    void print();//deal with specific print situation @Zejian
-    void printtext();// added for testing @fanyang
+    void print(Text & mytext);//print text @fan yang
+
 
 };
 

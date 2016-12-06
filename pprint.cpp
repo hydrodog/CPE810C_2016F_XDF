@@ -1,6 +1,12 @@
 #include <pprint.hh>
 #include <list>
 #include <QString>
+#include <content.h>
+#include <text.h>
+#include <vector>
+#include <QRect>
+#include <QColor>
+#include <QFont>
 using namespace std;
 PPrint::PPrint() {
     startPageNum=0;
@@ -10,8 +16,8 @@ PPrint::PPrint() {
 }
 
 void PPrint::PProcess(){
-    //print();
-    printtext();
+    print();
+    //printtext(Text & sampleText);
 }
 
 void PPrint::setEndPageNum(int num){
@@ -39,7 +45,8 @@ void PPrint::setIsPDF(bool is)
     isPDF=is;
 }
 
-void PPrint::print(){
+void PPrint::print(Text & mytext){
+
     QPrinter printer(QPrinter::HighResolution);
     QPrintDialog dialog(&printer);
     dialog.setWindowTitle("Print Document");
@@ -59,7 +66,43 @@ void PPrint::print(){
         painter.begin(&printer);
         if(isOdd==0){//means normal print
             for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum--){
-                painter.drawText(1000, 1000, "123123");//Just test code in case other team fuck up
+                list<Content> MT = mytext.contentList();
+                vector<Content> L;
+                list<Content>::iterator i;
+                for (i = MT.begin() ;i != MT.end(); ++i){
+                    L.push_back(*i);
+                }
+                //get the length of the whole text
+                int NumOfContent = mytext.getnumber();
+
+                for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                   int Y = 0; //define the pos of the y coordinate
+                   int num2 = L[a].getlength();//get the number of word contained in one content object
+                   int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                   int * P1;
+                   P1 = L[a].getlinechange();
+                   QFont pfont = L[a].font();//get the font of the content
+                   const QColor pcolor = L[a].color();//get the color of the content
+                   QString str = L[a].getQString();
+                   int * LC = L[a].getlinechange();
+
+                   for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                       QString str1;
+                       for (int bre; bre <= *LC; bre++){
+                           str1 += str[bre];
+                       }//to get the component of the string
+                       painter.setFont(pfont);
+                       painter.setPen(pcolor);
+                       painter.drawText(0, Y, str1);
+                       str1.clear();
+                   }
+//                   const QRect r(0,Y,2000,2000);
+//                   QTextOption option(Qt::AlignLeft);
+//                   painter.setFont(pfont);
+//                   painter.setPen(pcolor);
+//                   painter.drawText(r, str, option);
+//                   Y = r.height();
+                }
                 if(PageNum!=startPageNum)
                     printer.newPage();
             }
@@ -67,9 +110,45 @@ void PPrint::print(){
         }
         else if(isOdd==1){//means odd pages printed
             if(endPageNum%2==0)//end page is even page
-                endPageNum--;//switch to odd page
+                endPageNum--;//switch to odd page  
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
-                    painter.drawText(1000, 1000, "123123");//Just test code in case other team fuck up
+                    list<Content> MT = mytext.contentList();
+                    vector<Content> L;
+                    list<Content>::iterator i;
+                    for (i = MT.begin() ;i != MT.end(); ++i){
+                        L.push_back(*i);
+                    }
+                    //get the length of the whole text
+                    int NumOfContent = mytext.getnumber();
+
+                    for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                       int Y = 0; //define the pos of the y coordinate
+                       int num2 = L[a].getlength();//get the number of word contained in one content object
+                       int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                       int * P1;
+                       P1 = L[a].getlinechange();
+                       QFont pfont = L[a].font();//get the font of the content
+                       const QColor pcolor = L[a].color();//get the color of the content
+                       QString str = L[a].getQString();
+                       int * LC = L[a].getlinechange();
+
+                       for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                           QString str1;
+                           for (int bre; bre <= *LC; bre++){
+                               str1 += str[bre];
+                           }//to get the component of the string
+                           painter.setFont(pfont);
+                           painter.setPen(pcolor);
+                           painter.drawText(0, Y, str1);
+                           str1.clear();
+                       }
+    //                   const QRect r(0,Y,2000,2000);
+    //                   QTextOption option(Qt::AlignLeft);
+    //                   painter.setFont(pfont);
+    //                   painter.setPen(pcolor);
+    //                   painter.drawText(r, str, option);
+    //                   Y = r.height();
+                    }
                     if(PageNum!=startPageNum)
                         printer.newPage();
                 }
@@ -79,7 +158,43 @@ void PPrint::print(){
             if(endPageNum%2!=0)//end page is odd page
                 endPageNum--;//switch to odd page
                 for(int PageNum=endPageNum;PageNum>=startPageNum;PageNum=PageNum-2){
-                    painter.drawText(1000, 1000, "123123");//Just test code in case other team fuck up
+                    list<Content> MT = mytext.contentList();
+                    vector<Content> L;
+                    list<Content>::iterator i;
+                    for (i = MT.begin() ;i != MT.end(); ++i){
+                        L.push_back(*i);
+                    }
+                    //get the length of the whole text
+                    int NumOfContent = mytext.getnumber();
+
+                    for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                       int Y = 0; //define the pos of the y coordinate
+                       int num2 = L[a].getlength();//get the number of word contained in one content object
+                       int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                       int * P1;
+                       P1 = L[a].getlinechange();
+                       QFont pfont = L[a].font();//get the font of the content
+                       const QColor pcolor = L[a].color();//get the color of the content
+                       QString str = L[a].getQString();
+                       int * LC = L[a].getlinechange();
+
+                       for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                           QString str1;
+                           for (int bre; bre <= *LC; bre++){
+                               str1 += str[bre];
+                           }//to get the component of the string
+                           painter.setFont(pfont);
+                           painter.setPen(pcolor);
+                           painter.drawText(0, Y, str1);
+                           str1.clear();
+                       }
+    //                   const QRect r(0,Y,2000,2000);
+    //                   QTextOption option(Qt::AlignLeft);
+    //                   painter.setFont(pfont);
+    //                   painter.setPen(pcolor);
+    //                   painter.drawText(r, str, option);
+    //                   Y = r.height();
+                    }
                     if(PageNum!=startPageNum)
                         printer.newPage();
                 }
@@ -97,7 +212,43 @@ void PPrint::print(){
 
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum++){
 
-                painter.drawText(1000, 1000, "123123");//Just test code in case other teams fuck up
+                list<Content> MT = mytext.contentList();
+                vector<Content> L;
+                list<Content>::iterator i;
+                for (i = MT.begin() ;i != MT.end(); ++i){
+                    L.push_back(*i);
+                }
+                //get the length of the whole text
+                int NumOfContent = mytext.getnumber();
+
+                for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                   int Y = 0; //define the pos of the y coordinate
+                   int num2 = L[a].getlength();//get the number of word contained in one content object
+                   int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                   int * P1;
+                   P1 = L[a].getlinechange();
+                   QFont pfont = L[a].font();//get the font of the content
+                   const QColor pcolor = L[a].color();//get the color of the content
+                   QString str = L[a].getQString();
+                   int * LC = L[a].getlinechange();
+
+                   for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                       QString str1;
+                       for (int bre; bre <= *LC; bre++){
+                           str1 += str[bre];
+                       }//to get the component of the string
+                       painter.setFont(pfont);
+                       painter.setPen(pcolor);
+                       painter.drawText(0, Y, str1);
+                       str1.clear();
+                   }
+//                   const QRect r(0,Y,2000,2000);
+//                   QTextOption option(Qt::AlignLeft);
+//                   painter.setFont(pfont);
+//                   painter.setPen(pcolor);
+//                   painter.drawText(r, str, option);
+//                   Y = r.height();
+                }
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }
@@ -107,7 +258,43 @@ void PPrint::print(){
             if(endPageNum%2==0)//end page is even page
                 endPageNum++;//switch to odd page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
-                painter.drawText(1000, 1000, "123123");//Just test code in case other teams fuck up
+                list<Content> MT = mytext.contentList();
+                vector<Content> L;
+                list<Content>::iterator i;
+                for (i = MT.begin() ;i != MT.end(); ++i){
+                    L.push_back(*i);
+                }
+                //get the length of the whole text
+                int NumOfContent = mytext.getnumber();
+
+                for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                   int Y = 0; //define the pos of the y coordinate
+                   int num2 = L[a].getlength();//get the number of word contained in one content object
+                   int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                   int * P1;
+                   P1 = L[a].getlinechange();
+                   QFont pfont = L[a].font();//get the font of the content
+                   const QColor pcolor = L[a].color();//get the color of the content
+                   QString str = L[a].getQString();
+                   int * LC = L[a].getlinechange();
+
+                   for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                       QString str1;
+                       for (int bre; bre <= *LC; bre++){
+                           str1 += str[bre];
+                       }//to get the component of the string
+                       painter.setFont(pfont);
+                       painter.setPen(pcolor);
+                       painter.drawText(0, Y, str1);
+                       str1.clear();
+                   }
+//                   const QRect r(0,Y,2000,2000);
+//                   QTextOption option(Qt::AlignLeft);
+//                   painter.setFont(pfont);
+//                   painter.setPen(pcolor);
+//                   painter.drawText(r, str, option);
+//                   Y = r.height();
+                }
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }
@@ -117,7 +304,43 @@ void PPrint::print(){
             if(endPageNum%2!=0)//end page is odd page
                 endPageNum++;//switch to even page
             for(int PageNum=startPageNum;PageNum<=endPageNum;PageNum=PageNum+2){
-                painter.drawText(1000, 1000, "123123");//Just test code in case other teams fuck up
+                list<Content> MT = mytext.contentList();
+                vector<Content> L;
+                list<Content>::iterator i;
+                for (i = MT.begin() ;i != MT.end(); ++i){
+                    L.push_back(*i);
+                }
+                //get the length of the whole text
+                int NumOfContent = mytext.getnumber();
+
+                for(int a = 0; a <= NumOfContent; a++){//the loop of the whole content
+                   int Y = 0; //define the pos of the y coordinate
+                   int num2 = L[a].getlength();//get the number of word contained in one content object
+                   int lineamount = L[a].getlineamount();//get the number of the lines for one content object
+                   int * P1;
+                   P1 = L[a].getlinechange();
+                   QFont pfont = L[a].font();//get the font of the content
+                   const QColor pcolor = L[a].color();//get the color of the content
+                   QString str = L[a].getQString();
+                   int * LC = L[a].getlinechange();
+
+                   for (Y = 0; Y <=lineamount; Y++){//the loop of the lines contained in one content
+                       QString str1;
+                       for (int bre; bre <= *LC; bre++){
+                           str1 += str[bre];
+                       }//to get the component of the string
+                       painter.setFont(pfont);
+                       painter.setPen(pcolor);
+                       painter.drawText(0, Y, str1);
+                       str1.clear();
+                   }
+//                   const QRect r(0,Y,2000,2000);
+//                   QTextOption option(Qt::AlignLeft);
+//                   painter.setFont(pfont);
+//                   painter.setPen(pcolor);
+//                   painter.drawText(r, str, option);
+//                   Y = r.height();
+                }
                 if(PageNum!=endPageNum)
                     printer.newPage();
               }

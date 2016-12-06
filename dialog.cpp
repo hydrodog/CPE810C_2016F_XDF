@@ -31,7 +31,7 @@ void Dialog::on_acceptButton_clicked()
         pt.setIsOdd(1);
     else
         pt.setIsOdd(0);
-    pt.PProcess();
+    pt.print(Text & mytext);
 }
 
 void Dialog::on_cancelButton_clicked()
