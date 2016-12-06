@@ -22,7 +22,7 @@ private:
     int k;
     int n=0;
     wstring words;
-    int changelinepos[20];
+    int changelinepos[20]={0};
     map<int,string> alignment;
 public:
     void getmessage(std::wstring a);
