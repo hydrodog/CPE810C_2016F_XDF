@@ -60,7 +60,7 @@ int main() {
     wcout.imbue(locale(""));
     wstring u = L"中国";
     wcout << u;*/
-    wstring wsrc = wopenfile("H:\\810C XDF EPUB\\2478944\\content2478944_41749293.html");
+    wstring wsrc = wopenfile("C:\\Users\\lenovo\\Desktop\\Little Women\\OEBPS\\bano_9781411432574_oeb_c40_r1.html");
     wstring body;
     while(true){
         int pos1 = wsrc.find(L"body>");//head of body
@@ -74,7 +74,7 @@ int main() {
             //wcout<<body<<endl;
     }
     //wcout<<body<<endl;
-    string src = openfile("H:\\810C XDF EPUB\\2478944\\content2478944_41749293.html");
+    string src = openfile("C:\\Users\\lenovo\\Desktop\\Little Women\\OEBPS\\bano_9781411432574_oeb_c40_r1.html");
     string sub;
     while(true){
         int pos1 = src.find("link");//find css head
@@ -85,10 +85,12 @@ int main() {
             break;
         int pos3 = src.find(".css",pos2+6);  // tail of css
         sub = src.substr(pos2+6,pos3-pos2-2);//text of body
+        if(sub.find(">",pos2)>pos3)
         src.erase(src.begin()+pos1,src.begin()+pos2+1);
-            //cout<<sub<<endl;
+            cout<<sub<<endl;
+            break;
     }
-    string csspath = "H:\\810C XDF EPUB\\2478944\\"+sub;
+    string csspath = "C:\\Users\\lenovo\\Desktop\\Little Women\\OEBPS\\"+sub;
     string csssub =openfile(csspath);
     //cout << csssub<<endl;
     string bodysetting = getsetting(csssub,"body")+"0>";
@@ -151,10 +153,11 @@ int main() {
             if(body[i+1]==L'a'){
                 int pos1 = body.find(L"href=",i);
                 int pos2 = body.find(L"\"",pos1+6);
-                wstring href = body.substr(pos1 + 6,pos2 - pos1 - 6);
+                if(body.find(L">",i)>pos1)
+                {wstring href = body.substr(pos1 + 6,pos2 - pos1 - 6);
                 //cout << href;
                 bodytrans += L"(" + href + L")";
-                allsetting += asetting;
+                allsetting += asetting;}
             }
             i = body.find(L'>',i);
         }
@@ -162,7 +165,7 @@ int main() {
             bodytrans += body[i];
 
     }
-
+wcout <<bodytrans;
     //cout << allsetting;
     system("pause");
     return 0;
