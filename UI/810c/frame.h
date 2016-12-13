@@ -14,7 +14,7 @@ class Frame{
         int m_type;//0 is pure text, 1 is image, 2 is 2d graphic
 
         Border m_border;
-        std::list<Frame> m_insideFrame;//If necessary  //TODO: choose better name:
+        std::list<Frame> m_insideFrame;//If necessary
         //list<Image> imageList;
         Text m_text;//Not sure make it a list or not
     //When change the border, need to update the width and height at the same time

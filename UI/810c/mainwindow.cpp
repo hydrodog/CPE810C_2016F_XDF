@@ -30,21 +30,25 @@ void MainWindow::addFrame(Frame f){
     frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
     frame_3->setFrameShape(QFrame::StyledPanel);
     frame_3->setFrameShadow(QFrame::Raised);
-    frame_3->setStyleSheet("background-color:yellow;");
+    frame_3->setStyleSheet("background-color:black");
     frame_3->setMidLineWidth(1);
     frame_3->setLineWidth(2);
     if(f.text().contentList().empty()){
         return;
     }else{
-
+        QDialog* myDia=new QDialog(ui->centralWidget);
+        myDia->setGeometry(100,100,300,300);
+        myDia->setStyleSheet("background-color:black;");
         QTextBrowser* textBrowser = new QTextBrowser(frame_3);
+        textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser->setStyleSheet("background-color:white");
         str.append("_textBrowser");
         textBrowser->setObjectName(str);
         textBrowser->setFrameStyle(QFrame::NoFrame);
-        QFrame* frame_4 = new QFrame(ui->centralWidget);
-        frame_4->setGeometry(QRect(0,0,100,100));
-        frame_4->setStyleSheet("background-color:green;");
+        //QFrame* frame_4 = new QFrame(frame_3);
+        //frame_4->setGeometry(QRect(0,0,100,100));
+        //frame_4->setStyleSheet("background-color:green;");
         int a;
         a=f.startX();
 
@@ -62,7 +66,7 @@ void MainWindow::addFrame(Frame f){
             QColor c=(*it).color();
             textBrowser->setCurrentFont(t);
             textBrowser->setTextColor(c);
-            textBrowser->append(str);
+            textBrowser->insertPlainText(str);
         }
 
 #if 0
@@ -85,6 +89,8 @@ void MainWindow::addFrame(Frame f){
             str.clear();
         }
 #endif
+#if 0
+        //Just test some english words
         QFont serifFont2("Times", 28, QFont::Bold);
         serifFont2.setItalic(true);
         textBrowser->setCurrentFont(serifFont2);
@@ -96,11 +102,9 @@ void MainWindow::addFrame(Frame f){
         textBrowser->setCurrentFont(serifFont3);
         textBrowser->setTextColor(QColor( "blue" ));
         textBrowser->insertPlainText("This is another string!\nmm");
-        textBrowser->setAlignment(Qt::AlignRight);
-        //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/abc.jpg'>");
-        //textBrowser->insertHtml("<html><head><title>HTML DEMO</title><style>p{color: yellow}</style></head><body><h1> My first heading</h1><p> My <b>first</b> paragraph</p><h1>My seconde heading</h1><p> My <sub>aa</sub>secon<sup>d</sup> paragraph</p><img src='/Users/zhiyuanchen/Downloads/lee.png'/></body></html>");
-    }
+ #endif
 
+    }
 }
 
 

@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     page.cpp \
     text.cpp \
     border.cpp \
-    content.cpp
+    content.cpp \
+    document.cpp
 
 HEADERS  += mainwindow.h \
     ../build-810c-Desktop_Qt_5_7_0_clang_64bit-Debug/ui_mainwindow.h \
@@ -26,6 +27,7 @@ HEADERS  += mainwindow.h \
     page.h \
     text.h \
     border.h \
-    content.h
+    content.h \
+    document.h
 
 FORMS    += mainwindow.ui
