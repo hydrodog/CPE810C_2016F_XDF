@@ -9,6 +9,7 @@
 #include <qstring.h>
 
 using namespace std;
+wstring ncx[500][2];//windows组做目录用,name and src
 struct Set{
     string color = "default";
     string font = "default";
@@ -77,13 +78,41 @@ wstring wopenfile(string path){
     wfile.close();
     return src;
 }
+void getncx(wstring fullncx,int pos,int i){
+    if(fullncx.find(L"playOrder",pos) != wstring::npos){
+        int postext1 = fullncx.find(L"<text>",fullncx.find(L"playOrder",pos));
+        int postext2 = fullncx.find(L"</text>",postext1+6);
+        ncx[i][0] = fullncx.substr(postext1+6,postext2-postext1-6);
+        int possrc1 = fullncx.find(L"src=",fullncx.find(L"playOrder",pos));
+        int possrc2 = fullncx.find(L"\"",possrc1+5);
+        ncx[i][1] = fullncx.substr(possrc1+5,possrc2-possrc1-5);
+        //wcout << ncx[i][0]<<'\n'<<ncx[i][1];
+        if(fullncx.find(L"playOrder",possrc2)!=wstring::npos){
+            i++;
+            getncx(fullncx,possrc2,i);
+        }
+        return;
+    }
+    return;
+}
 
 int main() {
-    //setlocale(LC_ALL, "chs");
-    //ios_base::sync_with_stdio(false); // 缺少的话，wcout wchar_t 会漏掉中文
-    //wcout.imbue(locale(""));
-    //wstring u = L"奥尔as123";
-    //wcout << u;
+    /*setlocale(LC_ALL, "chs");
+    ios_base::sync_with_stdio(false); // 缺少的话，wcout wchar_t 会漏掉中文
+    wcout.imbue(locale(""));
+    wstring u = L"奥尔as123";
+    wcout << u;*/
+    string ncxpath = "C:\\Users\\lenovo\\Desktop\\Little Women\\OEBPS\\toc.ncx";
+    wstring fullncx = wopenfile(ncxpath);
+    getncx(fullncx,0,0);
+    /*int i = 0;
+    while(true){
+
+        if(ncx[i][0]==L""&&ncx[i][1]==L"")
+            break;
+        else {wcout << ncx[i][0]<< endl<<ncx[i][1]<<endl;
+        i++;}
+    }//cout << i;*/
     string htmlpath1 = "C:\\Users\\lenovo\\Desktop\\Little Women\\OEBPS\\bano_9781411432574_oeb_c40_r1.html";//原文件地址
     QString qstr = QString::fromStdString(htmlpath1);
     qstr.replace(".html",".txt");
@@ -208,7 +237,7 @@ int main() {
             else if(body[i+1]==L'i'){
                 if(body[i+2]==L'm'){
                     if(body[i+3]==L'g'){
-                        bodytrans += L"<img>";
+                        bodytrans += stylechange + L"<img>";
                         int pos1 = body.find(L"src=");
                         int pos2 = body.find(L"\"",pos1 + 5);
                         imgset = body.substr(pos1+5,pos2-pos1-5);//wcout<<imgset;
