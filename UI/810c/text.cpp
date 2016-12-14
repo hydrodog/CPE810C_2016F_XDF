@@ -56,6 +56,8 @@ void Text::getText(const wstring w,const string v){
             tem.erase(tem.begin(),tem.begin()+pos+13);
             temfont.erase(temfont.begin(),temfont.begin()+posf+13);
             j++;
+            m_imagepos[m_imagenum]=tem.find(L"<img>")+first[e-1];
+            m_imagenum++;
         }
     }
     /*tem=tem1.substr(length*2/3,length/3);
@@ -136,4 +138,10 @@ void Text::addContent(Content c){
 //}
 int Text::getnumber(){
     return n;
+}
+int* Text::getimagepos(){
+    return m_imagepos;
+}
+int Text::getimagenum(){
+    return m_imagenum;
 }

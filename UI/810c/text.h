@@ -16,14 +16,16 @@ private:
     std::list<Content> m_contentList;
     int m_len;
     int n=0;
+    int m_imagepos[100]={0};
+    int m_imagenum=0;
 public:
     Text();
     int getnumber();
     //void dealContentmessage();
-
+    int* getimagepos();
     void getText(const wstring w,const string v);
     //void getallfont(const string v);
-
+    int getimagenum();
     int len(){return m_len;}
 
     std::list<Content> contentList() const{return m_contentList;}
