@@ -13,34 +13,52 @@ void Text::getText(const wstring w,const string v){
     string lisf;
     int posf=0;
     int posfont;
-
-    int length=w.length();
-    wstring tem=tem1.substr(length/3,length/3);
-    pos=tem.find(L"<stylechange>");
-    int first=(length/3)+pos+12;
-    if(pos==-1){tem=tem1;}else{tem=tem1.substr(0,first);}
-
+    int first[11];
+    first[0]=0;
+    int firstfont[11];
+    firstfont[0]=0;
     int fontlength=temp.length();
-    string temfont=temp.substr(fontlength/3,fontlength/3);
-    posfont=temfont.find("<stylechange>");
-    int firstfont=(fontlength/3)+posfont+12;
-    if(posfont==-1){temfont=temp;}else{temfont=temp.substr(0,firstfont);}
-    while(1){
-        if(posf==-1)break;
-        posf=temfont.find("<stylechange>");
-        lisf=temfont.substr(0,posf);
-        pos=tem.find(L"<stylechange>");
-        if(pos==-1)break;
-        n++;
-        lis=tem.substr(0,pos);
-        temstore.getmessage(lis);
-        temstore.getfont(lisf);
-        m_contentList.push_back(temstore);                                    //push here
-        tem.erase(tem.begin(),tem.begin()+pos+13);
-        temfont.erase(temfont.begin(),temfont.begin()+posf+13);
-        j++;       
+    int length=w.length();
+    string temfont;
+    wstring tem;
+    for(int e=1;e<10;e++){
+        if(e<9){
+            tem=tem1.substr(e*length/10,e*length/10);
+            pos=tem.find(L"<stylechange>");
+            if(posfont==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}
+            first[e]=(e*length/10)+pos+12;
+            if(pos==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}
+
+            temfont=temp.substr(e*fontlength/10,e*fontlength/10);
+            posfont=temfont.find("<stylechange>");
+            if(posfont==-1){firstfont[e]=firstfont[e-1];continue;}
+            firstfont[e]=(e*fontlength/10)+posfont+12;
+            if(posfont==-1){continue;}else{temfont=temp.substr(firstfont[e-1],firstfont[e]-firstfont[e-1]);}
+            posf=0;
+            pos=0;
+        }else{
+            tem=tem1.substr(first[e-1]+1,length-first[e-1]+1);
+            temfont=temp.substr(firstfont[e-1],fontlength-firstfont[e-1]);
+            posf=0;
+            pos=0;
+        }
+        while(1){
+            if(posf==-1)break;
+            posf=temfont.find("<stylechange>");
+            lisf=temfont.substr(0,posf);
+            pos=tem.find(L"<stylechange>");
+            if(pos==-1)break;
+            n++;
+            lis=tem.substr(0,pos);
+            temstore.getmessage(lis);
+            temstore.getfont(lisf);
+            m_contentList.push_back(temstore);                                    //push here
+            tem.erase(tem.begin(),tem.begin()+pos+13);
+            temfont.erase(temfont.begin(),temfont.begin()+posf+13);
+            j++;
+        }
     }
-    tem=tem1.substr(length*2/3,length/3);
+    /*tem=tem1.substr(length*2/3,length/3);
     pos=tem.find(L"<stylechange>");
     int second=(length*2/3)+pos+12;
     if(pos==-1){tem=tem1;}else{tem=tem1.substr(first+1,second-first);}
@@ -82,7 +100,7 @@ void Text::getText(const wstring w,const string v){
         tem.erase(tem.begin(),tem.begin()+pos+13);
         temfont.erase(temfont.begin(),temfont.begin()+posf+13);
         j++;
-    }
+    }*/
 }
 #if 0
 void Text::getallfont(const string v){
