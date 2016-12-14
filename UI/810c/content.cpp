@@ -42,7 +42,6 @@ void Content::getmessage(wstring a) {
         j++;
     }
     k=b.length();
-    words=b;
     m_str=b;
 }
 void Content::getfont(string a) {
