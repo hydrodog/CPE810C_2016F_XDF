@@ -1,10 +1,18 @@
+/*
+ * common.h
+ * the keywords of c++ http://baike.baidu.com/view/3111818.htm
+ */
 #ifndef __COMMON_H__
 #define __COMMON_H__
-
+//avoid buiding the .h file more than one time.
 
 #include<QFile>
 #include<QDir>
 
+/*macro definition
+ * http://s99f.blog.163.com/blog/static/3511836520089193612795/
+ * http://s99f.blog.163.com/blog/static/3511836520089193612795/
+ */
 typedef unsigned long DWORD;
 typedef unsigned short WORD;
 typedef char  TCHAR;
@@ -15,7 +23,9 @@ typedef char CHAR;
 typedef unsigned char BYTE;
 typedef void* HANDLE;
 
-const int MAX_PATH = 512;
+const int MAX_PATH = 260;
+// The max length of the file is 258 bytes in windows and 255 bytes in linnux.
+//http://www.manew.com/blog-166767-23197.html
 
 typedef struct _FILETIME {
     _FILETIME()
@@ -37,8 +47,11 @@ typedef struct _SYSTEMTIME {
     WORD wSecond;
     WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME, *LPSYSTEMTIME;
+//about time     
+//http://blog.csdn.net/bokee/article/details/5330791
 
 #define DECLARE_HANDLE(name) struct name##__{int unused;}; typedef struct name##__ *name
+//http://blog.csdn.net/dotphoenix/article/details/4345174
 
 #define _T(str) str
 #define _tcscmp strcmp
@@ -48,6 +61,7 @@ typedef struct _SYSTEMTIME {
 #define _tcscat strcat
 #define _tcsncpy strncpy
 
+//https://zhidao.baidu.com/question/238902765.html
 #define FILE_SHARE_READ                 0x00000001  
 #define FILE_SHARE_WRITE                0x00000002  
 #define FILE_SHARE_DELETE               0x00000004  
