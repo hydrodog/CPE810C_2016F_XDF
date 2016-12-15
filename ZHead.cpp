@@ -6,16 +6,15 @@
 using namespace std;
 
  
-/*
-功能：根据目录路径生成对应的目录
-*/ 
+
+//Fuction：create a directory accorting to the path of the directory.
 BOOL CreateDirectorys( LPCSTR lpszPath )
 {    
     return QDir().mkpath(lpszPath);	
 }
  
 
-//文件目录格式化
+//Change '\'to'/', cause windows use'\' while linux use '/'. So that we need to Unify one kind of symbol.
 void FormatDirectorys( LPSTR lpszDirectorys )
 {
 	if( lpszDirectorys!= NULL )
@@ -33,15 +32,17 @@ void FormatDirectorys( LPSTR lpszDirectorys )
 		}
 	}	
 }
- 
+
+//unzip
 DWORD UnZipToDirectory( LPCSTR lpszZipPathName, LPCSTR lpszDestDirectory)
 { 
 	DWORD dwError = -1;
-    ZIPENTRY ze; 
+    	ZIPENTRY ze; 
 	HZIP hz = NULL ;
 	CHAR szOldDir[ MAX_PATH ] = _T("") ;
     QString dir = QDir::currentPath();
 
+//The file name will be evaluated by the these sentences to determine if it is the right form.
     do
     {
 	    if ( lpszZipPathName == NULL || lpszDestDirectory == NULL )
@@ -56,16 +57,19 @@ DWORD UnZipToDirectory( LPCSTR lpszZipPathName, LPCSTR lpszDestDirectory)
 	    {
 		    break;
 	    }    
-    	    
+    	
+//set the current working directory.
         strcpy(szOldDir,dir.toStdString().c_str());			
 	    QDir::setCurrent(lpszDestDirectory ) ;    
     	
+//evaluate the file will be opened or not, if not, will return to the start of the function.
 	    hz = OpenZip( (void*)lpszZipPathName, 0, ZIP_FILENAME ) ;
 	    if ( hz == NULL )
 	    {
 		    break;
 	    }
-    			
+    		
+//get the zip file list file.
 	    GetZipItem( hz, -1, &ze ) ;
     	
 	    unsigned nItems = ze.index; 	
