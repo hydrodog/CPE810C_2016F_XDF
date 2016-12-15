@@ -13,24 +13,24 @@ class Text{
 */
 
 private:
-    std::list<Content> m_contentList;
-    int m_len;
-    int n=0;
-    int m_imagepos[100]={0};
-    int m_imagenum=0;
+    std::list<Content> m_contentList;  //make a list to store the Content objects
+    //int m_len;
+    int n=0;   //represent how many Content objects this Text object have
+    int m_imagepos[100]={0};         //the image position
+    int m_imagenum=0;               //how many images does this Text object have
 public:
     Text();
-    int getnumber();
+    int getnumber();    //get the quantity of Content objects in the Text object
     //void dealContentmessage();
-    int* getimagepos();
-    void getText(const wstring w,const string v);
+    int* getimagepos();     //get the image position
+    void getText(const wstring w,const string v);      //read in the message the other groups give to us
     //void getallfont(const string v);
-    int getimagenum();
-    int len(){return m_len;}
+    int getimagenum();                               //get the quantity of image in the Text object
+    //int len(){return m_len;}
 
-    std::list<Content> contentList() const{return m_contentList;}
+    std::list<Content> contentList() const{return m_contentList;}  //get the Content objects in the Text object
 
-    void addContent(Content c);
+    void addContent(Content c);  //read in addition Content object into the object, mostly needn't use this function
 
 };
 
