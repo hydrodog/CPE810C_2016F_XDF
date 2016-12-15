@@ -1,7 +1,6 @@
 #include "DrawFunList.h"
 //constructor
 
-
 /*
  @author: Seito Ryu  11/20/16
  @modifer: Bingyang Wen 12/2/16 "Build the connection between DrawFunList and Window, which shows graphs"
@@ -11,6 +10,7 @@
 /**
  TODO: implement basic and complicated QT methods
 */
+
 
 DrawFunList::DrawFunList() {
   mapDrw = {

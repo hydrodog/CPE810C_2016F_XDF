@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "tod.h"
 #include <QApplication>
 #include <string>
 #include <vector>
@@ -12,14 +12,11 @@
 
 /*
  @author: Seito Ryu  11/20/16    "Reading data and store data"
- @modifer: Bingyang Wen 12/2/16 
+ @modifer: Bingyang Wen 12/2/16
  @modifer: Bo fan       12/2/16
                                   "Enable drawing function with given data"
 
  */
-
-
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -74,7 +71,7 @@ int main(int argc, char *argv[])
   std::vector<double> opnds6;
   twoDGph->setShape(opter6, opnds6);
 
-  MainWindow m(twoDGph);
+  ToD m(twoDGph);
 
    m.show();
 
