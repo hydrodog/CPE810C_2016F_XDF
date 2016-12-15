@@ -4,7 +4,7 @@
  */
 #ifndef XDFIMPORT_H__
 #define XDFIMPORT_H__
-
+#include "pdfimage.h"
 #include <podofo.h>
 #include "pdfgraphics.h"
 #include <cstdio>
@@ -58,6 +58,8 @@ private:
     //xDocument* xdoc;
     ofstream of;
     ifstream fileConfig;
+    ImageExtractor imageextractor;
+    int nNum = 0;
 
     class PdfObj {
     public:

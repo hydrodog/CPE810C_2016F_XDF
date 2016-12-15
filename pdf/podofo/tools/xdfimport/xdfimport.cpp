@@ -3,13 +3,14 @@
  * Edited by: Zhuo Chen, Yingting Huang
  */
 #include "xdfimport.h"
-
+#include "pdfimage.h"
 #include <stack>
 #include <iomanip>
 #include <unordered_set>
 #include <sstream>
 PdfImporter::PdfImporter():of("out.txt")
 {
+
     loadFileConfig();
 }
 
@@ -72,6 +73,7 @@ void PdfImporter::Init( const char* pszInput )
     }
     
     PdfMemDocument document( pszInput );
+    imageextractor.Init(&document, &nNum);
     
     int nCount = document.GetPageCount();
     for( int i=0; i<nCount; i++ )
