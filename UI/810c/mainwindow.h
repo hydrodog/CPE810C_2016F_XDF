@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "frame.h"
-
+#include "page.h"
 //Generate by Qt automatically
 namespace Ui {
 class MainWindow;
@@ -18,7 +18,7 @@ public:
     ~MainWindow();
 
 
-    void addFrame(Frame f);//Could be a list of frame, one frame for test first
+    void addFrame(Page pg);//Could be a list of frame, one frame for test first
 private slots:
     void on_actionFont_triggered();
 

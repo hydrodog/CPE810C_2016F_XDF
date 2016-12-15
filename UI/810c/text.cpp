@@ -60,6 +60,7 @@ void Text::getText(const wstring w,const string v){
             m_imagenum++;
         }
     }
+    #if 0
     /*tem=tem1.substr(length*2/3,length/3);
     pos=tem.find(L"<stylechange>");
     int second=(length*2/3)+pos+12;
@@ -103,6 +104,7 @@ void Text::getText(const wstring w,const string v){
         temfont.erase(temfont.begin(),temfont.begin()+posf+13);
         j++;
     }*/
+    #endif
 }
 #if 0
 void Text::getallfont(const string v){

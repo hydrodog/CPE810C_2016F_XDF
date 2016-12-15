@@ -8,6 +8,7 @@
 #include <QTextBrowser>
 #include "frame.h"
 #include "border.h"
+#include "page.h"
 
 using namespace  std;
 MainWindow::MainWindow(QWidget *parent) :
@@ -22,64 +23,68 @@ MainWindow::~MainWindow()
     delete ui;
     //ui->textEdit->
 }
-void MainWindow::addFrame(Frame f){
 
-    QFrame* frame_3 = new QFrame(ui->centralWidget);
-    QString str=QString("frame").append(QChar(f.frameNum()));
-    frame_3->setObjectName(str);
-    frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
-    frame_3->setFrameShape(QFrame::Box);
-    frame_3->setFrameShadow(QFrame::Raised);
-    frame_3->setStyleSheet("background-color:grey");
-    frame_3->setMidLineWidth(10);
-    frame_3->setLineWidth(10);
-    if(f.text().contentList().empty()){
-        return;
-    }else{
+void MainWindow::addFrame(Page pg){
+    std::list<Frame> myframeList=pg.frameList();
+    for (std::list<Frame>::iterator it =myframeList.begin(); it != myframeList.end(); ++it){
+        Frame f=(*it);
+        QFrame* frame_3 = new QFrame(ui->centralWidget);
+        QString str=QString("frame").append(QChar(f.frameNum()));
+        frame_3->setObjectName(str);
+        frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
+        frame_3->setFrameShape(QFrame::Box);
+        frame_3->setFrameShadow(QFrame::Raised);
+        frame_3->setStyleSheet("background-color:grey");
+        frame_3->setMidLineWidth(10);
+        frame_3->setLineWidth(10);
+        if(f.text().contentList().empty()){
+            return;
+        }else{
 
-        QDialog* myDia=new QDialog(ui->centralWidget);
-        myDia->setGeometry(100,100,300,300);
-        myDia->setStyleSheet("background-color:black;");
-        QTextBrowser* textBrowser = new QTextBrowser(frame_3);
-        textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser->setFrameShape(QFrame::Box);
-        textBrowser->setFrameShadow(QFrame::Sunken);
-        textBrowser->setStyleSheet("background-color:grey");
-        QTextOption* myOp= new QTextOption();
-        myOp->setTextDirection(Qt::RightToLeft);
-        textBrowser->document()->setDefaultTextOption(*myOp);
-        str.append("_textBrowser");
-        textBrowser->setObjectName(str);
-        textBrowser->setFrameStyle(QFrame::NoFrame);
-        textBrowser->viewport()->setAutoFillBackground(false);
-        QFrame* frame_4 = new QFrame(textBrowser);
-        frame_4->setGeometry(QRect(0,0,100,100));
-        frame_4->setStyleSheet("background-color:green;");
-        int a;
-        a=f.startX();
+            QDialog* myDia=new QDialog(ui->centralWidget);
+            myDia->setGeometry(100,100,300,300);
+            myDia->setStyleSheet("background-color:black;");
+            QTextBrowser* textBrowser = new QTextBrowser(frame_3);
+            textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+            textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+            textBrowser->setFrameShape(QFrame::Box);
+            textBrowser->setFrameShadow(QFrame::Sunken);
+            textBrowser->setStyleSheet("background-color:grey");
+            QTextOption* myOp= new QTextOption();
+            myOp->setTextDirection(Qt::RightToLeft);
+            //textBrowser->document()->setDefaultTextOption(*myOp);
+            str.append("_textBrowser");
+            textBrowser->setObjectName(str);
+            textBrowser->setFrameStyle(QFrame::NoFrame);
+            textBrowser->viewport()->setAutoFillBackground(false);
+            QFrame* frame_4 = new QFrame(textBrowser);
+            frame_4->setGeometry(QRect(0,0,100,100));
+            frame_4->setStyleSheet("background-color:green;");
+            int a;
+            a=f.startX();
 
-        textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
-        //textBrowser->setStyleSheet("background-color:white;");
+            textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
+            //textBrowser->setStyleSheet("background-color:white;");
 
-        QString str;
+            QString str;
 
-        //Get the content list from text and append string to textbrowser
-        textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/lee.png' width='30%'/>");
+            //Get the content list from text and append string to textbrowser
+            //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/lee.png' width='30%'/>");
 
-        std::list<Content> mycontent=f.text().contentList();
-        for (std::list<Content>::iterator it =mycontent.begin(); it != mycontent.end(); ++it){
-            wstring temp=(*it).str();
-            str=QString::fromStdWString(temp);
-            QFont t=(*it).font();
-            QColor c=(*it).color();
-            textBrowser->setCurrentFont(t);
-            textBrowser->setTextColor(c);
-            textBrowser->insertPlainText(str);
-        }
-        textBrowser->append("str");
-        textBrowser->insertPlainText("b");
-        textBrowser->insertPlainText("c");
+            std::list<Content> mycontent=f.text().contentList();
+            for (std::list<Content>::iterator it =mycontent.begin(); it != mycontent.end(); ++it){
+                wstring temp=(*it).str();
+                str=QString::fromStdWString(temp);
+                QFont t=(*it).font();
+                QColor c=(*it).color();
+                textBrowser->setCurrentFont(t);
+                textBrowser->setTextColor(c);
+                textBrowser->insertPlainText(str);
+            }
+            textBrowser->append("str");
+            textBrowser->insertPlainText("b");
+            textBrowser->insertPlainText("c");
+
 
 
 
@@ -118,6 +123,7 @@ void MainWindow::addFrame(Frame f){
         textBrowser->insertPlainText("This is another string!\nmm");
  #endif
 
+        }
     }
 }
 

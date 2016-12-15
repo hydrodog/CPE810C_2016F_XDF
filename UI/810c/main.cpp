@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <iostream>
 #include<fstream>
+#include <page.h>
 #include <qdir.h>
 using namespace std;
 int main(int argc, char *argv[])
@@ -33,7 +34,9 @@ int main(int argc, char *argv[])
 
     Frame f(40,20,600,600,1);
     f.text(test1);
-    w.addFrame(f);
+    Page pg(1000,1000,1);
+    pg.addFrame(f);
+    w.addFrame(pg);
     w.show();
 #if 0
     //zqx's test are as follow
