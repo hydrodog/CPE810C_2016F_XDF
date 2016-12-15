@@ -13,6 +13,8 @@ class Frame{
         int m_startX,m_startY;//the start point of each frame
         int m_type;//0 is pure text, 1 is image, 2 is 2d graphic
 
+        std::string m_shape;
+        std::string m_shadow;
         Border m_border;// call the object of the class Border
         std::list<Frame> m_insideFrame;//If necessary
         //list<Image> imageList;
@@ -28,7 +30,12 @@ class Frame{
         int height(){return m_height;}
         int width(){return m_width;}
         int type(){return m_type;}
+        std::string shape(){return m_shape;}
+        std::string shadow(){return m_shadow;}
+
         void addContent(Content c);
+        void shape(std::string s){m_shape=s;}
+        void shadow(std::string s){m_shadow=s;}
 
         void text(Text& t){m_text=t;}
         Text text(){return m_text;}

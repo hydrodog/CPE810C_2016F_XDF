@@ -25,10 +25,19 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::addFrame(Page pg){
+
+    QFrame* frame2 = new QFrame(ui->centralWidget);
+    frame2->setObjectName("page");
+    frame2->setGeometry(QRect(0, 0, pg.height(), pg.width()));
+    frame2->setFrameShape(QFrame::Box);
+    frame2->setFrameShadow(QFrame::Raised);
+    frame2->setStyleSheet("background-color:white");
+    frame2->setMidLineWidth(5);
+    frame2->setLineWidth(5);
     std::list<Frame> myframeList=pg.frameList();
     for (std::list<Frame>::iterator it =myframeList.begin(); it != myframeList.end(); ++it){
         Frame f=(*it);
-        QFrame* frame_3 = new QFrame(ui->centralWidget);
+        QFrame* frame_3 = new QFrame(frame2);
         QString str=QString("frame").append(QChar(f.frameNum()));
         frame_3->setObjectName(str);
         frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
@@ -57,11 +66,9 @@ void MainWindow::addFrame(Page pg){
             textBrowser->setObjectName(str);
             textBrowser->setFrameStyle(QFrame::NoFrame);
             textBrowser->viewport()->setAutoFillBackground(false);
-            QFrame* frame_4 = new QFrame(textBrowser);
-            frame_4->setGeometry(QRect(0,0,100,100));
-            frame_4->setStyleSheet("background-color:green;");
-            int a;
-            a=f.startX();
+            //QFrame* frame_4 = new QFrame(textBrowser);
+            //frame_4->setGeometry(QRect(0,0,100,100));
+            //frame_4->setStyleSheet("background-color:green;");
 
             textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
             //textBrowser->setStyleSheet("background-color:white;");

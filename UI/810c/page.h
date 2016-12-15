@@ -14,7 +14,6 @@ private:
     std::list<Frame> m_frameList;
     int m_height,m_width;
     bool m_LtoR;//Left to right or right to left
-    bool m_horizontal;// horizontal or vertical
 public:
     Page(int height, int width, int pageNum);
 

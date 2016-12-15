@@ -50,8 +50,8 @@ void Text::getText(const wstring w,const string v){
             if(pos==-1)break;
             n++;
             lis=tem.substr(0,pos);
-            temstore.getmessage(lis);
-            temstore.getfont(lisf);
+            temstore.readInMessage(lis);
+            temstore.readInFont(lisf);
             m_contentList.push_back(temstore);                                    //push here
             tem.erase(tem.begin(),tem.begin()+pos+13);
             temfont.erase(temfont.begin(),temfont.begin()+posf+13);

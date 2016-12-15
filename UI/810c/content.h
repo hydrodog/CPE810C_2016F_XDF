@@ -21,12 +21,11 @@ private:
     std::wstring m_str;
     int k;
     int n=0;
-    wstring words;
     int changelinepos[20]={0};
     map<int,string> alignment;
 public:
-    void getmessage(std::wstring a);
-    void getfont(std::string a);
+    void readInMessage(std::wstring a);
+    void readInFont(std::string a);
     QFont font(){return m_font;}
     QColor color(){return m_color;}
     std::wstring str(){return m_str;}
@@ -34,9 +33,8 @@ public:
     void font(QFont f){m_font=f;}
     void color(QColor c){m_color=c;}
 
-    void getalignment(int *n,int *m);
+    void readInalignment(int *n,int *m);
     map<int,string> exportalignment();
-    wstring getword();
     int getlength();
     int* getlinechange();
     int getlineamount();

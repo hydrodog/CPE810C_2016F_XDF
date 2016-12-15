@@ -26,32 +26,21 @@ int main(int argc, char *argv[])
     Content c;
     for(kid=test2.begin();kid!=test2.end();kid++){
         c=*kid;
-        wstring test3=c.getword();
+        wstring test3=c.str();
         wcout<<test3<<endl;
     }
 
    //End test
 
-    Frame f(40,20,600,600,1);
+    Frame f(100,20,800,600,1);
     f.text(test1);
     Page pg(1000,1000,1);
+    Frame f2(100,630,800,600,2);
+    f2.text(test1);
     pg.addFrame(f);
+    pg.addFrame(f2);
     w.addFrame(pg);
     w.show();
-#if 0
-    //zqx's test are as follow
-    wifstream in("testfile1.txt");
-    wstring words;
-    try {
-        in.is_open();
-    }
-    catch(int) {
-        cout<<"Opening file error!"<<endl;
-    }
-    const int LINE_LENGTH = 200;
-    wchar_t str[LINE_LENGTH];
-    in.getline(str,LINE_LENGTH);
-    cout<<str<<endl;
-#endif
+
     return a.exec();
 }

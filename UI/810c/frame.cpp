@@ -10,11 +10,11 @@ Frame::Frame(int startX, int startY, int height, int width, int FrameNum):m_fram
 {}
 
 void Frame::clear(){
-    m_height=800;
-    m_width=800;
-    m_startX=60;
-    m_startY=30;
-    m_frameNum=2;
+    m_height=0;
+    m_width=0;
+    m_startX=0;
+    m_startY=0;
+    m_frameNum=0;
 
 }//Reset all information to defalut value
 

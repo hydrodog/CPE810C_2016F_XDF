@@ -8,7 +8,7 @@ class Border{
 private:
     int m_leftEdge,m_rightEdge,m_topEdge,m_downEdge;// four distances
     QColor m_color;// Qcolor to set color
-    QFont m_font;//Qfont to set font
+
 public:
     Border(int height=800, int width=600);
 
@@ -25,6 +25,6 @@ public:
     void topEdge(int top){m_topEdge=top;}
     void downEdge(int down){m_downEdge=down;}
     void color(QColor c){m_color=c;}
-    void font(QFont f){m_font=f;}
+
 };
 #endif // BORDER_H
