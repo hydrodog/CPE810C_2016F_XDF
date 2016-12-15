@@ -1,8 +1,9 @@
-#include "DrawFunList.hh"
+#include "DrawFunList.h"
 
 /*
  @author: Seito Ryu  20/11/16
  @modifer: Seito Ryu 30/11/16 "add some sample code"
+ @modifer: Seito Ryu 1/12/16  "fix some bugs"
  */
 
 //constructor
@@ -24,9 +25,9 @@ void DrawFunList::draw1(const std::vector<Shape>& shape, const int& currentIndex
 #if 0
         //sample code version 1(get current operator's data):
         std::cout << "\n" << "===============" << "\n" <<"this is sample code of getting current operands for current operator!" << "\n";
-        
+
         std::cout << "Current operator is " << shape[currentIndex].getOpter() << "\n";
-        
+
         for(auto ite = shape[currentIndex].getOpnds().begin(); ite != shape[currentIndex].getOpnds().end(); ++ite){
             std::cout << *ite << "\t\t";
         }
@@ -43,7 +44,7 @@ void DrawFunList::draw1(const std::vector<Shape>& shape, const int& currentIndex
         std::string currentOperator = shape[currentIndex].getOpter();
         std::vector<double> currentOperands = shape[currentIndex].getOpnds();
         //Draw a circle on the main window and fulfill color
-        
+
         //reference prevois operators and operands
         for(int i = currentIndex - 1; i >= 0; i--){
             if(shape[i].getOpter() == "c"){
@@ -69,7 +70,7 @@ void DrawFunList::draw5(const std::vector<Shape>& shape, const int& currentIndex
   std::cout << "\t\t" << "This is draw5!" << "\t";
 }
 //draw function table
-DrawFunList::draw(const std::string& currentOperator, const std::vector<Shape>& shapeList, const int& currentIndex){
+void DrawFunList::draw(const std::string& currentOperator, const std::vector<Shape>& shapeList, const int& currentIndex){
   if(mapDrw[currentOperator]){
     (this->*mapDrw[currentOperator])(shapeList, currentIndex);
   }

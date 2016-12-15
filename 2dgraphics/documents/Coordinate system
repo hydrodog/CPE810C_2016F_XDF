@@ -1,0 +1,54 @@
+Graphics
+
+The graphics operators used in PDF content streams describe the appearance of pages that
+are to be reproduced on a raster output device.The graphics operators from six main groups:
+
+1. Graphics state operators
+   Graphics state operators manipulate the data structure called the graphics state.
+   Graphics state is the "global framework" within which the other graphics opertors execute.
+   
+   Graphics state includes:
+   1. Current transformation matrix(CTM)
+   2. Current color(Color Space)
+   3. Current clipping path
+   
+2. Graphic object
+   Graphic object contains operators operands
+   Graphic object types:
+   
+   A path object: begin with m,re  end with f,s
+   A test object: ---   
+   An external object:---
+   An inline image object:---
+   A shading object:---
+
+3. Graphic State
+
+Parameter                initial valule               Value
+Clipping path          Entire imageable page         a path construction begin with re end with W and n
+color space(CS)            Device Grey               a name
+color                      black                     numbers
+text                       ----                      contain 9 graphic statement parameters
+line width	            1                        thichness
+line cap	            0                        shape endpoints for any open path
+line join                   0                        shape of joints
+miter limit
+dash pattern              a solid line
+stroke adjustment         false                      compensate for possible rasterization effects
+CTM
+
+
+Graphic state details
+
+1.Coordinate System
+
+Coordinate systems define the canvas on which all painting occures. They determine the position, 
+orientation, and size of the text, graphics, and images that appear on a page. 
+
+A coordinate space is determined by te following properties with respect to the current page:
+  The location of the origin
+  The orientation of the x and y axes
+  The lengths of the units along each axis
+
+Transformations among coordinate spaces are defined by transformation matrices, which can specify any 
+linear mapping of two-dimensional coordinates, including translation, scaling, rotation, reflection, and skewing.
