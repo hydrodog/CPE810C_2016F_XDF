@@ -16,8 +16,8 @@ using namespace std;
 class Content{
 private:
 
-    QFont m_font;
-    QColor m_color;
+    QFont m_font;//QFont to set font
+    QColor m_color;//Qcolor to set color
     std::wstring m_str;
     int k;
     int n=0;

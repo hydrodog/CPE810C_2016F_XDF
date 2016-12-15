@@ -2,12 +2,13 @@
 #define BORDER_HH__
 #include <QColor>
 #include <QFont>
-//Contains the different distance to four edges
+
+//Contains the different distance from the textbrowser to four edges
 class Border{
 private:
-    int m_leftEdge,m_rightEdge,m_topEdge,m_downEdge;
-    QColor m_color;
-    QFont m_font;
+    int m_leftEdge,m_rightEdge,m_topEdge,m_downEdge;// four distances
+    QColor m_color;// Qcolor to set color
+    QFont m_font;//Qfont to set font
 public:
     Border(int height=800, int width=600);
 
