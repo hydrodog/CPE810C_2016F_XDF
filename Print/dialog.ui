@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>389</width>
-    <height>283</height>
+    <width>436</width>
+    <height>271</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -153,16 +153,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>reverseCheckBox</zorder>
-  <zorder>pdfCheckBox</zorder>
-  <zorder>startPageLineEdit</zorder>
-  <zorder>EndTextLineEdit</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer_2</zorder>
   <zorder>verticalSpacer</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
