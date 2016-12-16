@@ -19,6 +19,6 @@ void Frame::clear(){
 }//Reset all information to defalut value
 
 
-void Frame::addContent(Content c){
+void Frame::addContent(Content c){//Add one content to the text
     m_text.addContent(c);
 }

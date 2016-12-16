@@ -11,8 +11,9 @@
 class Page{
 private:
     int m_pageNumber;
-    std::list<Frame> m_frameList;
-    int m_height,m_width;
+    std::list<Frame> m_frameList;//A list of frame in the page
+    int m_height;
+    int m_width;
     std::string m_backgroudColor;
     bool m_LtoR;//Left to right or right to left
 public:
@@ -21,7 +22,7 @@ public:
     void clear();//Reset all information to defalut value
     void print();
     void save();
-    void import();//Way to import a file  NOT YOUR PROBLEM
+    void import();//Way to import a file
     void addNewFrame(int startX, int startY, int height, int width, int FrameNum);
     void addFrame(Frame& f);//Add a given frame to the list
 

@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-    //ui->textEdit->
+
 }
 
 void MainWindow::addFrame(Page pg){
@@ -34,6 +34,7 @@ void MainWindow::addFrame(Page pg){
     frame2->setStyleSheet("background-color:white");
     frame2->setMidLineWidth(5);
     frame2->setLineWidth(5);
+    //Find all the frame in the page, then put them inside of the Big frame of Page
     std::list<Frame> myframeList=pg.frameList();
     for (std::list<Frame>::iterator it =myframeList.begin(); it != myframeList.end(); ++it){
         Frame f=(*it);
@@ -41,18 +42,19 @@ void MainWindow::addFrame(Page pg){
         QString str=QString("frame").append(QChar(f.frameNum()));
         frame_3->setObjectName(str);
         frame_3->setGeometry(QRect(f.startX(), f.startY(), f.height(), f.width()));
+        //Get the x,y coordinate, height and weight from the frame
         frame_3->setFrameShape(QFrame::Box);
         frame_3->setFrameShadow(QFrame::Raised);
         frame_3->setStyleSheet("background-color:grey");
         frame_3->setMidLineWidth(10);
         frame_3->setLineWidth(10);
         if(f.text().contentList().empty()){
+            //If There is no content just return
             return;
         }else{
 
-            QDialog* myDia=new QDialog(ui->centralWidget);
-            myDia->setGeometry(100,100,300,300);
-            myDia->setStyleSheet("background-color:black;");
+            //Create a QtextBrowser to put all the text in it
+            //And make the textBrowser inside the given frame
             QTextBrowser* textBrowser = new QTextBrowser(frame_3);
             textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
             textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -65,19 +67,24 @@ void MainWindow::addFrame(Page pg){
             str.append("_textBrowser");
             textBrowser->setObjectName(str);
             textBrowser->setFrameStyle(QFrame::NoFrame);
-            textBrowser->viewport()->setAutoFillBackground(false);
-            //QFrame* frame_4 = new QFrame(textBrowser);
-            //frame_4->setGeometry(QRect(0,0,100,100));
-            //frame_4->setStyleSheet("background-color:green;");
+            //Set the textBrowser to be noFrameStyle
 
-            textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(), f.width()-f.border().leftEdge()-f.border().rightEdge()));
+            textBrowser->viewport()->setAutoFillBackground(false);
+
+            //Based on the Border of the frame, adjust the x,y coordinate, weight and height of the textBrowser
+            textBrowser->setGeometry(QRect(f.border().leftEdge(), f.border().topEdge(), f.height()-f.border().downEdge()-f.border().topEdge(),
+                                           f.width()-f.border().leftEdge()-f.border().rightEdge()));
+
             //textBrowser->setStyleSheet("background-color:white;");
 
-            QString str;
 
-            //Get the content list from text and append string to textbrowser
             //textBrowser->insertHtml("<img src='/Users/zhiyuanchen/Downloads/lee.png' width='30%'/>");
 
+            /*
+             * Find all the content in the text
+             * Get the font and color from the content, then set the information for textbrowser
+             */
+            QString str;
             std::list<Content> mycontent=f.text().contentList();
             for (std::list<Content>::iterator it =mycontent.begin(); it != mycontent.end(); ++it){
                 wstring temp=(*it).str();

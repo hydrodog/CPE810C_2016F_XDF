@@ -13,13 +13,13 @@ class Frame{
         int m_startX,m_startY;//the start point of each frame
         int m_type;//0 is pure text, 1 is image, 2 is 2d graphic
 
-        std::string m_shape;
-        std::string m_shadow;
-        std::string m_backgroudColor;
+        std::string m_shape;//Shape style
+        std::string m_shadow;//Shadow style
+        std::string m_backgroudColor;//Backgroud color
         Border m_border;// call the object of the class Border
         std::list<Frame> m_insideFrame;//If necessary
         //list<Image> imageList;
-        Text m_text;//Not sure make it a list or not
+        Text m_text;//Contain the text information
     //When change the border, need to update the width and height at the same time
     public:
         Frame(int startX,int startY,int height,int width,int FrameNum);
