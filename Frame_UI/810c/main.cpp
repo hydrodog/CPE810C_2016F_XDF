@@ -123,12 +123,7 @@ int main(int argc, char *argv[]) {
 
     string htmlpath1= "content2478944_41850213.html";//Address of html file
     TRANS output = texttrans(htmlpath1);//Function to transfer html to given standard
-    string htmlpath2= "content2478944_41857214.html";
-    TRANS output2 =texttrans(htmlpath2);
-    wofstream testf2;
-    testf2.open("testfile22.txt");
-    testf2 << output2.getbodytrans();
-    testf2.close();
+
     QApplication a(argc, argv);
     MainWindow w;
     //Put the output to a txt file
@@ -164,7 +159,7 @@ int main(int argc, char *argv[]) {
     Text test1;
     test1.readInText(allwords1,output.getallsetting());
     Text test2;
-    test2.readInText(allwords2,output2.getallsetting());
+    test2.readInText(allwords2,output.getallsetting());
     Frame f(100,20,800,600,1);
     f.text(test1);
     Page pg(1000,1600,1);
