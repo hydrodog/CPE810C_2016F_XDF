@@ -15,6 +15,7 @@ class Frame{
 
         std::string m_shape;
         std::string m_shadow;
+        std::string m_backgroudColor;
         Border m_border;// call the object of the class Border
         std::list<Frame> m_insideFrame;//If necessary
         //list<Image> imageList;
@@ -32,11 +33,12 @@ class Frame{
         int type(){return m_type;}
         std::string shape(){return m_shape;}
         std::string shadow(){return m_shadow;}
+        std::string backgroudColor(){return m_backgroudColor;}
 
         void addContent(Content c);
         void shape(std::string s){m_shape=s;}
         void shadow(std::string s){m_shadow=s;}
-
+        void backgroudColor(std::string s){ m_backgroudColor=s;}
         void text(Text& t){m_text=t;}
         Text text(){return m_text;}
         Border border(){return m_border;}

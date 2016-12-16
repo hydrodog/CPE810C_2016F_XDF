@@ -25,7 +25,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::addFrame(Page pg){
-
+    //First create a frame for the whole page
     QFrame* frame2 = new QFrame(ui->centralWidget);
     frame2->setObjectName("page");
     frame2->setGeometry(QRect(0, 0, pg.height(), pg.width()));
@@ -88,10 +88,6 @@ void MainWindow::addFrame(Page pg){
                 textBrowser->setTextColor(c);
                 textBrowser->insertPlainText(str);
             }
-            textBrowser->append("str");
-            textBrowser->insertPlainText("b");
-            textBrowser->insertPlainText("c");
-
 
 
 

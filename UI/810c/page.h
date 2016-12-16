@@ -13,6 +13,7 @@ private:
     int m_pageNumber;
     std::list<Frame> m_frameList;
     int m_height,m_width;
+    std::string m_backgroudColor;
     bool m_LtoR;//Left to right or right to left
 public:
     Page(int height, int width, int pageNum);
@@ -22,12 +23,15 @@ public:
     void save();
     void import();//Way to import a file  NOT YOUR PROBLEM
     void addNewFrame(int startX, int startY, int height, int width, int FrameNum);
-    void addFrame(Frame& f);
+    void addFrame(Frame& f);//Add a given frame to the list
+
 
     std::list<Frame> frameList(){ return m_frameList;}
     int pageNumber(){ return m_pageNumber;}
     int height(){return m_height;}
     int width (){return m_width;}
+    std::string backgroudColor(){return m_backgroudColor;}
+    void backgroudColor(std::string s){ m_backgroudColor=s;}
 
 
 

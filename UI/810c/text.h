@@ -23,7 +23,7 @@ public:
     int getnumber();    //get the quantity of Content objects in the Text object
     //void dealContentmessage();
     int* getimagepos();     //get the image position
-    void getText(const wstring w,const string v);      //read in the message the other groups give to us
+    void readInText(const wstring w,const string v);      //read in the message the other groups give to us
     //void getallfont(const string v);
     int getimagenum();                               //get the quantity of image in the Text object
     //int len(){return m_len;}

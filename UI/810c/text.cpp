@@ -3,7 +3,7 @@
 using namespace std;
 Text::Text(){}
 
-void Text::getText(const wstring w,const string v){
+void Text::readInText(const wstring w,const string v){
     wstring tem1=w;
     Content temstore;
     int pos=0;
@@ -136,9 +136,6 @@ void Text::addContent(Content c){
     m_contentList.push_back(c);
 }
 
-//Content Text::getContent(int i){
-    //return m_textcontent[i];
-//}
 int Text::getnumber(){
     return n;
 }

@@ -13,7 +13,6 @@
 #include <page.h>
 #include <qdir.h>
 #include <text.h>
-using namespace std;
 
 using namespace std;
 wstring ncx[500][2];//windows组做目录用,name and src
@@ -124,15 +123,15 @@ int main(int argc, char *argv[]) {
     string st=path.toStdString();
     cout<<st<<endl;
 
-    string htmlpath1= "content2478944_41850213.html";//原文件地址
-    TRANS output = texttrans(htmlpath1);
+    string htmlpath1= "content2478944_41850213.html";//Address of html file
+    TRANS output = texttrans(htmlpath1);//Function to transfer html to given standard
     QApplication a(argc, argv);
     MainWindow w;
     wofstream testf;
 
-        testf.open("testfile.txt");
-        testf << output.getbodytrans();
-        testf.close();
+    testf.open("testfile.txt");
+    testf << output.getbodytrans();
+    testf.close();
 
    //Start test
 
@@ -149,43 +148,16 @@ int main(int argc, char *argv[]) {
 
 
  #endif
-    //string allfont="colorredfonttimessize28bold0italic0underline1end<stylechange>languageChinesecolorgreenfonttimessize44bold0italic1underline0end<stylechange>languageChinesecoloryellowfonttimessize15bold1italic1underline1end<stylechange>languageChinesecolorredfonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold1italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecoloryellowfonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>";
     const wstring allwords1=L"第20章 危机降临 \n<stylechange> \nPS：亲，求几张推荐票！\n“你确定需要接受这个任务？不再更改其它任务？你要知道，这是三星任务，黑水山脉，猎杀五阶妖兽风火熊？现在的你，绝对不是对手。”\n工作台上，一位貌相不错的白衣女子，忍不住提醒对方。\n五级妖兽，风火熊，黑水山脉，群居的一种妖兽，拥有强悍防御能力，又具有风火双系攻击，名声非常响亮。\n一般上，外门弟子，不到武道六重天，绝对不单独挑战这一类妖兽。\n“不需要，三星任务，我接了！”\n<stylechange>众多任务之中，林飞选择三星任务，因为这一门任务，奖励丰富，又可以提升实力，这其中，重要一点，通过挑战群居妖兽，修炼《金刚不坏之身》，提升自己的防御能力。\n.......\n登记三星任务后。\n林飞转身离开，不打算继续留在这里。\n“喂，你忘了拿东西！”\n背后，忽然响起女子的声音。\n“东西？”林飞恍然大悟，自己真的忘记拿东西，那是关于风火熊的具体资料记载。\n悬赏区相关事情，林飞不过是前任“林飞”留下来，了解并不算太多。忽略资料的事情，再正常不过。\n<stylechange>果然，女子递上来一份资料，美眸里带着一抹的好奇。\n“这位师弟，风火熊不是这么好对付，师姐还是劝你，放弃这个任务，你要明白，任务失败，必须扣除功勋值，失去功勋值，将会影响到玄功，黄阶玄功，兑换…..”\n工作台上的女子，年约十七八岁，身穿一套淡白色衣裙，容貌尚不算出色，却也是难得一见的美女，樱桃小嘴上，挂着淡淡的欢笑，透着少女活泼气氛。\n“谢谢师姐的好意，我这个人喜欢各种挑战，有挑战才有各种生活。”林飞开口笑道，说罢，拿着资料，直接离开。\n白衣女孩，嘴上哼了哼，“哼哼，好狂妄的小子，本小姐劝你，不给脸色，诅咒你倒霉！”\n话音落下，白衣女孩身后再次出现一个女子，旋即响起空灵一般的声音，宛如山水之间，叮咚流过的溪水。\n“悠悠，你在气什么呢？”\n“青幽姐，你出关啦！”\n<stylechange>白衣女孩跑出来，一下子抱住青衣女子，好不高兴的样子，惹来旁边不少人羡慕妒忌的眼光，恨不得自己成为那一个女子。\n“当然啦，要是不出来，我怎么会知道，咱们的悠悠，好像看上什么人，莫非是在思春，想男人？”青衣女子嫣然一笑，如百花盛开。\n“哼哼，青幽姐，你好坏啊，你才想男人了。”\n……\n从悬赏区出来。\n外面仍然有不少人前来悬赏区接受悬赏任务，争取完成各种任务，获取足够的功勋值，要么便是获得大量银子。\n玄天大陆，一个武者的世界。\n一个武者想要出人头地，威震大陆，各种强横玄功，首要立足之本，黄阶玄功还是其次，作为外门弟子，修炼合适自己的玄功，需要天文数字的银两，同样需要打量功勋值。\n<stylechange>一本二三流玄功，动不动几千银子。\n一本黄阶玄功，动不动上万银子。\n仅仅玄功之上，花费的银子，想来都是一件恐怖的数字。\n武者玄功修炼少，对敌上将会吃很大的亏，两人相同实力，结果另外一方，修炼几门玄功，再加上黄阶玄功，足够压制对方。\n神武门之中，家族弟子，寒门弟子，想要获取玄功，需要获取各种功勋值。\n悬赏区，才会如今的繁荣。\n神武门通过弟子，完成各种任务，双方都可以获得好处。\n林飞很明白，刚才那女子的提醒，一般人真不敢去对付风火熊，其中危险性很大。弄不好死在上面。\n<stylechange>“谁让低阶妖兽经验值不给力，老子何苦猎杀五阶妖兽，纯粹自己给自己找不自在，可惜了….对了，貌似刚才那女孩不错，粉嫩可爱，若是可以勾搭一下，一尝芳泽那就爽了。”\n……\n“林飞，你终于舍得出来，不枉费我一直在这等你。”\n正当林飞想入非非的时候，一声低沉带着愤怒的声音，从正前方传过来。\n愤怒的声音，立刻引起众多弟子的注意。\n因为，这里是悬赏区门口。\n“天那，那不是林飞吗？”\n“林飞算什么，你不如看看，那边站着什么人？”\n<stylechange>“什么人，值得….什么，他怎么来了，难道是冲着林飞来的？”\n“张万山师兄怎么可能出现在这，最近不是传闻，他不是在修炼一门玄功吗，莫非因为弟弟张重山之事？”\n“一定是这样的，林飞曾经大发神威打伤张重山，后来又打败张风浪，想不到将张万山这一尊外门高手逼迫出来！”\n“林飞要倒霉了，张万山师兄一生气，谁都挡不住怒火。”\n……..\n当众外门弟子，目光落在那散发着冷冽气息的年轻人身上时，全都下意识打了一身寒颤，宛如深处在冰天雪地之中，不由自主离开这范围。躲避那冰冷气息。\n张万山，武道八重天，罡气高手！\n提起这个名字，外门弟子之中，无人不知，无人不晓，凡是达到武道八重天，罡气护身，都有望成为玄者。\n<stylechange>张万山亲自出面，在场的人都明白是怎么一回事。\n“张重山师兄，莫非你的伤好的差不多，又想继续回去修养？如果这样，师弟不客气了。”\n林飞嘴上浮起一抹笑容，露出一口洁白牙齿，轻轻踏前一步，说出一番让人无法相信的话。\n这林飞是不是吃错药了。\n先前喝斥林飞，正是伤势渐好的张重山。\n“不要过来，给我站住，不要动。”\n闻言，张重山眼中闪过一抹惧意，下意识退开一步，仅仅是一步，暴露出内心之中的害怕。\n自己输在林飞这废物手上，大哥的帮手张风浪，同样被打败，如今还躺在床上养伤，下意识对林飞产生一股惧意，连他自己都不知道。\n<stylechange>林飞不在意张重山，当见到这家伙伤势恢复的如此之快，心里不由暗暗惊讶，真不愧是有一个外门高手大哥，疗伤丹药服用下去，伤势恢复神速。\n目光一转，转向某人身上，脸上表情微微一动，一颗心沉下来。\n“这人应该就是张万山，罡气护身高手，外门弟子之中，位居前三十的存在，张重山的大哥。”\n视野之中，一位貌相和张重山相差无几的年轻人，冷如冰山，周身之内，寒气逼人，尚未接近，寒气袭来，无形之中，空出一个位置。\n林飞脑中，第一时间浮现出，关于张万山的个人信息。\n\n手机用户请到m.qidian.com阅读。\n手机阅读器、看书更方便。【<stylechange>安卓版】 <stylechange>";
     string allfont="colordefault fontdefault size1.6em bold1 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colordefault fontdefault size63% bold0 italic0 underline0end<stylechange>colorblue fontdefault size63% bold0 italic0 underline1end<stylechange>";
-#if 0
-    const wstring allwords1=output.getbodytrans();
-    string allfont=output.getallsetting();
-    //test1.getText(allwords1,allfont);
-    cout<<"*********************"<<endl;
-    wcout<<allwords1<<endl;
-     cout<<"*********************"<<endl;
-    cout<<allfont<<endl;
-     cout<<"*********************"<<endl;
 
-
-    list<Content> test2=test1.contentList();
-    list<Content>::iterator kid;
-    Content c;
-    for(kid=test2.begin();kid!=test2.end();kid++){
-        c=*kid;
-        wstring test3=c.str();
-        wcout<<test3<<endl;
-    }
-#endif
-   //End test
-    wifstream file("testfile.txt");
-    wstring my_str=L"";
-    wstring wbuf2;
-    while(!file.eof()){
-        getline(file,wbuf2);
-
-        my_str+=wbuf2;
-
-    }
-    file.close();
+    /*
+     * After transfering html to two string. pass these two string to text
+     * The
+     */
 
     Text test1;
-    test1.getText(allwords1,output.getallsetting());
+    test1.readInText(allwords1,output.getallsetting());
     Frame f(100,20,800,600,1);
     f.text(test1);
     Page pg(1000,1000,1);

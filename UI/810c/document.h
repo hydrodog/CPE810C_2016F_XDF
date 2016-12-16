@@ -6,7 +6,7 @@
 class Document
 {
 private:
-    std::list<Page> m_pageList;
+    std::list<Page> m_pageList;//Contain a list of Page
 public:
     Document();
     std::list<Page> pageList(){return m_pageList;}

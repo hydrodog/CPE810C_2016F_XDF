@@ -14,7 +14,7 @@ void Page::save(){
 }
 void Page::import(){
 
-}//Way to import a file  NOT YOUR PROBLEM
+}//Way to import a file
 
 void Page::addNewFrame(int startX, int startY, int height, int width, int FrameNum){
     Frame f(startX,startY,height,width,FrameNum);
