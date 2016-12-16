@@ -1,5 +1,7 @@
 # Backups
 *~
+*.user
+build-podofo-Desktop-Default/
 
 # Prerequisites
 *.d
