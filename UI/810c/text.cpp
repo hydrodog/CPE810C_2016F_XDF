@@ -21,15 +21,15 @@ void Text::readInText(const wstring w,const string v){
     int length=w.length();
     string temfont;
     wstring tem;
-    for(int e=1;e<10;e++){
+    for(int e=1;e<10;e++){                                  //The string is too long,so we have to divide it into a few parts,othervise the program may crash.
         if(e<9){
-            tem=tem1.substr(e*length/10,e*length/10);
-            pos=tem.find(L"<stylechange>");
-            if(pos==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}
-            first[e]=(e*length/10)+pos+12;
-            if(posfont==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}
+            tem=tem1.substr(e*length/10,e*length/10);       //divide into 10 parts,if necessary we can divide it into more parts,just need to change some number in the program.
+            pos=tem.find(L"<stylechange>");                 //find the mark "<stylechange>" in case of cutting the mark
+            if(pos==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}  //If the string is short,the string can be divided into fewer parts.
+            first[e]=(e*length/10)+pos+12;                            //The array "first" can store where the string should be split.
+            if(posfont==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}   //cut the string
 
-            temfont=temp.substr(e*fontlength/10,e*fontlength/10);
+            temfont=temp.substr(e*fontlength/10,e*fontlength/10);      //deal with the string of font,same as wstring
             posfont=temfont.find("<stylechange>");
             if(posfont==-1){firstfont[e]=firstfont[e-1];continue;}
             firstfont[e]=(e*fontlength/10)+posfont+12;
@@ -45,7 +45,7 @@ void Text::readInText(const wstring w,const string v){
         }
         while(1){
             if(posf==-1)break;
-            posf=temfont.find("<stylechange>");
+            posf=temfont.find("<stylechange>");         //find the mark "<stylechange>" to make a new Content object.
             lisf=temfont.substr(0,posf);
             pos=tem.find(L"<stylechange>");
             if(pos==-1)break;
@@ -55,9 +55,9 @@ void Text::readInText(const wstring w,const string v){
             temstore.readInFont(lisf);
             m_contentList.push_back(temstore);                                    //push here
             tem.erase(tem.begin(),tem.begin()+pos+13);
-            temfont.erase(temfont.begin(),temfont.begin()+posf+13);
+            temfont.erase(temfont.begin(),temfont.begin()+posf+13);     //erase the mark "<stylechange>"
             j++;
-            m_imagepos[m_imagenum]=tem.find(L"<img>")+first[e-1];
+            m_imagepos[m_imagenum]=tem.find(L"<img>")+first[e-1];       //find the image position
             m_imagenum++;
         }
     }

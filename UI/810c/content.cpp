@@ -15,18 +15,18 @@ void Content::readInMessage(wstring a) {
     int j=0;
     int pos;
     while(1){
-        pos=b.find(L"<n>");
-        if(pos==-1)break;
-        n++;
+        pos=b.find(L"<n>");             //find the line change marks"<n>"
+        if(pos==-1)break;               //if there is no <n>,break
+        n++;                            //count the line change marks
         //cout<<pos<<endl;
-        changelinepos[j]=pos;
-        b.erase(pos,3);
+        changelinepos[j]=pos;           //insert the position
+        b.erase(pos,3);                 //erase the first mark to find next one
         j++;
     }
-    k=b.length();
+    k=b.length();                       //get the text length,already removed all marks
     m_str=b;
 }
-void Content::readInFont(string a) {
+void Content::readInFont(string a) {    //deal with the string to get the message of the font
     string language;
     string colortem;
     string fonttem;
@@ -57,7 +57,7 @@ void Content::readInFont(string a) {
 
     const char *temc=c.c_str();
     sscanf(temc,"%lf",&size);
-    if(c.find("em")!=-1){
+    if(c.find("em")!=-1){           //There are four ways to show the size,so we have to judge which one it is.
         size=size*16;
     }else if(c.find("%")!=-1){
         size=size*16/100;
@@ -101,9 +101,9 @@ void Content::readInFont(string a) {
     }else {
         underline=false;
     }
-    QString fonttem1= QString::fromStdString(fonttem);
+    QString fonttem1= QString::fromStdString(fonttem);      //It has to change into Qstring so that Qfont can read in.
     QString colortem1= QString::fromStdString(colortem);
-    m_font.setFamily(fonttem1);
+    m_font.setFamily(fonttem1);         //make the information into the object
     m_font.setPixelSize(size);
     m_font.setBold(bold);
     m_font.setItalic(italic);
@@ -112,7 +112,7 @@ void Content::readInFont(string a) {
 }
 
 void Content::readInalignment(int *n,int *m){
-    for(int i=0;i<256;i++){
+    for(int i=0;i<256;i++){                             //judge the alignment
         if(n[i]==NULL||m[i]==NULL)break;
         if(m[i]==0){
             alignment.insert(pair<int,string>(n[i],"left"));
