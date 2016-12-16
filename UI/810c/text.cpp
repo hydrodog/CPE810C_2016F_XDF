@@ -13,9 +13,9 @@ void Text::getText(const wstring w,const string v){
     string lisf;
     int posf=0;
     int posfont;
-    int first[11];
+    int first[11]={0};
     first[0]=0;
-    int firstfont[11];
+    int firstfont[11]={0};
     firstfont[0]=0;
     int fontlength=temp.length();
     int length=w.length();
@@ -25,9 +25,9 @@ void Text::getText(const wstring w,const string v){
         if(e<9){
             tem=tem1.substr(e*length/10,e*length/10);
             pos=tem.find(L"<stylechange>");
-            if(posfont==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}
+            if(pos==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}
             first[e]=(e*length/10)+pos+12;
-            if(pos==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}
+            if(posfont==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}
 
             temfont=temp.substr(e*fontlength/10,e*fontlength/10);
             posfont=temfont.find("<stylechange>");
@@ -37,6 +37,7 @@ void Text::getText(const wstring w,const string v){
             posf=0;
             pos=0;
         }else{
+            int a=tem1.length();
             tem=tem1.substr(first[e-1]+1,length-first[e-1]+1);
             temfont=temp.substr(firstfont[e-1],fontlength-firstfont[e-1]);
             posf=0;

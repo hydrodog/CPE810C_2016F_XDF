@@ -54,8 +54,19 @@ void Content::readInFont(string a) {
     posA=posB;
     posB=b.find("bold");
     c=b.substr(posA+4,posB-posA-4);
+
     const char *temc=c.c_str();
     sscanf(temc,"%lf",&size);
+    if(c.find("em")!=-1){
+        size=size*16;
+    }else if(c.find("%")!=-1){
+        size=size*16/100;
+    }
+    else if(c.find("pt")!=-1){
+        size=size/12*16;
+    }else{
+
+    }
     posA=posB;
     posB=b.find("italic");
 
