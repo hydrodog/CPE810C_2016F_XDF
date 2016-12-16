@@ -1,0 +1,9 @@
+This is a guide file for other team to send data to us.
+
+Content:
+<n>:new line;
+<stylechange>:change a style of text;
+
+Font:
+sample:languageChinesecolorbluefonttimessize28bold0italic0underline0end<stylechange>
+This means:language(English/Chinese)+color(color of text, such as red blue etc.)+font(font of text, such as times etc.)+size(color of text, such as 12.0 etc.)+bold(bool,0 or 1)+italic(bool,0 or 1)+underline(bool,0 or 1)+end<stylechange>.
