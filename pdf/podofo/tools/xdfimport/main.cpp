@@ -23,7 +23,6 @@ int main( int argc, char* argv[] )
 {
     char*    pszInput;
 
-
   
 
     if( argc != 2 )
