@@ -23,13 +23,13 @@ void Text::readInText(const wstring w,const string v){
     wstring tem;
     for(int e=1;e<10;e++){                                  //The string is too long,so we have to divide it into a few parts,othervise the program may crash.
         if(e<9){
-            tem=tem1.substr(e*length/10,e*length/10);       //divide into 10 parts,if necessary we can divide it into more parts,just need to change some number in the program.
+            tem=tem1.substr(e*length/10,length/10);       //divide into 10 parts,if necessary we can divide it into more parts,just need to change some number in the program.
             pos=tem.find(L"<stylechange>");                 //find the mark "<stylechange>" in case of cutting the mark
             if(pos==-1){first[e]=first[e-1];firstfont[e]=firstfont[e-1];continue;}  //If the string is short,the string can be divided into fewer parts.
             first[e]=(e*length/10)+pos+12;                            //The array "first" can store where the string should be split.
             if(posfont==-1){continue;}else{tem=tem1.substr(first[e-1]+1,first[e]-first[e-1]);}   //cut the string
 
-            temfont=temp.substr(e*fontlength/10,e*fontlength/10);      //deal with the string of font,same as wstring
+            temfont=temp.substr(e*fontlength/10,fontlength/10);      //deal with the string of font,same as wstring
             posfont=temfont.find("<stylechange>");
             if(posfont==-1){firstfont[e]=firstfont[e-1];continue;}
             firstfont[e]=(e*fontlength/10)+posfont+12;
