@@ -71,7 +71,7 @@ int main()
     for (int i = 0;i < size;i++)
     {
         pathoffiles[i] = files[i].c_str();//save the pathes
-        //cout << pathoffiles[i] << endl;//Verify what is in pathoffiles[].nameoffiles[i] and pathoffiles[i] are corresponding
+        cout << pathoffiles[i] << endl;//Verify what is in pathoffiles[].nameoffiles[i] and pathoffiles[i] are corresponding
     }
    //Verify the name in nameoffiles[]
     /*for(int i = 0;i<size;i++)
