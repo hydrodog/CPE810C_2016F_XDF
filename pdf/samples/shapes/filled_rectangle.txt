@@ -1,2 +1,13 @@
 q Q q /Gs1 gs /Gs2 gs 0 0 m 100 0 l S /Cs1 CS 0.5 0 0 SC 200 300 50 350 re
 S /Cs1 cs 0.5 0 0 sc 200 300 50 350 re f Q
+
+# An excerpt of a content stream describing graphics objects
+0 0 m              # start a subpath
+100 0 l            # append a line to the subpath
+S                  # stroke
+0.5 0 0 SC         # Set the RGB color
+200 300 50 350 re  # Draw a rectangle
+S                  # Stroke
+0.5 0 0 sc         # Set the RGB color
+200 300 50 350 re  # Draw a rectangle
+f                  # Fill the subpath
