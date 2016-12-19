@@ -10,6 +10,8 @@
 #define INCLUDES_HH
 
 
+#include "iostream"
+#include <vector>
 #include "dialog.h"
 #include <QApplication>
 #include <list>
@@ -17,12 +19,11 @@
 #include <QPainter>
 
 
-#include "page.h"
-//#include "frame.h"
 
-#include "ppage.h"
+
 #include "pprint.hh"
-#include "pframe.h"
+
+#include "QImage"
 
 
 

@@ -24,7 +24,7 @@ public:
 
 //divided draw method
     void draw_image(QImage image);
-    void draw_text();
+    void draw_text(Text mytext);
     void draw_2dGraph();
 };
 
