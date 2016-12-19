@@ -319,9 +319,9 @@ IF(CMAKE_COMPILER_IS_GNUCXX)
 ENDIF(CMAKE_COMPILER_IS_GNUCXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-find_package(Qt5 REQUIRED COMPONENTS Core Gui)
-get_target_property(QtCore_location Qt5::Core LOCATION)
-MESSAGE("Found Qt5Core library in ${QtCore_location}")
+#find_package(Qt5 REQUIRED COMPONENTS Core Gui)
+#get_target_property(QtCore_location Qt5::Core LOCATION)
+#MESSAGE("Found Qt5Core library in ${QtCore_location}")
 
 FIND_PACKAGE(ZLIB REQUIRED)
 MESSAGE("Found zlib headers in ${ZLIB_INCLUDE_DIR}, library at ${ZLIB_LIBRARIES}")
@@ -510,6 +510,7 @@ ENDIF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
 SET(PODOFO_LIB
     podofo
     ${PODOFO_LIB_DEPENDS}
+    #PARENT_SCOPE
     )
 
 #
@@ -534,7 +535,11 @@ IF(NOT PODOFO_BUILD_LIB_ONLY)
 ADD_SUBDIRECTORY(tools)
 ADD_SUBDIRECTORY(examples)
 ADD_SUBDIRECTORY(debian)
+
 ENDIF(NOT PODOFO_BUILD_LIB_ONLY)
+
+#add_subdirectory(pdfimport)
+
 
 # Generate our configure file
 CONFIGURE_FILE(${PoDoFo_SOURCE_DIR}/podofo_config.h.in ${PoDoFo_BINARY_DIR}/podofo_config.h)

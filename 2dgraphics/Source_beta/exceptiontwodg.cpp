@@ -1,4 +1,4 @@
-#include "ExceptionTwoDG.h"
+#include "exceptiontwodg.h"
 
 /*
  @author: Seito Ryu  18/11/16

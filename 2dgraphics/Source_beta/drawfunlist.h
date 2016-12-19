@@ -1,8 +1,7 @@
 #ifndef DRAW_FUNLIST_HH__
 #define DRAW_FUNLIST_HH__
 
-#include "Shape.h"
-#include "ExceptionDraw.h"
+#include "shape.h"
 #include <iostream>
 #include <vector>
 #include <string>

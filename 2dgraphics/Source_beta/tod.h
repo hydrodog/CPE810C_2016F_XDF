@@ -1,11 +1,11 @@
 #ifndef TOD_H
 #define TOD_H
 
-#include <QDialog>
+
+#include <QtWidgets/QtWidgets>
 #include "twodgraphics.h"
 #include <QtGui>
 #include <QtCore>
-
 
 namespace Ui {
 class ToD;

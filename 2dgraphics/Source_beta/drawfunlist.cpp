@@ -1,4 +1,4 @@
-#include "DrawFunList.h"
+#include "drawfunlist.h"
 //constructor
 
 /*

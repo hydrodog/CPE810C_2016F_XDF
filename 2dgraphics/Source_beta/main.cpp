@@ -1,5 +1,5 @@
 #include "tod.h"
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <string>
 #include <vector>
 #include <iostream>

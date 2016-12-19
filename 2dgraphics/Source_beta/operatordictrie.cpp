@@ -1,4 +1,4 @@
-#include "OperatorDicTrie.h"
+#include "operatordictrie.h"
 
 /*
  @author: Seito Ryu  18/11/16

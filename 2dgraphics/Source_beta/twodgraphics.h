@@ -1,9 +1,9 @@
 #ifndef TWO_DGRAPHICS_HH__
 #define TWO_DGRAPHICS_HH__
 
-#include "OperatorDicTrie.h"
-#include "Shape.h"
-#include "ExceptionTwoDG.h"
+#include "operatordictrie.h"
+#include "shape.h"
+#include "exceptiontwodg.h"
 #include <string>
 #include <vector>
 #include <fstream>

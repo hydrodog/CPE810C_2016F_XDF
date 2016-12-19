@@ -1,4 +1,4 @@
-#include "TwoDGraphics.h"
+#include "twodgraphics.h"
 
 /**
  @author: Seito Ryu  18/11/16

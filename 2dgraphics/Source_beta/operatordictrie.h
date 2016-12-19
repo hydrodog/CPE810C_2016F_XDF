@@ -1,7 +1,7 @@
 #ifndef OPERATOR_DIC_TRIE_HH__
 #define OPERATOR_DIC_TRIE_HH__
 
-#include "ExceptionOptDic.h"
+#include "exceptionoptdic.h"
 #include <iostream>
 
 /*
