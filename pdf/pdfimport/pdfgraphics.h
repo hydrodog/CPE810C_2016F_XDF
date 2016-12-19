@@ -7,7 +7,7 @@
 #include <stack>
 #include <vector>
 #include <QPen>
-
+#include <QtGui>
 
 class PdfGState{
     PdfGState();
@@ -23,6 +23,7 @@ private:
 };
 
 typedef std::stack<PdfGState> stackPdfGState_t;
+
 
 
 

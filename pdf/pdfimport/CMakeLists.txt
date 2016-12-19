@@ -1,0 +1,9 @@
+add_library(pdfimport pdfimport.cpp pdfgraphics.cpp pdfimage.cpp)
+
+TARGET_LINK_LIBRARIES(pdfimport ${PODOFO_DEPEND_TARGET}  Qt5::Core  Qt5::Gui)
+
+SET_TARGET_PROPERTIES(pdfimport PROPERTIES COMPILE_FLAGS "${PODOFO_CFLAGS}")
+ADD_DEPENDENCIES(pdfimport ${PODOFO_DEPEND_TARGET})
+INCLUDE_DIRECTORIES(${PoDoFo_SOURCE_DIR})
+
+message("+++++++++ PODOFO_DEPEND_TARGET ${PODOFO_DEPEND_TARGET}")

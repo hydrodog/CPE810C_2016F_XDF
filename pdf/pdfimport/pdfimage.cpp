@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
+#include <podofo/podofo.h>
 
 #include "pdfimage.h"
 
@@ -40,7 +41,7 @@ ImageExtractor::~ImageExtractor()
 
 void ImageExtractor::Init( PdfMemDocument *document, int* pnNum )
 {
-	char * pszOutput = "./";
+    char * pszOutput = "./outputImages";
     PdfObject*  pObj  = NULL;
 
     if( !document )
@@ -48,6 +49,11 @@ void ImageExtractor::Init( PdfMemDocument *document, int* pnNum )
         PODOFO_RAISE_ERROR( ePdfError_InvalidHandle );
     }
 
+    // Make a directory for output images, if it doesn't exist
+    struct stat st = {0};
+    if (stat(pszOutput, &st) == -1) {
+        mkdir(pszOutput, 0700);
+    }
 
    // PdfMemDocument document( pszInput );
 
@@ -100,6 +106,8 @@ void ImageExtractor::ExtractImage( PdfObject* pObject, bool bJpeg )
     do {
         snprintf( m_szBuffer, MAX_PATH, "%s/pdfimage_%04i.%s", m_pszOutputDirectory, m_nCount++, pszExtension );
     } while( FileExists( m_szBuffer ) );
+
+
 
     hFile = fopen( m_szBuffer, "wb" );
     if( !hFile )

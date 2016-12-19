@@ -1,14 +1,16 @@
 /*
+ *
  * Author: Dominik Seichter
  * Edited by: Zhuo Chen, Yingting Huang
  */
-#include "xdfimport.h"
+#include "pdfimport.h"
 #include "pdfimage.h"
 #include <stack>
 #include <iomanip>
 #include <unordered_set>
 #include <sstream>
-PdfImporter::PdfImporter():of("out.txt")
+#include <algorithm>
+PdfImporter::PdfImporter():of("out.txt"), pDocument(nullptr)
 {
 
     loadFileConfig();
@@ -16,12 +18,13 @@ PdfImporter::PdfImporter():of("out.txt")
 
 PdfImporter::~PdfImporter()
 {
+    delete pDocument;
     fileConfig.close();
 }
 
 void PdfImporter::loadFileConfig()
 {
-    std::string sFileName("./../../../config/graphics_operator_list.conf");
+    std::string sFileName("../../CPE810C_2016F_XDF/pdf/config/graphics_operator_list.conf");
     fileConfig.open(sFileName);
     if(!fileConfig.good())
     {
@@ -67,14 +70,18 @@ void PdfImporter::loadFileConfig()
 
 void PdfImporter::Init( const char* pszInput )
 {
+
     if( !pszInput )
     {
         PODOFO_RAISE_ERROR( ePdfError_InvalidHandle );
     }
     
-    PdfMemDocument document( pszInput );
-    imageextractor.Init(&document, &nNum);
-    
+    pDocument = new PdfMemDocument(pszInput);
+    PdfMemDocument &document = *pDocument;
+
+    //imageextractor.Init(pDocument);
+
+
     int nCount = document.GetPageCount();
     for( int i=0; i<nCount; i++ )
     {
@@ -90,6 +97,7 @@ void PdfImporter::Init( const char* pszInput )
             this->ImportPage( &document, pPage );
         }
     }
+
 #ifdef PDF_IMPORT_TEST_MODE
 
     cout<<"operator found:\n";
@@ -102,7 +110,6 @@ void PdfImporter::Init( const char* pszInput )
         cout<<(*it)<<" ";
     cout<<endl;
 #endif
-
 }
 
 void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
@@ -132,6 +139,19 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
             mapPdfObj_t::iterator it = mapPdfGraphicsObj.find(pszToken);
             if (it != mapPdfGraphicsObj.end())
             {
+                // Found a pdf graphics operator
+                cout << "Graphics operator found: " << it->first << " " << it->second.numOperands << " ";
+                std::string operatorName = it->first;
+                std::vector<double> Operands;
+
+                for (int i=0; i<it->second.numOperands ; i++)
+                {
+                    Operands.push_back(stack.top().GetReal());
+                    stack.pop();
+                }
+                cout << '\n';
+                std::reverse(Operands.begin(), Operands.end());
+                addGraphicsOperation(operatorName, Operands);
 
             }
             else if( strcmp( pszToken, "BT" ) == 0 )

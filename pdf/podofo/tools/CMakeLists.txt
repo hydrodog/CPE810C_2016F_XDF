@@ -3,6 +3,5 @@ SUBDIRS(
 	podofoimg2pdf
 	podofoimgextract
 	podofotxtextract
-	podofoxmp
-        xdfimport
+        podofoxmp
 	)

@@ -4,7 +4,6 @@
 #ifndef PDFIMAGE_H__
 #define PDFIMAGE_H__
 
-#include <podofo.h>
 
 using namespace PoDoFo;
 

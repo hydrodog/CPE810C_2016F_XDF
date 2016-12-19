@@ -3,7 +3,7 @@
  * Edited by: Zhuo Chen, Yingting Huang
 */
 
-#include "xdfimport.h"
+#include "pdfimport.h"
 
 #include <stdio.h>
 #include <stdlib.h>

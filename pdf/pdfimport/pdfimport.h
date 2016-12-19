@@ -2,10 +2,11 @@
  * Author: Dominik Seichter
  * Edited by: Zhuo Chen, Yingting Huang
  */
-#ifndef XDFIMPORT_H__
-#define XDFIMPORT_H__
+#ifndef PDFIMPORT_H__
+#define PDFIMPORT_H__
+#include <podofo/podofo.h>
+
 #include "pdfimage.h"
-#include <podofo.h>
 #include "pdfgraphics.h"
 #include <cstdio>
 #include <iostream>
@@ -54,12 +55,14 @@ private:
      */
     void AddTextElement( double dCurPosX, double dCurPosY,
                         PdfFont* pCurFont, const PdfString & rString );
+    virtual void addGraphicsOperation(std::string operatorName, \
+                                      std::vector<double> operands) {}
 private:
     //xDocument* xdoc;
+    PdfMemDocument* pDocument;
     ofstream of;
     ifstream fileConfig;
     ImageExtractor imageextractor;
-    int nNum = 0;
 
     class PdfObj {
     public:
@@ -69,9 +72,10 @@ private:
     mapPdfObj_t mapPdfGraphicsObj;
 
 #ifdef PDF_IMPORT_TEST_MODE
-    unordered_set<string> Operator_set; // for coding testing only
-    unordered_set<string> Operator_set_not_handled; // for coding testing only
+    unordered_set<string> Operator_set; // for test only
+    unordered_set<string> Operator_set_not_handled; // for test only
+
 #endif
 };
 
-#endif // XDFIMPORT_H__
+#endif // PDFIMPORT_H__
