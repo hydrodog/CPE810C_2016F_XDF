@@ -88,13 +88,8 @@ void PPrint::print(){
                 painter.setPen(Qt::blue);
                 painter.drawText(r2, str, option);
 
-
-                QImage test_image("background.png");
+                QImage test_image("../Print_runnable/background.png");
                 painter.drawImage(1800,600,test_image);
-
-
-
-
 
                 if(PageNum!=startPageNum)
                     printer.newPage();
@@ -137,17 +132,8 @@ void PPrint::print(){
                     painter.setPen(Qt::blue);
                     painter.drawText(r2, str, option);
 
-
-
-                    QImage test_image("background.png");
+                    QImage test_image("../Print_runnable/background.png");
                     painter.drawImage(1800,600,test_image);
-
-
-
-
-
-
-
 
                     if(PageNum!=startPageNum)
                         printer.newPage();
@@ -192,19 +178,10 @@ void PPrint::print(){
                     painter.setPen(Qt::blue);
                     painter.drawText(r2, str, option);
 
-
-
                     painter.drawText(r2, str, option);
 
-
-
-                    QImage test_image("background.png");
+                    QImage test_image("../Print_runnable/background.png");
                     painter.drawImage(1800,600,test_image);
-
-
-
-
-
 
 
                     if(PageNum!=startPageNum)
@@ -254,12 +231,8 @@ void PPrint::print(){
                 painter.setPen(Qt::blue);
                 painter.drawText(r2, str, option);
 
-                QImage test_image("background.png");
+                QImage test_image("../Print_runnable/background.png");
                 painter.drawImage(1800,600,test_image);
-
-
-
-
 
 
                 if(PageNum!=startPageNum)
@@ -315,10 +288,8 @@ void PPrint::print(){
                 painter.drawText(r2, str, option);
 
 
-                QImage test_image("background.png");
+                QImage test_image("../Print_runnable/background.png");
                 painter.drawImage(1800,600,test_image);
-
-
 
 
 
