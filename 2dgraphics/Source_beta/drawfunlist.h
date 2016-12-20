@@ -22,23 +22,25 @@
 class DrawFunList{
 private:
   std::map<std::string, void (DrawFunList::*)(const std::vector<double>&, const int&)> mapDrw;
-  void setPoint(const std::vector<double>& operands, const int& currentIndex);
+  void moveTo(const std::vector<double>& operands, const int& currentIndex);
   void drawLine(const std::vector<double>& operands, const int& currentIndex);
   void drawRect(const std::vector<double>& operands, const int& currentIndex);
   void drawCubic(const std::vector<double>& operands, const int& currentIndex);
   void closePath(const std::vector<double>& operands, const int& currentIndex);
-  void setColor(const std::vector<double>& operands, const int& currentIndex);
-  void setPen(const std::vector<double>& operands, const int& currentIndex);
-  void setBrush(const std::vector<double>& operands, const int& currentIndex);
+  void setNonStrokingColor(const std::vector<double>& operands, const int& currentIndex);
+  void setStrokingColor(const std::vector<double>& operands, const int& currentIndex);
+  void stroke(const std::vector<double>& operands, const int& currentIndex);
+  void fill(const std::vector<double>& operands, const int& currentIndex);
   void setCTM(const std::vector<double>& operands, const int& currentIndex);
-  QPainterPath *path=new QPainterPath;
-  QColor *color=new QColor;
-  QPen *pen=new QPen;
-  QBrush *brush=new QBrush;
+  QPainter* pQPainter;
+  QPainterPath path;
+  QColor color;
+  QPen pen;
+  QBrush brush;
   QTransform *transformer=new QTransform;
 
 public:
-    DrawFunList();
+    DrawFunList(QPainter*);
     ~DrawFunList();
     void draw(const std::string& currentOperator, const std::vector<double>& operands, const int& currentIndex);
     QPainterPath getPath();

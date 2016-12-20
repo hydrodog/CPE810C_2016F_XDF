@@ -22,7 +22,7 @@ public:
 
 private:
     Ui::ToD *ui;
-    twoDGraphics *mTwoDGph;
+    twoDGraphics *pTwoDGph;
 protected:
     void paintEvent(QPaintEvent *);
 };

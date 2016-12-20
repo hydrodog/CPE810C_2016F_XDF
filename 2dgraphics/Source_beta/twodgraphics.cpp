@@ -38,15 +38,15 @@ void twoDGraphics::setShape(std::string curOpter, std::vector<double> curOpnds){
   }
 #endif
   //create a new shape object
-  Shape newShape;
-  newShape.setOpter(curOpter);
-  //there is no operand regarding to this operator
+  Shape Operation;
+  Operation.setOpter(curOpter);
+  //This operator has no operand
   if(curOpnds.size() == 0){
-    shpLst.push_back(newShape);
+    shpLst.push_back(Operation);
     return;
   }
   try{
-    newShape.setOpnds(curOpnds);
+    Operation.setOpnds(curOpnds);
   }catch(ExceptionTwoDG d){
     throw d.getCng();
     return;
@@ -55,9 +55,20 @@ void twoDGraphics::setShape(std::string curOpter, std::vector<double> curOpnds){
     return;
   }
   //add one line into shape object
-  shpLst.push_back(newShape);
+  shpLst.push_back(Operation);
 }
 //get all shape objects, saved in vector
 const std::vector<Shape>& twoDGraphics::getAllShape() const {
   return shpLst;
+}
+
+void twoDGraphics::addTextBox(textBox txtBox)
+{
+    m_textBoxes.push_back(txtBox);
+}
+
+textBox::textBox(QPointF topLeftPosition, std::string text):
+    m_topLeftPosition(topLeftPosition), m_text( QString::fromStdString(text))
+{
+
 }

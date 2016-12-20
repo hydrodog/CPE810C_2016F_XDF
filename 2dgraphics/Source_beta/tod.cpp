@@ -10,7 +10,7 @@ ToD::ToD(QWidget *parent) :
 }
 ToD::ToD(twoDGraphics *twoDGph)
 {
-    mTwoDGph=twoDGph;
+    pTwoDGph=twoDGph;
 }
 
 ToD::~ToD()
@@ -19,27 +19,31 @@ ToD::~ToD()
 }
 void ToD::paintEvent(QPaintEvent *)
 {
-    DrawFunList drawFunList;
 
+    QPainter painter(this);
+    DrawFunList drawFunList(&painter);
+    painter.translate(this->rect().bottomLeft());
+    painter.scale(.8, -.8);
 
-    for(auto ite = mTwoDGph->getAllShape().begin(); ite != mTwoDGph->getAllShape().end(); ++ite){
+    for(auto ite = pTwoDGph->getAllShape().begin(); ite != pTwoDGph->getAllShape().end(); ++ite){
 
         std::string curOpt = ite->getOpter();
-
-        std::cout << "Operator is " << curOpt << "\t";
-
+        std::cout << "Operator is " << curOpt << " <";
         std::vector<double> allOpnds = ite->getOpnds();
 
         drawFunList.draw(curOpt, allOpnds,1);
-
-        for(auto iteOpnds = allOpnds.begin(); iteOpnds != allOpnds.end(); ++iteOpnds){
-          std::cout << "\t\t" << *iteOpnds;
-        }
-        std::cout << "\n";
+        for(auto iteOpnds = allOpnds.begin(); iteOpnds != allOpnds.end(); ++iteOpnds)
+            std::cout << " " << *iteOpnds;
+        std::cout << " > " << '\n';
+        //std::getchar();
+    }
+    for (auto it=pTwoDGph->pTextBoxes()->begin(); it != pTwoDGph->pTextBoxes()->end(); ++it)
+    {
+        //painter.drawText(it->topLeftPosition(), it->text());
     }
 
+/*
 
-    QPainter painter(this);
     painter.setPen(drawFunList.getPen());
     painter.setBrush(drawFunList.getBrush());
     painter.drawPath(drawFunList.getPath());
@@ -47,9 +51,9 @@ void ToD::paintEvent(QPaintEvent *)
 
 
 
-    painter.translate(this->rect().bottomLeft());
-    painter.scale(1.0, -1.0);
+
 
 
     painter.drawPath(drawFunList.getPath());
+    */
 }

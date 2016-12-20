@@ -7,6 +7,23 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <QPointF>
+#include <QString>
+
+
+
+class textBox
+{
+private:
+    QPointF m_topLeftPosition;
+    QString m_text;
+public:
+    textBox(QPointF topLeftPosition, std::string text);
+    QPointF topLeftPosition() {return m_topLeftPosition;}
+    QString text() {return m_text;}
+};
+typedef std::vector<textBox> textBoxes_t;
+
 
 /*
  @author: Seito Ryu  18/11/16
@@ -17,6 +34,7 @@ private:
   std::string operFilPath;
   std::string operFileName;
   std::vector<Shape> shpLst;
+  textBoxes_t m_textBoxes;
   OperatorDicTrie opterTrie;
 public:
   twoDGraphics(std::string operFilPath, std::string operFileName, std::vector<Shape> shpLst = {});//: operFilPath(operFilPath), operFileName(operFileName), shpLst(shpLst){}
@@ -27,5 +45,11 @@ public:
   void setShape(std::string curOpter, std::vector<double> curOpnds);
   //get all shape objects, saved in vector
   const std::vector<Shape>& getAllShape() const;
+
+  void addTextBox(textBox txtBox);
+  textBoxes_t* pTextBoxes(){ return &m_textBoxes;}
 };
+
+
+
 #endif
