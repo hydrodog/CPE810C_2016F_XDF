@@ -1,9 +1,0 @@
-# Each line should contain no more than 255 characters
-# This file specifies the number of operands associated with each graphics object
-# Format:
-# Operator, # of operands
-c, 3
-Tj, 2
-l, 2
-
-# addGraphicsObject(std::string operator, std::vector<double> operands) 
