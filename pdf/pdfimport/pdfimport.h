@@ -53,7 +53,7 @@ private:
      *  \param pCurFont font of the text
      *  \param rString the actual string
      */
-    void AddTextElement( double dCurPosX, double dCurPosY,
+    virtual void AddTextElement( double dCurPosX, double dCurPosY,
                         PdfFont* pCurFont, const PdfString & rString );
     virtual void addGraphicsOperation(std::string operatorName, \
                                       std::vector<double> operands) {}

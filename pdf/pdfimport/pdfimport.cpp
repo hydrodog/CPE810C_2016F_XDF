@@ -140,13 +140,13 @@ void PdfImporter::ImportPage( PdfMemDocument* pDocument, PdfPage* pPage )
             if (it != mapPdfGraphicsObj.end())
             {
                 // Found a pdf graphics operator
-                cout << "Graphics operator found: " << it->first << " " << it->second.numOperands << " ";
+                cout << "Graphics operator found: " << it->first << ": ";
                 std::string operatorName = it->first;
                 std::vector<double> Operands;
-
                 for (int i=0; i<it->second.numOperands ; i++)
                 {
                     Operands.push_back(stack.top().GetReal());
+                    cout << stack.top().GetReal() << ' ';
                     stack.pop();
                 }
                 cout << '\n';

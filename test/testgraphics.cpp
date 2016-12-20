@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+
 #include "xdfgraphics_includes.h"
 #include "pdfimport.h"
 /*
@@ -24,6 +25,35 @@ public:
     {
         delete pTwoDGraphics;
     }
+    virtual void AddTextElement( double dCurPosX, double dCurPosY,
+                                     PdfFont* pCurFont, const PdfString & rString )
+    {
+        static double dCurPosX_old, dCurPosY_old;
+        if( !pCurFont )
+        {
+            fprintf( stderr, "WARNING: Found text but do not have a current font: %s\n", rString.GetString() );
+            return;
+        }
+
+        if( !pCurFont->GetEncoding() )
+        {
+            fprintf( stderr, "WARNING: Found text but do not have a current encoding: %s\n", rString.GetString() );
+            return;
+        }
+
+        PdfString unicode = pCurFont->GetEncoding()->ConvertToUnicode( rString, pCurFont );
+        static std::string text;
+
+        if (dCurPosX_old != dCurPosX || dCurPosY_old != dCurPosY)
+        {
+            pTwoDGraphics->addTextBox(textBox(QPointF(dCurPosX_old, dCurPosY_old), text));
+            text.clear();
+        }
+        text += unicode.GetStringUtf8();
+        dCurPosX_old = dCurPosX;
+        dCurPosY_old = dCurPosY;
+    }
+
     virtual void addGraphicsOperation(std::string operatorName, \
                                       std::vector<double> operands)
     {
